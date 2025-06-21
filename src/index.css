@@ -90,7 +90,7 @@
   }
 
   .image-placeholder {
-    @apply bg-gradient-to-br from-luxury-gray/50 to-luxury-black border border-luxury-gray/30 flex items-center justify-center text-luxury-text/40 font-light;
+    @apply bg-gradient-to-br from-luxury-gray/50 to-luxury-black border border-luxury-gray/30 flex items-center justify-center text-luxury-text/40 font-light min-h-[200px];
     background-size: cover;
     background-position: center;
   }

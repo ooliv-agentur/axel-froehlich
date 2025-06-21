@@ -1,196 +1,95 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 
 export const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    concern: 'Badplanung',
-    preferredDate: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
-    <section id="kontakt" className="section-spacing bg-luxury-gray">
+    <section id="kontakt" className="py-40 lg:py-52 bg-luxury-gray relative">
       <div className="container mx-auto px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-32">
-            <h2 className="section-title">
-              Unverbindlichen Termin <span className="gold-accent">vereinbaren</span>
-            </h2>
-            <p className="editorial-text text-luxury-text/80 max-w-3xl mx-auto">
-              Lassen Sie uns gemeinsam Ihr Traumbad planen.<br />
-              Vereinbaren Sie einen persönlichen Beratungstermin im Showroom in Mainz.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-12 gap-20 lg:gap-24">
-            
-            {/* Contact Form */}
-            <div className="lg:col-span-8">
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <label className="block text-luxury-white text-lg font-light mb-4">
-                      Vorname *
-                    </label>
-                    <Input
-                      type="text"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      required
-                      className="bg-luxury-black/50 border-luxury-gray/30 text-luxury-white text-lg py-6 focus:border-luxury-gold"
-                    />
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-24 lg:gap-32 items-start">
+            {/* Content */}
+            <div className="animate-fade-in">
+              <div className="w-20 h-1 bg-luxury-gold mb-12"></div>
+              <h2 className="text-5xl lg:text-6xl xl:text-7xl font-thin mb-16 text-luxury-white tracking-tight leading-tight">
+                Vereinbaren Sie Ihren{' '}
+                <span className="gold-accent font-serif italic block mt-4">Beratungstermin</span>
+              </h2>
+              
+              <div className="mb-16">
+                <p className="text-2xl lg:text-3xl text-luxury-text/90 mb-12 leading-relaxed font-light">
+                  Besuchen Sie unsere Ausstellung in Mainz oder vereinbaren Sie eine individuelle Beratung.
+                </p>
+                
+                <div className="space-y-8 mb-16">
+                  <div className="flex items-start space-x-6">
+                    <div className="w-3 h-3 bg-luxury-gold rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-xl lg:text-2xl font-light text-luxury-gold mb-2">Showroom Mainz</h3>
+                      <p className="text-lg lg:text-xl text-luxury-text/80 font-light">
+                        Besichtigung unserer 500m² Ausstellung<br />
+                        nach Terminvereinbarung
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <label className="block text-luxury-white text-lg font-light mb-4">
-                      Nachname *
-                    </label>
-                    <Input
-                      type="text"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      required
-                      className="bg-luxury-black/50 border-luxury-gray/30 text-luxury-white text-lg py-6 focus:border-luxury-gold"
-                    />
+                  
+                  <div className="flex items-start space-x-6">
+                    <div className="w-3 h-3 bg-luxury-gold rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-xl lg:text-2xl font-light text-luxury-gold mb-2">3D-Badplanung</h3>
+                      <p className="text-lg lg:text-xl text-luxury-text/80 font-light">
+                        Individuelle Planungsgespräche<br />
+                        mit unseren Innenarchitekten
+                      </p>
+                    </div>
                   </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <label className="block text-luxury-white text-lg font-light mb-4">
-                      E-Mail *
-                    </label>
-                    <Input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="bg-luxury-black/50 border-luxury-gray/30 text-luxury-white text-lg py-6 focus:border-luxury-gold"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-luxury-white text-lg font-light mb-4">
-                      Telefonnummer
-                    </label>
-                    <Input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="bg-luxury-black/50 border-luxury-gray/30 text-luxury-white text-lg py-6 focus:border-luxury-gold"
-                    />
+                  
+                  <div className="flex items-start space-x-6">
+                    <div className="w-3 h-3 bg-luxury-gold rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-xl lg:text-2xl font-light text-luxury-gold mb-2">Deutschlandweite Umsetzung</h3>
+                      <p className="text-lg lg:text-xl text-luxury-text/80 font-light">
+                        Realisierung mit unseren<br />
+                        Partnern vor Ort
+                      </p>
+                    </div>
                   </div>
                 </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <label className="block text-luxury-white text-lg font-light mb-4">
-                      Anliegen
-                    </label>
-                    <select
-                      name="concern"
-                      value={formData.concern}
-                      onChange={handleChange}
-                      className="w-full bg-luxury-black/50 border border-luxury-gray/30 text-luxury-white text-lg py-6 px-4 rounded-md focus:border-luxury-gold focus:outline-none"
-                    >
-                      <option value="Badplanung">Badplanung</option>
-                      <option value="Ausstellung">Ausstellung</option>
-                      <option value="Sonstiges">Sonstiges</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-luxury-white text-lg font-light mb-4">
-                      Wunschtermin
-                    </label>
-                    <Input
-                      type="text"
-                      name="preferredDate"
-                      value={formData.preferredDate}
-                      onChange={handleChange}
-                      placeholder="Di–Sa"
-                      className="bg-luxury-black/50 border-luxury-gray/30 text-luxury-white text-lg py-6 focus:border-luxury-gold"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-luxury-white text-lg font-light mb-4">
-                    Nachricht
-                  </label>
-                  <Textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={6}
-                    className="bg-luxury-black/50 border-luxury-gray/30 text-luxury-white text-lg focus:border-luxury-gold resize-none"
-                  />
-                </div>
-
-                <div className="pt-8">
-                  <Button type="submit" className="luxury-button w-full md:w-auto">
-                    Termin anfragen
-                  </Button>
-                </div>
-              </form>
+                
+                <Button 
+                  className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-xl px-16 py-8 font-light tracking-wide transition-all duration-500 hover:scale-105"
+                >
+                  Termin vereinbaren
+                </Button>
+              </div>
             </div>
-
+            
             {/* Contact Info */}
-            <div className="lg:col-span-4">
+            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="aspect-[4/3] image-placeholder rounded-sm mb-16">
+                <div className="text-center h-full flex flex-col justify-center">
+                  <div className="text-luxury-text/30 text-2xl font-light mb-4">Showroom Mainz</div>
+                  <div className="text-luxury-text/20 text-lg">Ausstellungsbereich</div>
+                </div>
+              </div>
+              
               <div className="space-y-12">
                 <div>
-                  <h3 className="text-2xl font-light text-luxury-white mb-6">Kontakt</h3>
-                  <div className="space-y-4 text-luxury-text/80">
-                    <p className="text-xl font-light">
-                      <strong className="text-luxury-white">Axel Fröhlich GmbH</strong><br />
-                      Rheinallee 120<br />
-                      55120 Mainz
-                    </p>
-                    <p className="text-xl font-light">
-                      Telefon: +49 6131 945990
-                    </p>
+                  <h3 className="text-2xl lg:text-3xl font-light text-luxury-gold mb-6">Kontakt</h3>
+                  <div className="space-y-4 text-lg lg:text-xl text-luxury-text/80 font-light">
+                    <p>Axel Fröhlich<br />Badplanung & Design</p>
+                    <p>Showroom Mainz<br />Musterstraße 123<br />55116 Mainz</p>
+                    <p>Tel: +49 (0) 6131 123456<br />Mail: info@axel-froehlich.de</p>
                   </div>
                 </div>
-
+                
                 <div>
-                  <h3 className="text-2xl font-light text-luxury-white mb-6">Öffnungszeiten</h3>
-                  <div className="space-y-2 text-luxury-text/80 text-xl font-light">
-                    <p>Di–Fr: 10–18 Uhr</p>
-                    <p>Sa: 10–14 Uhr</p>
-                    <p>Mo: geschlossen</p>
+                  <h3 className="text-2xl lg:text-3xl font-light text-luxury-gold mb-6">Öffnungszeiten</h3>
+                  <div className="space-y-2 text-lg lg:text-xl text-luxury-text/80 font-light">
+                    <p>Montag - Freitag: 10:00 - 18:00 Uhr</p>
+                    <p>Samstag: 10:00 - 16:00 Uhr</p>
+                    <p className="text-luxury-text/50 italic">Termine auch außerhalb der Öffnungszeiten möglich</p>
                   </div>
-                </div>
-
-                <div>
-                  <a 
-                    href="https://maps.google.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-luxury-gold hover:text-luxury-white transition-colors duration-500 text-xl font-light"
-                  >
-                    Route planen →
-                  </a>
                 </div>
               </div>
             </div>
