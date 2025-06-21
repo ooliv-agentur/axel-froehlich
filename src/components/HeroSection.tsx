@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 export const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with luxury gradient and placeholder for hero image */}
+      {/* Large Hero Background Image */}
       <div className="absolute inset-0">
         <div className="w-full h-full image-placeholder">
           <div className="text-center">
@@ -19,20 +19,20 @@ export const HeroSection = () => {
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-8 text-center text-luxury-white">
-        <div className="max-w-7xl mx-auto animate-fade-in">
-          <h1 className="hero-text mb-16 leading-tight">
+        <div className="max-w-8xl mx-auto animate-fade-in">
+          <h1 className="text-7xl lg:text-9xl xl:text-[12rem] font-thin mb-20 leading-[0.85] tracking-tight">
             Ihr Bad.{' '}
             <span className="block">Ihre Vision.</span>
-            <span className="gold-accent block">Unsere Planung.</span>
+            <span className="gold-accent block font-light">Unsere Planung.</span>
           </h1>
           
-          <p className="editorial-text mb-20 text-luxury-text/90 font-light leading-relaxed max-w-4xl mx-auto">
+          <p className="text-2xl lg:text-3xl xl:text-4xl mb-24 text-luxury-text/90 font-light leading-relaxed max-w-5xl mx-auto">
             Exklusive 3D-Planung mit Ausstellung in Mainz
           </p>
           
           <Button 
             size="lg"
-            className="luxury-button text-xl px-20 py-8 animate-slide-in"
+            className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-xl px-24 py-10 font-light tracking-wide transition-all duration-500 hover:scale-105"
             onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Beratungstermin vereinbaren

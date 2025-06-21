@@ -14,26 +14,46 @@ export const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-luxury-black">
-      <div className="container mx-auto px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16">
+    <section className="py-40 lg:py-52 bg-luxury-gray relative">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="w-full h-full" style={{
+          backgroundImage: `radial-gradient(circle at 20% 50%, #a68343 2px, transparent 2px), radial-gradient(circle at 80% 50%, #a68343 2px, transparent 2px)`,
+          backgroundSize: '100px 100px'
+        }}></div>
+      </div>
+      
+      <div className="container mx-auto px-8 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-32 lg:mb-40">
+            <div className="w-24 h-1 bg-luxury-gold mx-auto mb-12"></div>
+            <h2 className="text-5xl lg:text-6xl xl:text-7xl font-thin text-luxury-white mb-16 tracking-tight">
+              Was unsere Kunden <span className="gold-accent font-serif italic">erleben</span>
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-20 lg:gap-32">
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index} 
-                className="text-center animate-fade-in"
+                className="text-center animate-fade-in relative"
                 style={{ animationDelay: `${index * 0.3}s` }}
               >
-                <div className="mb-8">
-                  <div className="text-6xl text-luxury-gold mb-6 font-light">"</div>
-                  <p className="text-xl text-luxury-text leading-relaxed italic mb-6">
+                {/* Quote Styling */}
+                <div className="relative">
+                  <div className="text-8xl lg:text-9xl text-luxury-gold/30 mb-8 font-serif leading-none">"</div>
+                  <blockquote className="text-2xl lg:text-3xl xl:text-4xl text-luxury-white leading-relaxed font-light italic mb-12 relative -mt-16">
                     {testimonial.text}
-                  </p>
-                  <div className="text-6xl text-luxury-gold rotate-180 font-light">"</div>
+                  </blockquote>
+                  <div className="text-8xl lg:text-9xl text-luxury-gold/30 rotate-180 font-serif leading-none float-right -mt-8"></div>
                 </div>
-                <p className="font-light text-luxury-text/70 tracking-wide">
-                  – {testimonial.author}
-                </p>
+                
+                <div className="mt-16 pt-8 border-t border-luxury-gold/20">
+                  <cite className="not-italic font-light text-xl lg:text-2xl text-luxury-gold tracking-wide">
+                    — {testimonial.author}
+                  </cite>
+                </div>
               </div>
             ))}
           </div>
