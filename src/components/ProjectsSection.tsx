@@ -26,7 +26,7 @@ export const ProjectsSection = () => {
   ];
 
   return (
-    <section id="referenzen" className="section-spacing bg-luxury-black">
+    <section id="inspiration" className="section-spacing bg-luxury-black">
       <div className="container mx-auto px-8">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
@@ -47,36 +47,34 @@ export const ProjectsSection = () => {
             {projects.map((project, index) => (
               <div 
                 key={index}
-                className="group animate-fade-in"
+                className="group animate-fade-in cursor-pointer"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                {/* Project Image */}
-                <div className="aspect-[5/4] image-placeholder rounded-sm mb-12 relative overflow-hidden">
+                {/* Project Image with Hover Overlay */}
+                <div className="aspect-[5/4] image-placeholder rounded-sm relative overflow-hidden">
                   <div className="text-center">
                     <div className="text-luxury-text/30 text-xl font-light mb-4">{project.title}</div>
                     <div className="text-luxury-text/20 text-lg">Referenz Projekt</div>
                     <div className="text-luxury-text/20 text-lg">Empfehlung: Atmosphärische Badaufnahme</div>
                   </div>
                   
-                  {/* Overlay with project info */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-8 left-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
-                    <p className="text-luxury-gold text-sm font-light mb-2">{project.subtitle}</p>
-                    <p className="text-luxury-white text-lg">{project.description}</p>
+                  {/* Enhanced Overlay with better contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/95 via-luxury-black/60 to-luxury-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Project info with enhanced readability */}
+                  <div className="absolute inset-0 flex flex-col justify-end p-8 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                    <div className="bg-luxury-black/80 backdrop-blur-sm p-6 rounded-sm border border-luxury-gold/20">
+                      <p className="text-luxury-gold text-sm font-light mb-2 uppercase tracking-wide">
+                        {project.subtitle}
+                      </p>
+                      <h3 className="text-2xl lg:text-3xl font-light mb-3 text-white">
+                        {project.title}
+                      </h3>
+                      <p className="text-lg text-white/90 leading-relaxed font-light">
+                        {project.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                
-                {/* Project Details */}
-                <div>
-                  <h3 className="text-3xl lg:text-4xl font-light mb-6 text-luxury-white group-hover:text-luxury-gold transition-colors duration-500">
-                    {project.title}
-                  </h3>
-                  <p className="text-xl lg:text-2xl text-luxury-text/70 font-light mb-4">
-                    {project.subtitle}
-                  </p>
-                  <p className="text-lg text-luxury-text/60 leading-relaxed font-light">
-                    {project.description}
-                  </p>
                 </div>
               </div>
             ))}
