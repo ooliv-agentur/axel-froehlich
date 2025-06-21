@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -27,13 +26,11 @@ export const PlanningSection = () => {
             {/* Large 3D Visualization */}
             <div className="order-2 lg:order-1">
               <div className="aspect-[4/3] image-placeholder rounded-sm relative overflow-hidden">
-                <div className="text-center z-10 relative px-4">
-                  <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-luxury-black/60 backdrop-blur-sm rounded border border-luxury-gold/30 mb-3 sm:mb-4">
-                    <div className="w-2 h-2 bg-luxury-gold rounded-full mr-2 sm:mr-3"></div>
-                    <div className="text-luxury-gold text-xs sm:text-sm font-light tracking-wide">3D-VISUALISIERUNG</div>
+                <div className="absolute top-3 left-3 z-10">
+                  <div className="inline-flex items-center px-2 py-1 bg-luxury-black/80 backdrop-blur-sm rounded border border-luxury-gold/20 opacity-40">
+                    <div className="w-1.5 h-1.5 bg-luxury-gold/60 rounded-full mr-2"></div>
+                    <div className="text-luxury-gold/60 text-xs font-light tracking-wide">3D-VISUALISIERUNG</div>
                   </div>
-                  <div className="text-luxury-text/50 text-sm sm:text-lg">Fotorealistische Darstellung</div>
-                  <div className="text-luxury-text/40 text-xs sm:text-sm mt-1 sm:mt-2">Empfehlung: Beeindruckende 3D-Ansicht</div>
                 </div>
                 {/* Overlay with planning details */}
                 <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/70 to-transparent"></div>

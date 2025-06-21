@@ -55,10 +55,9 @@ export const ProcessSection = () => {
                   
                   {/* Image Placeholder */}
                   <div className="lg:col-span-4">
-                    <div className="aspect-[4/3] image-placeholder rounded-sm">
-                      <div className="text-center px-4">
-                        <div className="text-luxury-gold text-xs font-light mb-2 tracking-wide">BILDFLÄCHE</div>
-                        <div className="text-luxury-text/50 text-sm">Schritt {step.number} Aufnahme</div>
+                    <div className="aspect-[4/3] image-placeholder rounded-sm relative">
+                      <div className="absolute bottom-3 right-3">
+                        <div className="text-luxury-gold/40 text-xs font-light">Schritt {step.number}</div>
                       </div>
                     </div>
                   </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const ProjectsSection = () => {
@@ -52,10 +51,8 @@ export const ProjectsSection = () => {
               >
                 {/* Project Image with Hover Overlay */}
                 <div className="aspect-[5/4] image-placeholder rounded-sm relative overflow-hidden mb-6 sm:mb-8">
-                  <div className="text-center px-4">
-                    <div className="text-luxury-gold text-xs font-light mb-2 tracking-wide">BILDFLÄCHE</div>
-                    <div className="text-luxury-text/50 text-sm sm:text-lg">{project.title}</div>
-                    <div className="text-luxury-text/40 text-xs sm:text-sm mt-1 sm:mt-2">Empfehlung: Atmosphärische Badaufnahme</div>
+                  <div className="absolute bottom-3 right-3">
+                    <div className="text-luxury-gold/30 text-xs font-light">{project.title}</div>
                   </div>
                   
                   {/* Enhanced Overlay with better contrast */}

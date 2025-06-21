@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -13,17 +12,17 @@ export const ContactSection = () => {
         }}></div>
       </div>
       
-      <div className="container mx-auto px-4 relative z-10 max-w-full">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Contact Content */}
             <div className="text-center lg:text-left order-2 lg:order-1">
-              <div className="w-16 h-1 bg-luxury-gold mb-8 mx-auto lg:mx-0"></div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin mb-8 lg:mb-12 text-luxury-white tracking-tight leading-tight">
+              <div className="w-16 h-1 bg-luxury-gold mb-6 lg:mb-8 mx-auto lg:mx-0"></div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-thin mb-6 lg:mb-8 text-luxury-white tracking-tight leading-tight">
                 Ihr Projekt <span className="gold-accent font-serif italic block sm:inline">beginnt hier</span>
               </h2>
               
-              <div className="space-y-6 lg:space-y-8 text-luxury-text/80 mb-8 lg:mb-12">
+              <div className="space-y-4 lg:space-y-6 text-luxury-text/80 mb-6 lg:mb-8">
                 <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed font-light">
                   Lassen Sie uns über Ihre Vorstellungen sprechen – 
                   in einem unverbindlichen Beratungsgespräch.
@@ -37,7 +36,7 @@ export const ContactSection = () => {
               
               <Button 
                 size="lg"
-                className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-8 font-light tracking-wide mb-8 lg:mb-12 w-full sm:w-auto"
+                className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 font-light tracking-wide mb-6 lg:mb-8 w-full sm:w-auto"
               >
                 Beratungstermin vereinbaren
               </Button>
@@ -65,10 +64,8 @@ export const ContactSection = () => {
             {/* Contact Image */}
             <div className="order-1 lg:order-2">
               <div className="aspect-[4/5] image-placeholder rounded-sm relative overflow-hidden mx-auto max-w-sm lg:max-w-none">
-                <div className="text-center px-4 flex flex-col justify-center h-full">
-                  <div className="text-luxury-gold text-xs font-light mb-2 tracking-wide">BILDFLÄCHE</div>
-                  <div className="text-luxury-text/50 text-sm">Axel Fröhlich Portrait</div>
-                  <div className="text-luxury-text/40 text-xs mt-1">oder Showroom Atmosphäre</div>
+                <div className="absolute top-3 left-3">
+                  <div className="text-luxury-gold/30 text-xs font-light">Portrait / Showroom</div>
                 </div>
                 
                 {/* Overlay with contact prompt */}
