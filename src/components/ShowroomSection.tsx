@@ -7,12 +7,6 @@ export const ShowroomSection = () => {
       {/* Large Showroom Image */}
       <div className="absolute inset-0">
         <div className="w-full h-full image-placeholder">
-          <div className="absolute bottom-2 right-2 z-10">
-            <div className="inline-flex items-center px-2 py-1 bg-luxury-black/60 backdrop-blur-sm rounded border border-luxury-gold/10 opacity-30">
-              <div className="w-1 h-1 bg-luxury-gold/40 rounded-full mr-1.5"></div>
-              <div className="text-luxury-gold/40 text-xs font-light tracking-wide">SHOWROOM</div>
-            </div>
-          </div>
         </div>
         <div className="absolute inset-0 luxury-gradient"></div>
       </div>
@@ -42,10 +36,19 @@ export const ShowroomSection = () => {
               
               <div className="mt-16 sm:mt-20 pt-8 sm:pt-10 border-t border-luxury-gold/20">
                 <p className="text-lg sm:text-xl font-light text-luxury-gold mb-4 sm:mb-5">Showroom-Besuch</p>
-                <p className="text-luxury-text/70 text-base sm:text-lg">
-                  Musterstraße 123, 55116 Mainz<br/>
-                  Termine nach Vereinbarung
-                </p>
+                <div className="text-luxury-text/70 text-base sm:text-lg space-y-2">
+                  <p>Axel Fröhlich GmbH<br/>Rheinallee 120, 55120 Mainz</p>
+                  <p className="mt-3">
+                    Öffnungszeiten:<br/>
+                    Di–Fr: 10–18 Uhr<br/>
+                    Sa: 10–14 Uhr<br/>
+                    Mo: geschlossen
+                  </p>
+                  <p className="mt-3">
+                    Tel: +49 6131 945990<br/>
+                    Mail: info@axel-froehlich.de
+                  </p>
+                </div>
               </div>
             </div>
             
@@ -53,27 +56,15 @@ export const ShowroomSection = () => {
             <div className="grid grid-cols-2 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 mt-8 lg:mt-0">
               <div className="space-y-6 sm:space-y-8 lg:space-y-10 xl:space-y-12">
                 <div className="aspect-[3/4] image-placeholder rounded-sm">
-                  <div className="text-center px-2">
-                    <div className="text-luxury-gold/30 text-xs font-light mb-1 tracking-wide opacity-60">Detail</div>
-                  </div>
                 </div>
                 <div className="aspect-[4/3] image-placeholder rounded-sm">
-                  <div className="text-center px-2">
-                    <div className="text-luxury-gold/30 text-xs font-light mb-1 tracking-wide opacity-60">Atmosphäre</div>
-                  </div>
                 </div>
               </div>
               
               <div className="space-y-6 sm:space-y-8 lg:space-y-10 xl:space-y-12 mt-8 sm:mt-12 lg:mt-16">
                 <div className="aspect-[4/3] image-placeholder rounded-sm">
-                  <div className="text-center px-2">
-                    <div className="text-luxury-gold/30 text-xs font-light mb-1 tracking-wide opacity-60">Materialien</div>
-                  </div>
                 </div>
                 <div className="aspect-[3/4] image-placeholder rounded-sm">
-                  <div className="text-center px-2">
-                    <div className="text-luxury-gold/30 text-xs font-light mb-1 tracking-wide opacity-60">Inspiration</div>
-                  </div>
                 </div>
               </div>
             </div>

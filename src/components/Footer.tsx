@@ -10,7 +10,7 @@ export const Footer = () => {
             {/* Brand */}
             <div className="text-center sm:text-left">
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light text-luxury-white mb-6 sm:mb-8 tracking-tight">
-                Axel Fröhlich
+                Axel Fröhlich GmbH
               </h3>
               <p className="text-base sm:text-lg lg:text-xl text-luxury-text/70 font-light leading-relaxed mb-6 sm:mb-8">
                 Seit über 30 Jahren realisieren wir besondere Bäder für anspruchsvolle Menschen.
@@ -34,8 +34,14 @@ export const Footer = () => {
             <div className="text-center sm:text-left sm:col-span-2 lg:col-span-1">
               <h4 className="text-lg sm:text-xl lg:text-2xl font-light text-luxury-gold mb-6 sm:mb-8">Kontakt</h4>
               <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-luxury-text/70 font-light">
-                <p>Showroom Mainz<br />Musterstraße 123<br />55116 Mainz</p>
-                <p>Tel: +49 (0) 6131 123456<br />Mail: info@axel-froehlich.de</p>
+                <p>Showroom Mainz<br />Rheinallee 120<br />55120 Mainz</p>
+                <p>Tel: +49 6131 945990<br />Mail: info@axel-froehlich.de</p>
+                <p className="text-sm sm:text-base">
+                  Öffnungszeiten:<br />
+                  Di–Fr: 10–18 Uhr<br />
+                  Sa: 10–14 Uhr<br />
+                  Mo: geschlossen
+                </p>
               </div>
             </div>
           </div>
@@ -44,7 +50,7 @@ export const Footer = () => {
           <div className="pt-12 sm:pt-16 border-t border-luxury-gray/10">
             <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0 text-center lg:text-left">
               <div className="text-luxury-text/50 font-light text-sm sm:text-base">
-                © 2024 Axel Fröhlich. Alle Rechte vorbehalten.
+                © 2024 Axel Fröhlich GmbH. Alle Rechte vorbehalten.
               </div>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 lg:space-x-12 text-luxury-text/50 font-light text-sm sm:text-base">

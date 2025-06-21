@@ -45,18 +45,27 @@ export const ContactSection = () => {
               {/* Contact Details */}
               <div className="space-y-6 pt-6 border-t border-luxury-gold/20">
                 <div className="text-center lg:text-left">
-                  <p className="text-lg font-light text-luxury-gold mb-2">Showroom Mainz</p>
+                  <p className="text-lg font-light text-luxury-gold mb-2">Axel Fröhlich GmbH</p>
                   <p className="text-luxury-text/70 text-base leading-relaxed">
-                    Musterstraße 123<br/>
-                    55116 Mainz
+                    Rheinallee 120<br/>
+                    55120 Mainz
                   </p>
                 </div>
                 
                 <div className="text-center lg:text-left">
                   <p className="text-lg font-light text-luxury-gold mb-2">Kontakt</p>
                   <p className="text-luxury-text/70 text-base leading-relaxed break-all sm:break-normal">
-                    Tel: +49 (0) 6131 123456<br/>
+                    Tel: +49 6131 945990<br/>
                     Mail: info@axel-froehlich.de
+                  </p>
+                </div>
+                
+                <div className="text-center lg:text-left">
+                  <p className="text-lg font-light text-luxury-gold mb-2">Öffnungszeiten Showroom</p>
+                  <p className="text-luxury-text/70 text-base leading-relaxed">
+                    Di–Fr: 10–18 Uhr<br/>
+                    Sa: 10–14 Uhr<br/>
+                    Mo: geschlossen
                   </p>
                 </div>
               </div>
@@ -65,10 +74,6 @@ export const ContactSection = () => {
             {/* Contact Image */}
             <div className="order-1 lg:order-2">
               <div className="aspect-[4/5] image-placeholder rounded-sm relative overflow-hidden mx-auto max-w-sm lg:max-w-none">
-                <div className="absolute bottom-2 right-2">
-                  <div className="text-luxury-gold/20 text-xs font-light opacity-60">Portrait</div>
-                </div>
-                
                 {/* Overlay with contact prompt */}
                 <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/70 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-luxury-white">
