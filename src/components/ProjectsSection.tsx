@@ -30,20 +30,20 @@ export const ProjectsSection = () => {
       <div className="container mx-auto px-4 sm:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="mb-16 sm:mb-24 lg:mb-32 xl:mb-40 text-center lg:text-left">
-            <div className="w-16 sm:w-20 h-1 bg-luxury-gold mb-8 sm:mb-12 mx-auto lg:mx-0"></div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-thin mb-12 sm:mb-16 text-luxury-white tracking-tight">
+          <div className="mb-20 sm:mb-28 lg:mb-32 xl:mb-40 text-center lg:text-left">
+            <div className="w-16 sm:w-20 h-1 bg-luxury-gold mb-10 sm:mb-12 mx-auto lg:mx-0"></div>
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-thin mb-16 sm:mb-20 text-luxury-white tracking-tight">
               Realisierte <span className="gold-accent font-serif italic">Projekte</span>
             </h2>
             
-            <p className="text-xl sm:text-2xl lg:text-3xl text-luxury-text/80 leading-relaxed max-w-4xl font-light mx-auto lg:mx-0">
+            <p className="text-2xl sm:text-3xl lg:text-4xl text-luxury-text/80 leading-relaxed max-w-4xl font-light mx-auto lg:mx-0">
               Jedes Projekt erzählt seine eigene Geschichte – von der ersten Idee 
               bis zur vollendeten Umsetzung.
             </p>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 xl:gap-24">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-16 sm:gap-20 lg:gap-24 xl:gap-28">
             {projects.map((project, index) => (
               <div 
                 key={index}
@@ -51,7 +51,7 @@ export const ProjectsSection = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Project Image */}
-                <div className="aspect-[5/4] image-placeholder rounded-sm relative overflow-hidden mb-6 sm:mb-8">
+                <div className="aspect-[5/4] image-placeholder rounded-sm relative overflow-hidden mb-8 sm:mb-10">
                   <div className="absolute bottom-2 right-2">
                     <div className="text-luxury-gold/20 text-xs font-light">{project.title}</div>
                   </div>
@@ -59,13 +59,13 @@ export const ProjectsSection = () => {
                 
                 {/* Project Info */}
                 <div>
-                  <p className="text-luxury-gold text-sm font-light mb-2 uppercase tracking-wide">
+                  <p className="text-luxury-gold text-base sm:text-lg font-light mb-3 sm:mb-4 uppercase tracking-wide">
                     {project.subtitle}
                   </p>
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-light mb-2 sm:mb-3 text-white">
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light mb-4 sm:mb-5 text-white">
                     {project.title}
                   </h3>
-                  <p className="text-base sm:text-lg text-white/90 leading-relaxed font-light">
+                  <p className="text-lg sm:text-xl text-white/90 leading-relaxed font-light">
                     {project.description}
                   </p>
                 </div>
@@ -74,8 +74,8 @@ export const ProjectsSection = () => {
           </div>
           
           {/* Call to Action */}
-          <div className="text-center mt-16 sm:mt-24 lg:mt-32 xl:mt-40">
-            <p className="text-lg sm:text-xl lg:text-2xl text-luxury-text/50 font-light italic max-w-3xl mx-auto leading-relaxed px-4">
+          <div className="text-center mt-20 sm:mt-28 lg:mt-32 xl:mt-40">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-luxury-text/50 font-light italic max-w-3xl mx-auto leading-relaxed px-4">
               Möchten Sie mehr über unsere realisierten Projekte erfahren? 
               Wir zeigen Ihnen gerne weitere Referenzen in einem persönlichen Gespräch.
             </p>
