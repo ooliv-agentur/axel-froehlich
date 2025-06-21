@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 export const Header = () => {
@@ -11,7 +10,7 @@ export const Header = () => {
   const menuItems = [
     'Beratung & Planung',
     'Ausstellung', 
-    'Referenzen',
+    'Inspiration',
     'Marken',
     'Über uns',
     'Kontakt'
