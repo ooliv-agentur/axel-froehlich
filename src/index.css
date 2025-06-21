@@ -41,14 +41,14 @@
   }
 
   body {
-    @apply bg-luxury-black text-luxury-text font-sans antialiased;
+    @apply bg-luxury-black text-white font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
     letter-spacing: -0.01em;
     line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans font-light tracking-tight;
+    @apply font-sans font-light tracking-tight text-white;
     letter-spacing: -0.025em;
     line-height: 1.1;
   }
@@ -56,7 +56,7 @@
 
 @layer components {
   .luxury-gradient {
-    background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(20, 20, 20, 0.95) 50%, rgba(10, 10, 10, 0.98) 100%);
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.7) 0%, rgba(20, 20, 20, 0.8) 50%, rgba(10, 10, 10, 0.7) 100%);
   }
   
   .gold-accent {
@@ -69,82 +69,18 @@
   }
 
   .section-spacing {
-    @apply py-40 lg:py-52;
-  }
-
-  .editorial-text {
-    @apply text-2xl lg:text-3xl leading-relaxed font-light;
-    letter-spacing: -0.01em;
-    line-height: 1.5;
-  }
-
-  .hero-text {
-    @apply text-7xl lg:text-9xl xl:text-[12rem] font-thin leading-[0.85] tracking-tight;
-    letter-spacing: -0.04em;
-  }
-
-  .section-title {
-    @apply text-6xl lg:text-7xl xl:text-8xl font-thin mb-16 lg:mb-20 text-luxury-white tracking-tight;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+    @apply py-24 lg:py-32;
   }
 
   .image-placeholder {
-    @apply bg-gradient-to-br from-luxury-gray/50 to-luxury-black border border-luxury-gray/30 flex items-center justify-center text-luxury-text/40 font-light min-h-[200px];
+    @apply bg-gradient-to-br from-luxury-gray/30 to-luxury-black/50 border border-luxury-gray/20 flex items-center justify-center text-white/40 font-light min-h-[200px];
     background-size: cover;
     background-position: center;
   }
 
-  /* Enhanced Animations */
-  .animate-fade-in {
-    animation: fadeInUp 1.2s ease-out forwards;
-    opacity: 0;
-    transform: translateY(60px);
-  }
-
-  .animate-slide-in {
-    animation: slideInLeft 0.8s ease-out forwards;
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes slideInLeft {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  /* Typography Enhancements */
-  .font-serif {
-    font-family: 'Playfair Display', serif;
-  }
-
-  /* Smooth Transitions */
-  * {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
   }
 }
 
@@ -170,9 +106,4 @@
 ::selection {
   background: #a68343;
   color: white;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }
