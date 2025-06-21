@@ -30,10 +30,10 @@ export const PlanningSection = () => {
                 <div className="text-center z-10 relative">
                   <div className="inline-flex items-center px-4 py-2 bg-luxury-black/60 backdrop-blur-sm rounded border border-luxury-gold/30 mb-4">
                     <div className="w-2 h-2 bg-luxury-gold rounded-full mr-3"></div>
-                    <div className="text-luxury-gold text-sm font-light tracking-wide">3D-VISUALIZATION</div>
+                    <div className="text-luxury-gold text-sm font-light tracking-wide">3D-VISUALISIERUNG</div>
                   </div>
-                  <div className="text-luxury-text/50 text-lg">Fotorealistisches Rendering</div>
-                  <div className="text-luxury-text/40 text-sm mt-2">Empfehlung: Beeindruckende 3D-Darstellung</div>
+                  <div className="text-luxury-text/50 text-lg">Fotorealistische Darstellung</div>
+                  <div className="text-luxury-text/40 text-sm mt-2">Empfehlung: Beeindruckende 3D-Ansicht</div>
                 </div>
                 {/* Overlay with planning details */}
                 <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/70 to-transparent"></div>

@@ -53,9 +53,9 @@ export const ProjectsSection = () => {
                 {/* Project Image with Hover Overlay */}
                 <div className="aspect-[5/4] image-placeholder rounded-sm relative overflow-hidden">
                   <div className="text-center">
-                    <div className="text-luxury-text/30 text-xl font-light mb-4">{project.title}</div>
-                    <div className="text-luxury-text/20 text-lg">Referenz Projekt</div>
-                    <div className="text-luxury-text/20 text-lg">Empfehlung: Atmosphärische Badaufnahme</div>
+                    <div className="text-luxury-gold text-xs font-light mb-2 tracking-wide">BILDFLÄCHE</div>
+                    <div className="text-luxury-text/50 text-lg">{project.title}</div>
+                    <div className="text-luxury-text/40 text-sm mt-2">Empfehlung: Atmosphärische Badaufnahme</div>
                   </div>
                   
                   {/* Enhanced Overlay with better contrast */}
@@ -63,7 +63,7 @@ export const ProjectsSection = () => {
                   
                   {/* Project info with enhanced readability */}
                   <div className="absolute inset-0 flex flex-col justify-end p-8 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
-                    <div className="bg-luxury-black/80 backdrop-blur-sm p-6 rounded-sm border border-luxury-gold/20">
+                    <div className="bg-luxury-black/90 backdrop-blur-sm p-6 rounded-sm border border-luxury-gold/30">
                       <p className="text-luxury-gold text-sm font-light mb-2 uppercase tracking-wide">
                         {project.subtitle}
                       </p>

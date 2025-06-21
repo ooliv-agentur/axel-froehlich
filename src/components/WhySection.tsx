@@ -34,7 +34,7 @@ export const WhySection = () => {
       {/* Background Image Element */}
       <div className="absolute top-0 right-0 w-1/3 h-full image-placeholder opacity-10">
         <div className="text-center h-full flex items-center justify-center">
-          <div className="text-luxury-text/20 text-lg">Background Texture</div>
+          <div className="text-luxury-text/20 text-lg">Hintergrund-Textur</div>
         </div>
       </div>
       

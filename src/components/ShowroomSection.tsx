@@ -57,7 +57,7 @@ export const ShowroomSection = () => {
                 <div className="aspect-[3/4] image-placeholder rounded-sm">
                   <div className="text-center">
                     <div className="text-luxury-gold text-xs font-light mb-2 tracking-wide">BILDFLÄCHE</div>
-                    <div className="text-luxury-text/50 text-sm">Detail Aufnahme</div>
+                    <div className="text-luxury-text/50 text-sm">Detail-Aufnahme</div>
                   </div>
                 </div>
                 <div className="aspect-[4/3] image-placeholder rounded-sm">

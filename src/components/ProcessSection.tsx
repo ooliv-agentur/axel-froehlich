@@ -58,7 +58,7 @@ export const ProcessSection = () => {
                     <div className="aspect-[4/3] image-placeholder rounded-sm">
                       <div className="text-center">
                         <div className="text-luxury-gold text-xs font-light mb-2 tracking-wide">BILDFLÄCHE</div>
-                        <div className="text-luxury-text/50 text-sm">Step {step.number} Image</div>
+                        <div className="text-luxury-text/50 text-sm">Schritt {step.number} Aufnahme</div>
                       </div>
                     </div>
                   </div>

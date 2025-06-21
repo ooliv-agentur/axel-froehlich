@@ -66,9 +66,9 @@ export const ContactSection = () => {
             <div>
               <div className="aspect-[4/5] image-placeholder rounded-sm relative overflow-hidden">
                 <div className="text-center">
-                  <div className="text-luxury-text/30 text-2xl font-light mb-4">Contact Image</div>
-                  <div className="text-luxury-text/20 text-lg">Axel Fröhlich Portrait</div>
-                  <div className="text-luxury-text/20 text-lg">oder Showroom Atmosphäre</div>
+                  <div className="text-luxury-gold text-xs font-light mb-2 tracking-wide">BILDFLÄCHE</div>
+                  <div className="text-luxury-text/50 text-lg">Axel Fröhlich Portrait</div>
+                  <div className="text-luxury-text/40 text-sm mt-2">oder Showroom Atmosphäre</div>
                 </div>
                 
                 {/* Overlay with contact prompt */}
