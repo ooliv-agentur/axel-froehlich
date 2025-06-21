@@ -3,61 +3,81 @@ import React from 'react';
 
 export const Footer = () => {
   return (
-    <footer className="bg-luxury-black text-luxury-text py-20 border-t border-luxury-gray/30">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12 max-w-6xl mx-auto">
+    <footer className="bg-luxury-black border-t border-luxury-gray/20 py-20">
+      <div className="container mx-auto px-8">
+        <div className="grid md:grid-cols-4 gap-16">
+          {/* Company */}
           <div>
-            <div className="text-2xl font-light mb-6 text-luxury-white">
-              Axel Fröhlich
+            <h3 className="text-2xl font-light text-luxury-white mb-8">Axel Fröhlich</h3>
+            <div className="space-y-4 text-luxury-text/70">
+              <p className="text-lg font-light">
+                Exklusive Badplanung<br />
+                seit über 30 Jahren
+              </p>
             </div>
-            <p className="text-luxury-text/70 leading-relaxed text-sm">
-              Seit über 30 Jahren Ihr Partner für exklusive Badplanung 
-              und internationale Designmarken in Mainz.
-            </p>
           </div>
 
+          {/* Contact */}
           <div>
-            <h3 className="text-lg font-light mb-6 text-luxury-gold">
-              Kontakt
-            </h3>
-            <div className="space-y-3 text-luxury-text/70 text-sm">
+            <h4 className="text-xl font-light text-luxury-white mb-8">Kontakt</h4>
+            <div className="space-y-4 text-luxury-text/70 text-lg font-light">
               <p>
-                <strong className="text-luxury-white">Axel Fröhlich GmbH</strong><br />
                 Rheinallee 120<br />
                 55120 Mainz
               </p>
-              <p>
-                Telefon: +49 6131 945990
-              </p>
+              <p>+49 6131 945990</p>
             </div>
           </div>
 
+          {/* Navigation */}
           <div>
-            <h3 className="text-lg font-light mb-6 text-luxury-gold">
-              Öffnungszeiten
-            </h3>
-            <div className="space-y-2 text-luxury-text/70 text-sm">
-              <p>Di–Fr: 10–18 Uhr</p>
-              <p>Sa: 10–14 Uhr</p>
-              <p>Mo: geschlossen</p>
-            </div>
+            <h4 className="text-xl font-light text-luxury-white mb-8">Navigation</h4>
+            <nav className="space-y-4">
+              {['Beratung & Planung', 'Ausstellung', 'Referenzen', 'Marken'].map((item, index) => (
+                <a 
+                  key={index}
+                  href={`#${item.toLowerCase().replace(' & ', '-').replace(' ', '-')}`}
+                  className="block text-lg font-light text-luxury-text/70 hover:text-luxury-gold transition-colors duration-300"
+                >
+                  {item}
+                </a>
+              ))}
+            </nav>
           </div>
 
+          {/* Legal & Shop */}
           <div>
-            <h3 className="text-lg font-light mb-6 text-luxury-gold">
-              Navigation
-            </h3>
-            <div className="space-y-3 text-luxury-text/70 text-sm">
-              <a href="#home" className="block hover:text-luxury-gold transition-colors">Startseite</a>
-              <a href="#showroom" className="block hover:text-luxury-gold transition-colors">Ausstellung</a>
-              <a href="#planung" className="block hover:text-luxury-gold transition-colors">3D-Planung</a>
-              <a href="#kontakt" className="block hover:text-luxury-gold transition-colors">Kontakt</a>
+            <h4 className="text-xl font-light text-luxury-white mb-8">Rechtliches</h4>
+            <div className="space-y-4">
+              <nav className="space-y-4">
+                {['Impressum', 'Datenschutz'].map((item, index) => (
+                  <a 
+                    key={index}
+                    href={`#${item.toLowerCase()}`}
+                    className="block text-lg font-light text-luxury-text/70 hover:text-luxury-gold transition-colors duration-300"
+                  >
+                    {item}
+                  </a>
+                ))}
+              </nav>
+              
+              <div className="pt-8 border-t border-luxury-gray/20">
+                <a 
+                  href="https://froehlich-bad.de"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg font-light text-luxury-text/70 hover:text-luxury-gold transition-colors duration-300"
+                >
+                  Zum Onlineshop →
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-luxury-gray/30 mt-16 pt-8 text-center">
-          <p className="text-luxury-text/50 text-sm">
+        {/* Copyright */}
+        <div className="border-t border-luxury-gray/20 mt-20 pt-8">
+          <p className="text-center text-lg font-light text-luxury-text/50">
             © 2024 Axel Fröhlich GmbH. Alle Rechte vorbehalten.
           </p>
         </div>

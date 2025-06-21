@@ -43,50 +43,83 @@
   body {
     @apply bg-luxury-black text-luxury-text font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-sans font-light tracking-tight;
+    letter-spacing: -0.025em;
   }
 }
 
 @layer components {
   .luxury-gradient {
-    background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 26, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(20, 20, 20, 0.95) 50%, rgba(10, 10, 10, 0.98) 100%);
   }
   
   .gold-accent {
-    @apply text-luxury-gold;
+    color: #a68343;
   }
   
   .luxury-button {
-    @apply bg-luxury-white hover:bg-luxury-gold transition-all duration-300 text-luxury-black px-8 py-4 text-base font-medium tracking-wide;
+    @apply bg-luxury-white hover:bg-[#a68343] transition-all duration-500 text-luxury-black hover:text-white px-12 py-5 text-lg font-light tracking-wide;
+    letter-spacing: 0.05em;
   }
   
   .luxury-button-outline {
-    @apply border border-luxury-white text-luxury-white hover:bg-luxury-white hover:text-luxury-black transition-all duration-300 px-8 py-4 text-base font-medium tracking-wide;
+    @apply border border-luxury-white text-luxury-white hover:bg-luxury-white hover:text-luxury-black transition-all duration-500 px-12 py-5 text-lg font-light tracking-wide;
+    letter-spacing: 0.05em;
   }
 
   .menu-overlay {
-    backdrop-filter: blur(10px);
-    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    background: rgba(10, 10, 10, 0.98);
+  }
+
+  .section-spacing {
+    @apply py-32 lg:py-40;
+  }
+
+  .editorial-text {
+    @apply text-xl lg:text-2xl leading-relaxed font-light;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-text {
+    @apply text-6xl lg:text-8xl xl:text-9xl font-thin leading-[0.9] tracking-tight;
+    letter-spacing: -0.04em;
+  }
+
+  .section-title {
+    @apply text-5xl lg:text-7xl xl:text-8xl font-thin mb-12 lg:mb-20 text-luxury-white tracking-tight;
+    letter-spacing: -0.03em;
+  }
+
+  .image-placeholder {
+    @apply bg-gradient-to-br from-luxury-gray/50 to-luxury-black border border-luxury-gray/30 flex items-center justify-center text-luxury-text/40 font-light;
   }
 }
 
 /* Custom scrollbar for dark theme */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #0a0a0a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
+  background: #a68343;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #b8935a;
+}
+
+/* Selection color */
+::selection {
+  background: #a68343;
+  color: white;
 }

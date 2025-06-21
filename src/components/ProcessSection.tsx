@@ -2,56 +2,67 @@
 import React from 'react';
 
 export const ProcessSection = () => {
-  const values = [
+  const steps = [
     {
-      title: 'Beratungskompetenz',
-      description: 'Persönliche Beratung durch Experten mit über 30 Jahren Erfahrung'
+      number: "01",
+      title: "Inspiration & Beratung im Showroom",
+      description: "Besuchen Sie unsere Ausstellung in Mainz und erleben Sie Materialien, Formen und Stilwelten live – abgestimmt auf Ihre Wünsche."
     },
     {
-      title: 'Designanspruch',
-      description: 'Höchste ästhetische Standards und zeitlose Eleganz'
+      number: "02", 
+      title: "3D-Badplanung durch Experten",
+      description: "Unsere Innenarchitekten entwickeln ein individuelles Raumkonzept – präzise geplant, visuell erlebbar, funktional durchdacht."
     },
     {
-      title: 'Markenvielfalt',
-      description: 'Internationale Designmarken der Luxusklasse'
-    },
-    {
-      title: '3D-Planung',
-      description: 'Fotorealistische Visualisierung Ihres Traumbades'
-    },
-    {
-      title: 'Exklusivität',
-      description: 'Individuelle Lösungen für höchste Ansprüche'
-    },
-    {
-      title: 'Showroom erleben',
-      description: 'Materialien und Design live in der Ausstellung erfahren'
+      number: "03",
+      title: "Umsetzung deutschlandweit", 
+      description: "Wir begleiten Sie bis zur Realisierung – mit unseren Partnern vor Ort oder in Kooperation mit Ihrem Handwerksbetrieb."
     }
   ];
 
   return (
-    <section className="py-32 bg-luxury-gray">
-      <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-thin mb-8 text-luxury-white tracking-tight">
-              Was uns <span className="gold-accent">auszeichnet</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {values.map((value, index) => (
+    <section className="section-spacing bg-luxury-gray">
+      <div className="container mx-auto px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="section-title text-center mb-32">
+            Der Weg zu Ihrem <span className="gold-accent">Traumbad</span>
+          </h2>
+          
+          <div className="space-y-32 lg:space-y-40">
+            {steps.map((step, index) => (
               <div 
                 key={index} 
-                className="text-center group animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="animate-fade-in"
+                style={{ animationDelay: `${index * 0.3}s` }}
               >
-                <h3 className="text-2xl font-light mb-6 text-luxury-white group-hover:text-luxury-gold transition-colors duration-300">
-                  {value.title}
-                </h3>
-                <p className="text-luxury-text/70 leading-relaxed">
-                  {value.description}
-                </p>
+                <div className="grid lg:grid-cols-12 gap-16 lg:gap-20 items-center">
+                  {/* Number */}
+                  <div className="lg:col-span-2">
+                    <div className="text-8xl lg:text-9xl font-thin text-luxury-gold/30 leading-none">
+                      {step.number}
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="lg:col-span-6">
+                    <h3 className="text-3xl lg:text-4xl font-light mb-8 text-luxury-white leading-tight">
+                      {step.title}
+                    </h3>
+                    <p className="editorial-text text-luxury-text/80">
+                      {step.description}
+                    </p>
+                  </div>
+                  
+                  {/* Image Placeholder */}
+                  <div className="lg:col-span-4">
+                    <div className="aspect-[4/3] image-placeholder rounded-sm">
+                      <div className="text-center">
+                        <div className="text-luxury-text/30 text-lg font-light mb-2">Step {step.number}</div>
+                        <div className="text-luxury-text/20 text-sm">Process Image</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

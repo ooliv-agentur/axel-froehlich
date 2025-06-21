@@ -4,56 +4,69 @@ import React from 'react';
 export const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Natursteinbad mit freistehender Wanne',
-      description: 'Zeitlose Eleganz in Naturstein'
+      title: "Natursteinbad mit freistehender Wanne",
+      description: "Zeitlose Eleganz mit natürlichen Materialien"
     },
     {
-      title: 'Monochromes Gäste-WC',
-      description: 'Minimalistisches Design mit Tapetenlösung'
+      title: "Monochromes Gäste-WC mit Tapetenlösung", 
+      description: "Kleine Räume, große Wirkung"
     },
     {
-      title: 'Wellnessbad mit Sauna',
-      description: 'Luxuriöse Entspannung unter der Dachschräge'
+      title: "Wellnessbad mit Sauna & Dusche",
+      description: "Dachschräge optimal genutzt"
     },
     {
-      title: 'Stilvolle Sanierung',
-      description: 'Sichtbeton und Goldakzente in perfekter Harmonie'
+      title: "Stilvolle Sanierung mit Sichtbeton",
+      description: "Moderne Interpretation klassischer Formen"
     }
   ];
 
   return (
-    <section id="projekte" className="py-32 bg-luxury-gray">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-thin mb-8 text-luxury-white tracking-tight">
-            Projekte & <span className="gold-accent">Inspiration</span>
-          </h2>
-          
-          <p className="text-xl text-luxury-text/80 leading-relaxed max-w-4xl mx-auto">
-            Ein Auszug realisierter Kundenprojekte – von zeitlos-elegant bis expressiv-modern
-          </p>
-        </div>
+    <section id="projekte" className="section-spacing bg-luxury-black">
+      <div className="container mx-auto px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-32">
+            <h2 className="section-title">
+              Projekte & <span className="gold-accent">Inspiration</span>
+            </h2>
+            <p className="editorial-text text-luxury-text/80 max-w-4xl mx-auto">
+              Ein Auszug realisierter Kundenprojekte – von zeitlos-elegant bis expressiv-modern
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className="group cursor-pointer animate-fade-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="aspect-[4/3] bg-gradient-to-br from-luxury-black to-luxury-gray rounded-lg overflow-hidden mb-6 group-hover:scale-[1.02] transition-transform duration-500">
-                <div className="w-full h-full bg-gradient-to-br from-luxury-gold/20 to-luxury-black/80 flex items-center justify-center">
-                  <div className="text-center text-luxury-white">
-                    <div className="text-2xl font-light">{project.title}</div>
+          {/* Project Grid */}
+          <div className="grid md:grid-cols-2 gap-16 lg:gap-20 mb-20">
+            {projects.map((project, index) => (
+              <div 
+                key={index} 
+                className="group animate-fade-in"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className="aspect-[4/3] image-placeholder rounded-sm mb-8 group-hover:border-luxury-gold/50 transition-colors duration-500">
+                  <div className="text-center">
+                    <div className="text-luxury-text/30 text-lg font-light mb-2">Projekt {index + 1}</div>
+                    <div className="text-luxury-text/20 text-sm">{project.title}</div>
                   </div>
                 </div>
+                <h3 className="text-2xl lg:text-3xl font-light mb-4 text-luxury-white group-hover:text-luxury-gold transition-colors duration-500">
+                  {project.title}
+                </h3>
+                <p className="text-xl text-luxury-text/70 font-light">
+                  {project.description}
+                </p>
               </div>
-              <h3 className="text-2xl font-light text-luxury-white mb-3 group-hover:text-luxury-gold transition-colors duration-300">
-                {project.title}
-              </h3>
-              <p className="text-luxury-text/70">{project.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <a 
+              href="#projekte" 
+              className="text-xl text-luxury-gold hover:text-luxury-white transition-colors duration-500 font-light tracking-wide"
+            >
+              Weitere Projekte ansehen →
+            </a>
+          </div>
         </div>
       </div>
     </section>

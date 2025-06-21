@@ -18,18 +18,18 @@ export const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-luxury-black/90 backdrop-blur-sm border-b border-luxury-gray">
-        <div className="container mx-auto px-6 py-6">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-luxury-black/95 backdrop-blur-md border-b border-luxury-gray/20">
+        <div className="container mx-auto px-8 py-8">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-light text-luxury-white tracking-wide">
+            <div className="text-3xl font-light text-luxury-white tracking-wide">
               Axel Fröhlich
             </div>
             
             <button 
-              className="p-2 text-luxury-white hover:text-luxury-gold transition-colors"
+              className="p-3 text-luxury-white hover:text-luxury-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <Menu size={24} />
+              <Menu size={28} strokeWidth={1.5} />
             </button>
           </div>
         </div>
@@ -38,22 +38,23 @@ export const Header = () => {
       {/* Fullscreen Menu Overlay */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-[60] menu-overlay animate-menu-fade">
-          <div className="flex items-center justify-center min-h-screen p-6">
+          <div className="flex items-center justify-center min-h-screen p-8">
             <button 
-              className="absolute top-8 right-8 p-2 text-luxury-white hover:text-luxury-gold transition-colors"
+              className="absolute top-10 right-10 p-3 text-luxury-white hover:text-luxury-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
-              <X size={32} />
+              <X size={36} strokeWidth={1.5} />
             </button>
             
             <nav className="text-center">
-              <ul className="space-y-8">
+              <ul className="space-y-12">
                 {menuItems.map((item, index) => (
                   <li key={index} className="animate-slide-in" style={{ animationDelay: `${index * 0.1}s` }}>
                     <a 
                       href={item.href}
-                      className="text-4xl md:text-5xl font-light text-luxury-white hover:text-luxury-gold transition-colors duration-300 block"
+                      className="text-5xl lg:text-6xl xl:text-7xl font-light text-luxury-white hover:text-luxury-gold transition-colors duration-500 block tracking-tight"
                       onClick={() => setIsMenuOpen(false)}
+                      style={{ letterSpacing: '-0.02em' }}
                     >
                       {item.name}
                     </a>
@@ -61,9 +62,9 @@ export const Header = () => {
                 ))}
               </ul>
               
-              <div className="mt-16">
+              <div className="mt-20">
                 <Button 
-                  className="luxury-button text-xl px-12 py-6"
+                  className="luxury-button text-xl px-16 py-7"
                   onClick={() => {
                     setIsMenuOpen(false);
                     document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' });
