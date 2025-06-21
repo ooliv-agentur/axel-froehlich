@@ -13,50 +13,50 @@ export const PlanningSection = () => {
         }}></div>
       </div>
       
-      <div className="container mx-auto px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-32 lg:mb-40">
-            <div className="w-24 h-1 bg-luxury-gold mx-auto mb-12"></div>
-            <h2 className="text-6xl lg:text-7xl xl:text-8xl font-thin mb-16 text-luxury-white tracking-tight">
+          <div className="text-center mb-16 sm:mb-24 lg:mb-32 xl:mb-40">
+            <div className="w-20 sm:w-24 h-1 bg-luxury-gold mx-auto mb-8 sm:mb-12"></div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-thin mb-12 sm:mb-16 text-luxury-white tracking-tight">
               3D-Planung <span className="gold-accent font-serif italic">erleben</span>
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center mb-32">
+          <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 xl:gap-32 items-center mb-16 sm:mb-24 lg:mb-32">
             {/* Large 3D Visualization */}
             <div className="order-2 lg:order-1">
               <div className="aspect-[4/3] image-placeholder rounded-sm relative overflow-hidden">
-                <div className="text-center z-10 relative">
-                  <div className="inline-flex items-center px-4 py-2 bg-luxury-black/60 backdrop-blur-sm rounded border border-luxury-gold/30 mb-4">
-                    <div className="w-2 h-2 bg-luxury-gold rounded-full mr-3"></div>
-                    <div className="text-luxury-gold text-sm font-light tracking-wide">3D-VISUALISIERUNG</div>
+                <div className="text-center z-10 relative px-4">
+                  <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-luxury-black/60 backdrop-blur-sm rounded border border-luxury-gold/30 mb-3 sm:mb-4">
+                    <div className="w-2 h-2 bg-luxury-gold rounded-full mr-2 sm:mr-3"></div>
+                    <div className="text-luxury-gold text-xs sm:text-sm font-light tracking-wide">3D-VISUALISIERUNG</div>
                   </div>
-                  <div className="text-luxury-text/50 text-lg">Fotorealistische Darstellung</div>
-                  <div className="text-luxury-text/40 text-sm mt-2">Empfehlung: Beeindruckende 3D-Ansicht</div>
+                  <div className="text-luxury-text/50 text-sm sm:text-lg">Fotorealistische Darstellung</div>
+                  <div className="text-luxury-text/40 text-xs sm:text-sm mt-1 sm:mt-2">Empfehlung: Beeindruckende 3D-Ansicht</div>
                 </div>
                 {/* Overlay with planning details */}
                 <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/70 to-transparent"></div>
-                <div className="absolute bottom-8 left-8 text-luxury-white">
-                  <p className="text-sm font-light mb-2">Projekt Beispiel</p>
-                  <p className="text-luxury-gold text-lg">Luxusbad Privatresidenz</p>
+                <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 text-luxury-white">
+                  <p className="text-xs sm:text-sm font-light mb-1 sm:mb-2">Projekt Beispiel</p>
+                  <p className="text-luxury-gold text-sm sm:text-base lg:text-lg">Luxusbad Privatresidenz</p>
                 </div>
               </div>
             </div>
             
             {/* Content */}
-            <div className="order-1 lg:order-2">
-              <h3 className="text-4xl lg:text-5xl xl:text-6xl font-light mb-16 text-luxury-white leading-tight">
+            <div className="order-1 lg:order-2 text-center lg:text-left">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-light mb-12 sm:mb-16 text-luxury-white leading-tight">
                 Sehen Sie Ihr Traumbad, bevor es entsteht
               </h3>
               
-              <div className="space-y-12 text-luxury-text/80 mb-16">
-                <p className="text-2xl lg:text-3xl leading-relaxed font-light">
+              <div className="space-y-8 sm:space-y-12 text-luxury-text/80 mb-12 sm:mb-16">
+                <p className="text-xl sm:text-2xl lg:text-3xl leading-relaxed font-light">
                   Mit modernster 3D-Technologie erstellen wir fotorealistische Visualisierungen 
                   Ihres zukünftigen Badezimmers.
                 </p>
                 
-                <p className="text-xl lg:text-2xl leading-relaxed font-light">
+                <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed font-light">
                   Jedes Detail wird sichtbar – von der Lichtführung über Materialstrukturen 
                   bis hin zur perfekten Raumaufteilung.
                 </p>
@@ -64,7 +64,7 @@ export const PlanningSection = () => {
               
               <Button 
                 size="lg"
-                className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-lg px-16 py-8 font-light tracking-wide"
+                className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-base sm:text-lg px-12 sm:px-16 py-6 sm:py-8 font-light tracking-wide"
               >
                 3D-Planung anfragen
               </Button>
@@ -72,7 +72,7 @@ export const PlanningSection = () => {
           </div>
 
           {/* Planning Features Grid */}
-          <div className="grid md:grid-cols-3 gap-16 lg:gap-20">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-16 lg:gap-20">
             {[
               {
                 title: "Detailgenauigkeit",
@@ -92,13 +92,13 @@ export const PlanningSection = () => {
                 className="text-center animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="w-16 h-16 border border-luxury-gold/30 rounded-full mx-auto mb-8 flex items-center justify-center">
+                <div className="w-12 sm:w-16 h-12 sm:h-16 border border-luxury-gold/30 rounded-full mx-auto mb-6 sm:mb-8 flex items-center justify-center">
                   <div className="w-2 h-2 bg-luxury-gold rounded-full"></div>
                 </div>
-                <h4 className="text-xl lg:text-2xl font-light mb-6 text-luxury-white">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-light mb-4 sm:mb-6 text-luxury-white">
                   {feature.title}
                 </h4>
-                <p className="text-lg text-luxury-text/70 leading-relaxed font-light">
+                <p className="text-base sm:text-lg text-luxury-text/70 leading-relaxed font-light">
                   {feature.description}
                 </p>
               </div>

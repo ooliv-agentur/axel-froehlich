@@ -69,14 +69,22 @@
   }
 
   .section-spacing {
-    @apply py-24 lg:py-32;
+    @apply py-16 sm:py-20 lg:py-24 xl:py-32;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin text-luxury-white tracking-tight;
+  }
+
+  .editorial-text {
+    @apply text-base sm:text-lg lg:text-xl font-light leading-relaxed;
   }
 
   .image-placeholder {
-    @apply bg-gradient-to-br from-luxury-gray/40 to-luxury-black/60 border-2 border-luxury-gold/20 flex items-center justify-center text-white/60 font-light min-h-[200px] relative;
+    @apply bg-gradient-to-br from-luxury-gray/40 to-luxury-black/60 border-2 border-luxury-gold/30 flex items-center justify-center text-white/60 font-light min-h-[200px] relative;
     background-size: cover;
     background-position: center;
-    box-shadow: 0 4px 20px rgba(166, 131, 67, 0.1);
+    box-shadow: 0 4px 20px rgba(166, 131, 67, 0.15), 0 0 0 1px rgba(166, 131, 67, 0.1);
   }
 
   .image-placeholder::before {
@@ -84,16 +92,36 @@
     position: absolute;
     inset: 0;
     background-image: 
-      linear-gradient(45deg, transparent 45%, rgba(166, 131, 67, 0.1) 50%, transparent 55%),
-      linear-gradient(-45deg, transparent 45%, rgba(166, 131, 67, 0.1) 50%, transparent 55%);
+      linear-gradient(45deg, transparent 45%, rgba(166, 131, 67, 0.15) 50%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(166, 131, 67, 0.15) 50%, transparent 55%);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
-    opacity: 0.3;
+    opacity: 0.4;
+  }
+
+  .image-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 30%, rgba(166, 131, 67, 0.05) 70%);
+    opacity: 0.6;
   }
 
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Touch improvements for mobile */
+  @media (max-width: 768px) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    .section-spacing {
+      @apply py-12;
+    }
   }
 }
 
@@ -119,4 +147,12 @@
 ::selection {
   background: #a68343;
   color: white;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
