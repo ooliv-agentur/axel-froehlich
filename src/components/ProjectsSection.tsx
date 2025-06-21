@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 export const ProjectsSection = () => {
@@ -46,43 +47,25 @@ export const ProjectsSection = () => {
             {projects.map((project, index) => (
               <div 
                 key={index}
-                className="group animate-fade-in cursor-pointer"
+                className="animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                {/* Project Image with Hover Overlay */}
+                {/* Project Image */}
                 <div className="aspect-[5/4] image-placeholder rounded-sm relative overflow-hidden mb-6 sm:mb-8">
-                  <div className="absolute bottom-3 right-3">
-                    <div className="text-luxury-gold/30 text-xs font-light">{project.title}</div>
-                  </div>
-                  
-                  {/* Enhanced Overlay with better contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/95 via-luxury-black/60 to-luxury-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Project info with enhanced readability */}
-                  <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6 lg:p-8 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
-                    <div className="bg-luxury-black/90 backdrop-blur-sm p-4 sm:p-6 rounded-sm border border-luxury-gold/30">
-                      <p className="text-luxury-gold text-xs sm:text-sm font-light mb-2 uppercase tracking-wide">
-                        {project.subtitle}
-                      </p>
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-light mb-2 sm:mb-3 text-white">
-                        {project.title}
-                      </h3>
-                      <p className="text-base sm:text-lg text-white/90 leading-relaxed font-light">
-                        {project.description}
-                      </p>
-                    </div>
+                  <div className="absolute bottom-2 right-2">
+                    <div className="text-luxury-gold/20 text-xs font-light">{project.title}</div>
                   </div>
                 </div>
                 
-                {/* Project info always visible on mobile */}
-                <div className="sm:hidden">
+                {/* Project Info */}
+                <div>
                   <p className="text-luxury-gold text-sm font-light mb-2 uppercase tracking-wide">
                     {project.subtitle}
                   </p>
-                  <h3 className="text-xl font-light mb-3 text-white">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-light mb-2 sm:mb-3 text-white">
                     {project.title}
                   </h3>
-                  <p className="text-base text-white/90 leading-relaxed font-light">
+                  <p className="text-base sm:text-lg text-white/90 leading-relaxed font-light">
                     {project.description}
                   </p>
                 </div>
