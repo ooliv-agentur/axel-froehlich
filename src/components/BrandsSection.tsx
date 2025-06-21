@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 
 export const BrandsSection = () => {
   const brands = [
@@ -9,40 +8,33 @@ export const BrandsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section id="marken" className="py-32 bg-luxury-black">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-brand-dark">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-thin mb-8 text-luxury-white tracking-tight">
             Unsere <span className="gold-accent">Markenwelt</span>
           </h2>
           
-          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-luxury-text/80 leading-relaxed max-w-4xl mx-auto">
             Wir arbeiten ausschließlich mit international anerkannten Designherstellern, 
             deren Qualität und Formensprache höchsten Ansprüchen gerecht werden.
           </p>
         </div>
 
-        <div className="mb-12">
-          <h3 className="text-xl font-serif font-semibold mb-8 text-center text-brand-dark">
-            Marken unter anderem:
-          </h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {brands.map((brand, index) => (
-              <div key={index} className="text-center p-4 bg-brand-gray rounded-lg hover:bg-brand-gold/10 transition-colors duration-300">
-                <span className="text-gray-700 font-medium">{brand}</span>
+              <div 
+                key={index} 
+                className="text-center p-6 border border-luxury-gray/30 hover:border-luxury-gold/50 transition-all duration-300 group animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <span className="text-luxury-text font-light group-hover:text-luxury-gold transition-colors duration-300">
+                  {brand}
+                </span>
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="text-center">
-          <Button 
-            className="brand-button-outline"
-            onClick={() => window.open('#', '_blank')}
-          >
-            Alle Marken entdecken
-          </Button>
         </div>
       </div>
     </section>

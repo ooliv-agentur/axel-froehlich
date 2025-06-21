@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --background: 10 10% 4%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card: 10 10% 6%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 10 10% 6%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 10 10% 4%;
 
-    --secondary: 0 0% 97%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 10 10% 10%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 97%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 10 10% 10%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 0 0% 97%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 10 10% 12%;
+    --accent-foreground: 0 0% 95%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 10%;
+    --border: 10 10% 15%;
+    --input: 10 10% 15%;
+    --ring: 0 0% 95%;
 
     --radius: 0.5rem;
   }
@@ -41,29 +41,52 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-luxury-black text-luxury-text font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-sans font-light tracking-tight;
   }
 }
 
 @layer components {
-  .hero-gradient {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(26, 26, 26, 0.7) 100%);
+  .luxury-gradient {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 26, 0.9) 100%);
   }
   
   .gold-accent {
-    @apply text-brand-gold;
+    @apply text-luxury-gold;
   }
   
-  .brand-button {
-    @apply bg-brand-dark hover:bg-brand-gold transition-all duration-300 text-white px-8 py-4 text-lg font-medium tracking-wide;
+  .luxury-button {
+    @apply bg-luxury-white hover:bg-luxury-gold transition-all duration-300 text-luxury-black px-8 py-4 text-base font-medium tracking-wide;
   }
   
-  .brand-button-outline {
-    @apply border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white transition-all duration-300 px-8 py-4 text-lg font-medium tracking-wide;
+  .luxury-button-outline {
+    @apply border border-luxury-white text-luxury-white hover:bg-luxury-white hover:text-luxury-black transition-all duration-300 px-8 py-4 text-base font-medium tracking-wide;
   }
+
+  .menu-overlay {
+    backdrop-filter: blur(10px);
+    background: rgba(10, 10, 10, 0.95);
+  }
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

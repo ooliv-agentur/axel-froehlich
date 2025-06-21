@@ -53,11 +53,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Axel Fröhlich Brand Colors
-				'brand-gold': '#B8860B',
-				'brand-gold-light': '#DAA520',
-				'brand-dark': '#1a1a1a',
-				'brand-gray': '#f8f9fa',
+				// New Dark Theme Colors
+				'luxury-black': '#0a0a0a',
+				'luxury-gray': '#1a1a1a',
+				'luxury-gold': '#d4af37',
+				'luxury-white': '#ffffff',
+				'luxury-text': '#f5f5f5',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -65,34 +66,44 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'serif': ['Playfair Display', 'serif'],
-				'sans': ['Inter', 'sans-serif'],
+				'sans': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
 			},
 			keyframes: {
 				'fade-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(20px)'
+						transform: 'translateY(30px)'
 					},
 					'100%': {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
 				},
-				'scale-in': {
+				'slide-in': {
 					'0%': {
-						transform: 'scale(0.95)',
-						opacity: '0'
+						opacity: '0',
+						transform: 'translateX(-30px)'
 					},
 					'100%': {
-						transform: 'scale(1)',
-						opacity: '1'
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'menu-fade': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)'
 					}
 				}
 			},
 			animation: {
-				'fade-in': 'fade-in 0.6s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out'
+				'fade-in': 'fade-in 0.8s ease-out',
+				'slide-in': 'slide-in 0.6s ease-out',
+				'menu-fade': 'menu-fade 0.3s ease-out'
 			}
 		}
 	},

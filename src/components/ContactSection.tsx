@@ -1,9 +1,6 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { toast } from '@/hooks/use-toast';
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -11,31 +8,17 @@ export const ContactSection = () => {
     lastName: '',
     email: '',
     phone: '',
-    concern: 'Badplanung',
-    preferredDate: '',
-    message: ''
+    message: '',
+    preferredDate: ''
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    toast({
-      title: "Terminanfrage gesendet",
-      description: "Wir melden uns zeitnah bei Ihnen zurück.",
-    });
-    // Reset form
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      concern: 'Badplanung',
-      preferredDate: '',
-      message: ''
-    });
+    // Here you would handle the form submission
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -43,122 +26,100 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="kontakt" className="py-24 bg-brand-gray">
+    <section id="kontakt" className="py-32 bg-luxury-gray">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-brand-dark">
-            Unverbindlichen <span className="gold-accent">Termin</span> vereinbaren
-          </h2>
-          
-          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            <strong>Lassen Sie uns gemeinsam Ihr Traumbad planen.</strong><br />
-            Vereinbaren Sie einen persönlichen Beratungstermin im Showroom in Mainz.
-          </p>
-        </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-thin mb-8 text-luxury-white tracking-tight">
+              Lassen Sie uns gemeinsam <span className="gold-accent">Ihr Traumbad planen</span>
+            </h2>
+            
+            <p className="text-xl text-luxury-text/80 leading-relaxed">
+              Vereinbaren Sie einen persönlichen Beratungstermin im Showroom in Mainz.
+            </p>
+          </div>
 
-        <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-sm">
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+          <form onSubmit={handleSubmit} className="space-y-8 animate-fade-in">
+            <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <Label htmlFor="firstName">Vorname *</Label>
-                <Input
+                <input
                   type="text"
-                  id="firstName"
                   name="firstName"
+                  placeholder="Vorname"
                   value={formData.firstName}
                   onChange={handleChange}
+                  className="w-full px-6 py-4 bg-luxury-black/50 border border-luxury-gray/30 rounded-none text-luxury-white placeholder-luxury-text/50 focus:border-luxury-gold focus:outline-none transition-colors duration-300"
                   required
-                  className="mt-2"
                 />
               </div>
               <div>
-                <Label htmlFor="lastName">Nachname *</Label>
-                <Input
+                <input
                   type="text"
-                  id="lastName"
                   name="lastName"
+                  placeholder="Nachname"
                   value={formData.lastName}
                   onChange={handleChange}
+                  className="w-full px-6 py-4 bg-luxury-black/50 border border-luxury-gray/30 rounded-none text-luxury-white placeholder-luxury-text/50 focus:border-luxury-gold focus:outline-none transition-colors duration-300"
                   required
-                  className="mt-2"
                 />
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <Label htmlFor="email">E-Mail *</Label>
-                <Input
+                <input
                   type="email"
-                  id="email"
                   name="email"
+                  placeholder="E-Mail"
                   value={formData.email}
                   onChange={handleChange}
+                  className="w-full px-6 py-4 bg-luxury-black/50 border border-luxury-gray/30 rounded-none text-luxury-white placeholder-luxury-text/50 focus:border-luxury-gold focus:outline-none transition-colors duration-300"
                   required
-                  className="mt-2"
                 />
               </div>
               <div>
-                <Label htmlFor="phone">Telefonnummer</Label>
-                <Input
+                <input
                   type="tel"
-                  id="phone"
                   name="phone"
+                  placeholder="Telefonnummer"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="mt-2"
+                  className="w-full px-6 py-4 bg-luxury-black/50 border border-luxury-gray/30 rounded-none text-luxury-white placeholder-luxury-text/50 focus:border-luxury-gold focus:outline-none transition-colors duration-300"
+                  required
                 />
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <Label htmlFor="concern">Anliegen</Label>
-                <select
-                  id="concern"
-                  name="concern"
-                  value={formData.concern}
-                  onChange={handleChange}
-                  className="mt-2 w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-gold focus:border-transparent"
-                >
-                  <option value="Badplanung">Badplanung</option>
-                  <option value="Ausstellung">Ausstellung</option>
-                  <option value="Sonstiges">Sonstiges</option>
-                </select>
-              </div>
-              <div>
-                <Label htmlFor="preferredDate">Wunschtermin</Label>
-                <Input
-                  type="date"
-                  id="preferredDate"
-                  name="preferredDate"
-                  value={formData.preferredDate}
-                  onChange={handleChange}
-                  className="mt-2"
-                />
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <Label htmlFor="message">Nachricht</Label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
+            <div>
+              <input
+                type="text"
+                name="preferredDate"
+                placeholder="Wunschtermin (Di–Sa, 10–18 Uhr)"
+                value={formData.preferredDate}
                 onChange={handleChange}
-                rows={4}
-                className="mt-2 w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-gold focus:border-transparent resize-none"
-                placeholder="Teilen Sie uns weitere Details zu Ihrem Projekt mit..."
+                className="w-full px-6 py-4 bg-luxury-black/50 border border-luxury-gray/30 rounded-none text-luxury-white placeholder-luxury-text/50 focus:border-luxury-gold focus:outline-none transition-colors duration-300"
               />
             </div>
 
-            <p className="text-sm text-gray-600 mb-6">
-              Öffnungszeiten Ausstellung: Di–Fr: 10–18 Uhr | Sa: 10–14 Uhr | Mo: geschlossen
-            </p>
+            <div>
+              <textarea
+                name="message"
+                placeholder="Ihre Nachricht"
+                rows={6}
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full px-6 py-4 bg-luxury-black/50 border border-luxury-gray/30 rounded-none text-luxury-white placeholder-luxury-text/50 focus:border-luxury-gold focus:outline-none transition-colors duration-300 resize-none"
+              />
+            </div>
 
-            <Button type="submit" className="w-full brand-button">
-              Termin anfragen
-            </Button>
+            <div className="text-center">
+              <Button 
+                type="submit"
+                className="luxury-button text-xl px-16 py-6"
+              >
+                Termin anfragen
+              </Button>
+            </div>
           </form>
         </div>
       </div>

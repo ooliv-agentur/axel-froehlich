@@ -1,70 +1,59 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 
 export const ProjectsSection = () => {
   const projects = [
     {
       title: 'Natursteinbad mit freistehender Wanne',
-      description: 'Luxuriöse Raumgestaltung mit natürlichen Materialien'
+      description: 'Zeitlose Eleganz in Naturstein'
     },
     {
-      title: 'Monochromes Gäste-WC mit Tapetenlösung',
-      description: 'Elegante Wandgestaltung für kleine Räume'
+      title: 'Monochromes Gäste-WC',
+      description: 'Minimalistisches Design mit Tapetenlösung'
     },
     {
-      title: 'Wellnessbad mit Sauna & Dusche',
-      description: 'Optimale Raumnutzung unter der Dachschräge'
+      title: 'Wellnessbad mit Sauna',
+      description: 'Luxuriöse Entspannung unter der Dachschräge'
     },
     {
-      title: 'Stilvolle Sanierung mit Sichtbeton',
-      description: 'Moderner Industrial-Style mit Goldakzenten'
+      title: 'Stilvolle Sanierung',
+      description: 'Sichtbeton und Goldakzente in perfekter Harmonie'
     }
   ];
 
   return (
-    <section id="projekte" className="py-24 bg-brand-gray">
+    <section id="projekte" className="py-32 bg-luxury-gray">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-brand-dark">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-thin mb-8 text-luxury-white tracking-tight">
             Projekte & <span className="gold-accent">Inspiration</span>
           </h2>
           
-          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            Ein Auszug realisierter Kundenprojekte – von zeitlos-elegant bis expressiv-modern:
+          <p className="text-xl text-luxury-text/80 leading-relaxed max-w-4xl mx-auto">
+            Ein Auszug realisierter Kundenprojekte – von zeitlos-elegant bis expressiv-modern
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300">
-                <div className="w-full h-full bg-gradient-to-br from-brand-dark/20 to-brand-gold/20 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="w-12 h-12 border border-white/50 rounded mx-auto mb-2"></div>
-                    <p className="text-sm opacity-75">Projekt {index + 1}</p>
+            <div 
+              key={index} 
+              className="group cursor-pointer animate-fade-in"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
+              <div className="aspect-[4/3] bg-gradient-to-br from-luxury-black to-luxury-gray rounded-lg overflow-hidden mb-6 group-hover:scale-[1.02] transition-transform duration-500">
+                <div className="w-full h-full bg-gradient-to-br from-luxury-gold/20 to-luxury-black/80 flex items-center justify-center">
+                  <div className="text-center text-luxury-white">
+                    <div className="text-2xl font-light">{project.title}</div>
                   </div>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-serif font-semibold mb-2 text-brand-dark">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  {project.description}
-                </p>
-              </div>
+              <h3 className="text-2xl font-light text-luxury-white mb-3 group-hover:text-luxury-gold transition-colors duration-300">
+                {project.title}
+              </h3>
+              <p className="text-luxury-text/70">{project.description}</p>
             </div>
           ))}
-        </div>
-
-        <div className="text-center">
-          <Button 
-            className="brand-button-outline"
-            onClick={() => window.open('#', '_blank')}
-          >
-            Weitere Projekte ansehen
-          </Button>
         </div>
       </div>
     </section>
