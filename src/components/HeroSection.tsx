@@ -8,10 +8,13 @@ export const HeroSection = () => {
       {/* Large Hero Background Image */}
       <div className="absolute inset-0">
         <div className="w-full h-full image-placeholder">
-          <div className="text-center">
-            <div className="text-luxury-text/30 text-2xl font-light mb-4">Hero Image Placeholder</div>
-            <div className="text-luxury-text/20 text-lg">Luxuriöses Badezimmer / Showroom</div>
-            <div className="text-luxury-text/20 text-lg">Empfehlung: Dunkle, atmosphärische Aufnahme</div>
+          <div className="text-center z-10 relative">
+            <div className="inline-flex items-center px-4 py-2 bg-luxury-black/60 backdrop-blur-sm rounded border border-luxury-gold/30 mb-4">
+              <div className="w-2 h-2 bg-luxury-gold rounded-full mr-3"></div>
+              <div className="text-luxury-gold text-sm font-light tracking-wide">HERO BILDFLÄCHE</div>
+            </div>
+            <div className="text-luxury-text/50 text-lg">Luxuriöses Badezimmer / Showroom</div>
+            <div className="text-luxury-text/40 text-sm mt-2">Empfehlung: Dunkle, atmosphärische Aufnahme</div>
           </div>
         </div>
         <div className="absolute inset-0 bg-luxury-black/40"></div>

@@ -7,10 +7,13 @@ export const ShowroomSection = () => {
       {/* Large Showroom Image */}
       <div className="absolute inset-0">
         <div className="w-full h-full image-placeholder">
-          <div className="text-center">
-            <div className="text-luxury-text/30 text-2xl font-light mb-4">Showroom Main Image</div>
-            <div className="text-luxury-text/20 text-lg">500m² Ausstellung Mainz</div>
-            <div className="text-luxury-text/20 text-lg">Empfehlung: Atmosphärische Showroom-Aufnahme</div>
+          <div className="text-center z-10 relative">
+            <div className="inline-flex items-center px-4 py-2 bg-luxury-black/60 backdrop-blur-sm rounded border border-luxury-gold/30 mb-4">
+              <div className="w-2 h-2 bg-luxury-gold rounded-full mr-3"></div>
+              <div className="text-luxury-gold text-sm font-light tracking-wide">SHOWROOM HAUPTBILD</div>
+            </div>
+            <div className="text-luxury-text/50 text-lg">500m² Ausstellung Mainz</div>
+            <div className="text-luxury-text/40 text-sm mt-2">Empfehlung: Atmosphärische Showroom-Aufnahme</div>
           </div>
         </div>
         <div className="absolute inset-0 luxury-gradient"></div>
@@ -53,14 +56,14 @@ export const ShowroomSection = () => {
               <div className="space-y-8 lg:space-y-12">
                 <div className="aspect-[3/4] image-placeholder rounded-sm">
                   <div className="text-center">
-                    <div className="text-luxury-text/30 text-lg font-light mb-2">Showroom 1</div>
-                    <div className="text-luxury-text/20 text-sm">Detail Aufnahme</div>
+                    <div className="text-luxury-gold text-xs font-light mb-2 tracking-wide">BILDFLÄCHE</div>
+                    <div className="text-luxury-text/50 text-sm">Detail Aufnahme</div>
                   </div>
                 </div>
                 <div className="aspect-[4/3] image-placeholder rounded-sm">
                   <div className="text-center">
-                    <div className="text-luxury-text/30 text-lg font-light mb-2">Showroom 2</div>
-                    <div className="text-luxury-text/20 text-sm">Atmosphäre</div>
+                    <div className="text-luxury-gold text-xs font-light mb-2 tracking-wide">BILDFLÄCHE</div>
+                    <div className="text-luxury-text/50 text-sm">Atmosphäre</div>
                   </div>
                 </div>
               </div>
@@ -68,14 +71,14 @@ export const ShowroomSection = () => {
               <div className="space-y-8 lg:space-y-12 mt-16">
                 <div className="aspect-[4/3] image-placeholder rounded-sm">
                   <div className="text-center">
-                    <div className="text-luxury-text/30 text-lg font-light mb-2">Showroom 3</div>
-                    <div className="text-luxury-text/20 text-sm">Materialien</div>
+                    <div className="text-luxury-gold text-xs font-light mb-2 tracking-wide">BILDFLÄCHE</div>
+                    <div className="text-luxury-text/50 text-sm">Materialien</div>
                   </div>
                 </div>
                 <div className="aspect-[3/4] image-placeholder rounded-sm">
                   <div className="text-center">
-                    <div className="text-luxury-text/30 text-lg font-light mb-2">Showroom 4</div>
-                    <div className="text-luxury-text/20 text-sm">Inspiration</div>
+                    <div className="text-luxury-gold text-xs font-light mb-2 tracking-wide">BILDFLÄCHE</div>
+                    <div className="text-luxury-text/50 text-sm">Inspiration</div>
                   </div>
                 </div>
               </div>

@@ -73,9 +73,22 @@
   }
 
   .image-placeholder {
-    @apply bg-gradient-to-br from-luxury-gray/30 to-luxury-black/50 border border-luxury-gray/20 flex items-center justify-center text-white/40 font-light min-h-[200px];
+    @apply bg-gradient-to-br from-luxury-gray/40 to-luxury-black/60 border-2 border-luxury-gold/20 flex items-center justify-center text-white/60 font-light min-h-[200px] relative;
     background-size: cover;
     background-position: center;
+    box-shadow: 0 4px 20px rgba(166, 131, 67, 0.1);
+  }
+
+  .image-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(45deg, transparent 45%, rgba(166, 131, 67, 0.1) 50%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(166, 131, 67, 0.1) 50%, transparent 55%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.3;
   }
 
   /* Smooth scrolling */
