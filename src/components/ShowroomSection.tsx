@@ -1,112 +1,81 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 
 export const ShowroomSection = () => {
-  const features = [
-    'Italienisches Baddesign',
-    'Naturstein-Waschtische', 
-    'Designarmaturen & Accessoires',
-    'Wandverkleidungen & Tapeten',
-    'Premium-Heizkörper'
-  ];
-
   return (
-    <section id="showroom" className="py-40 lg:py-52 bg-luxury-black">
-      <div className="container mx-auto px-8">
-        <div className="max-w-8xl mx-auto">
-          {/* Large Showroom Hero Image */}
-          <div className="mb-32 lg:mb-40">
-            <div className="aspect-[21/9] image-placeholder rounded-sm mb-16">
-              <div className="text-center">
-                <div className="text-luxury-text/30 text-3xl font-light mb-6">Showroom Hauptansicht</div>
-                <div className="text-luxury-text/20 text-xl">500m² Ausstellungsfläche in Mainz</div>
-                <div className="text-luxury-text/20 text-lg">Atmosférische Gesamtaufnahme</div>
-              </div>
-            </div>
+    <section id="ausstellung" className="section-spacing bg-luxury-black relative overflow-hidden">
+      {/* Large Showroom Image */}
+      <div className="absolute inset-0">
+        <div className="w-full h-full image-placeholder">
+          <div className="text-center">
+            <div className="text-luxury-text/30 text-2xl font-light mb-4">Showroom Main Image</div>
+            <div className="text-luxury-text/20 text-lg">500m² Ausstellung Mainz</div>
+            <div className="text-luxury-text/20 text-lg">Empfehlung: Atmosphärische Showroom-Aufnahme</div>
           </div>
-
-          <div className="grid lg:grid-cols-12 gap-24 lg:gap-32 items-start">
+        </div>
+        <div className="absolute inset-0 luxury-gradient"></div>
+      </div>
+      
+      <div className="container mx-auto px-8 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center">
             {/* Content */}
-            <div className="lg:col-span-5 animate-fade-in">
-              <h2 className="text-6xl lg:text-7xl xl:text-8xl font-thin mb-16 text-luxury-white tracking-tight leading-tight">
-                Der Showroom in <span className="gold-accent font-serif italic">Mainz</span>
+            <div>
+              <div className="w-20 h-1 bg-luxury-gold mb-12"></div>
+              <h2 className="text-6xl lg:text-7xl xl:text-8xl font-thin mb-16 text-luxury-white tracking-tight">
+                Showroom <span className="gold-accent font-serif italic">Mainz</span>
               </h2>
               
-              <div className="mb-20">
-                <p className="text-2xl lg:text-3xl text-luxury-text/90 mb-16 leading-relaxed font-light">
-                  Auf 500 m² Ausstellungsfläche und zwei Etagen zeigen wir Ihnen Musterbäder, 
-                  Naturstein, Fliesen und exklusive Badobjekte.
+              <div className="space-y-12 text-luxury-text/80">
+                <p className="text-2xl lg:text-3xl leading-relaxed font-light">
+                  Auf 500m² zeigen wir Ihnen die Welt des exklusiven Baddesigns – 
+                  zum Anfassen, Erleben und Inspirieren lassen.
                 </p>
                 
-                <p className="text-xl lg:text-2xl text-luxury-text/70 mb-16 leading-relaxed font-light italic">
-                  Lassen Sie sich inspirieren – in einem Umfeld, das Qualität und Design spricht.
+                <p className="text-xl lg:text-2xl leading-relaxed font-light">
+                  Jede Ausstellungsecke erzählt eine eigene Geschichte von Qualität, 
+                  Design und handwerklicher Perfektion. Von klassisch-zeitlos bis 
+                  avantgardistisch-modern.
                 </p>
-                
-                <div className="space-y-6 mb-20">
-                  <h3 className="text-2xl lg:text-3xl font-light text-luxury-gold mb-12">
-                    Erleben Sie unsere Ausstellung:
-                  </h3>
-                  {features.map((feature, index) => (
-                    <div 
-                      key={index} 
-                      className="flex items-center space-x-6 animate-slide-in group"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                      <div className="w-3 h-3 bg-luxury-gold rounded-full transition-all duration-300 group-hover:scale-125"></div>
-                      <span className="text-xl lg:text-2xl text-luxury-text/80 font-light group-hover:text-luxury-gold transition-colors duration-300">{feature}</span>
-                    </div>
-                  ))}
-                </div>
               </div>
               
-              <Button 
-                className="bg-transparent border-2 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-luxury-black text-xl px-12 py-6 font-light tracking-wide transition-all duration-500"
-                onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Besuch planen
-              </Button>
+              <div className="mt-16 pt-8 border-t border-luxury-gold/20">
+                <p className="text-lg font-light text-luxury-gold mb-4">Showroom-Besuch</p>
+                <p className="text-luxury-text/70">
+                  Musterstraße 123, 55116 Mainz<br/>
+                  Termine nach Vereinbarung
+                </p>
+              </div>
             </div>
             
             {/* Image Grid */}
-            <div className="lg:col-span-7 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="grid grid-cols-12 gap-6 h-[800px]">
-                {/* Large Featured Image */}
-                <div className="col-span-8 row-span-2">
-                  <div className="h-full image-placeholder rounded-sm">
-                    <div className="text-center h-full flex flex-col justify-center">
-                      <div className="text-luxury-text/30 text-2xl font-light mb-4">Hauptausstellung</div>
-                      <div className="text-luxury-text/20 text-lg">Musterbäder & Designdetails</div>
-                    </div>
+            <div className="grid grid-cols-2 gap-8 lg:gap-12">
+              <div className="space-y-8 lg:space-y-12">
+                <div className="aspect-[3/4] image-placeholder rounded-sm">
+                  <div className="text-center">
+                    <div className="text-luxury-text/30 text-lg font-light mb-2">Showroom 1</div>
+                    <div className="text-luxury-text/20 text-sm">Detail Aufnahme</div>
                   </div>
                 </div>
-                
-                {/* Small Images */}
-                <div className="col-span-4">
-                  <div className="h-full image-placeholder rounded-sm">
-                    <div className="text-center h-full flex flex-col justify-center">
-                      <div className="text-luxury-text/30 text-lg font-light mb-2">Materialien</div>
-                      <div className="text-luxury-text/20 text-sm">Naturstein & Fliesen</div>
-                    </div>
+                <div className="aspect-[4/3] image-placeholder rounded-sm">
+                  <div className="text-center">
+                    <div className="text-luxury-text/30 text-lg font-light mb-2">Showroom 2</div>
+                    <div className="text-luxury-text/20 text-sm">Atmosphäre</div>
                   </div>
                 </div>
-                
-                <div className="col-span-4">
-                  <div className="h-full image-placeholder rounded-sm">
-                    <div className="text-center h-full flex flex-col justify-center">
-                      <div className="text-luxury-text/30 text-lg font-light mb-2">Armaturen</div>
-                      <div className="text-luxury-text/20 text-sm">Design & Funktion</div>
-                    </div>
+              </div>
+              
+              <div className="space-y-8 lg:space-y-12 mt-16">
+                <div className="aspect-[4/3] image-placeholder rounded-sm">
+                  <div className="text-center">
+                    <div className="text-luxury-text/30 text-lg font-light mb-2">Showroom 3</div>
+                    <div className="text-luxury-text/20 text-sm">Materialien</div>
                   </div>
                 </div>
-                
-                {/* Wide Bottom Image */}
-                <div className="col-span-12">
-                  <div className="h-full image-placeholder rounded-sm">
-                    <div className="text-center h-full flex flex-col justify-center">
-                      <div className="text-luxury-text/30 text-xl font-light mb-2">Beratungsbereich</div>
-                      <div className="text-luxury-text/20 text-lg">Persönliche Planungsgespräche</div>
-                    </div>
+                <div className="aspect-[3/4] image-placeholder rounded-sm">
+                  <div className="text-center">
+                    <div className="text-luxury-text/30 text-lg font-light mb-2">Showroom 4</div>
+                    <div className="text-luxury-text/20 text-sm">Inspiration</div>
                   </div>
                 </div>
               </div>

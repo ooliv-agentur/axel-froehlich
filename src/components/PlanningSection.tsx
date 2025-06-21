@@ -1,93 +1,105 @@
 
 import React from 'react';
+import { Button } from '@/components/ui/button';
 
 export const PlanningSection = () => {
-  const advantages = [
-    'Grundriss & 3D-Visualisierung',
-    'Individuelle Beratung durch Experten', 
-    'Optimale Raumnutzung & Materialkombination'
-  ];
-
   return (
-    <section id="planung" className="py-40 lg:py-52 bg-luxury-gray relative overflow-hidden">
-      {/* Decorative Background Element */}
-      <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-luxury-gold/5 to-transparent"></div>
+    <section id="beratung-planung" className="section-spacing bg-luxury-gray relative">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="w-full h-full" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, #a68343 2px, transparent 2px)`,
+          backgroundSize: '80px 80px'
+        }}></div>
+      </div>
       
       <div className="container mx-auto px-8 relative z-10">
-        <div className="max-w-8xl mx-auto">
-          <div className="grid lg:grid-cols-12 gap-24 lg:gap-32 items-center">
-            
-            {/* Large Planning Showcase */}
-            <div className="lg:col-span-7 animate-fade-in">
-              <div className="space-y-8">
-                {/* Main 3D Visualization */}
-                <div className="aspect-[16/10] image-placeholder rounded-sm relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/60 to-transparent"></div>
-                  <div className="text-center h-full flex flex-col justify-center relative z-10">
-                    <div className="text-luxury-text/40 text-3xl font-light mb-6">3D-Planung Showcase</div>
-                    <div className="text-luxury-text/30 text-xl mb-2">Fotorealistische Visualisierung</div>
-                    <div className="text-luxury-text/30 text-lg">Ihr Traumbad wird sichtbar</div>
-                  </div>
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-32 lg:mb-40">
+            <div className="w-24 h-1 bg-luxury-gold mx-auto mb-12"></div>
+            <h2 className="text-6xl lg:text-7xl xl:text-8xl font-thin mb-16 text-luxury-white tracking-tight">
+              3D-Planung <span className="gold-accent font-serif italic">erleben</span>
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center mb-32">
+            {/* Large 3D Visualization */}
+            <div className="order-2 lg:order-1">
+              <div className="aspect-[4/3] image-placeholder rounded-sm relative overflow-hidden">
+                <div className="text-center">
+                  <div className="text-luxury-text/30 text-2xl font-light mb-4">3D-Visualization</div>
+                  <div className="text-luxury-text/20 text-lg">Fotorealistisches Rendering</div>
+                  <div className="text-luxury-text/20 text-lg">Empfehlung: Beeindruckende 3D-Darstellung</div>
                 </div>
-                
-                {/* Before/After or Process Steps */}
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="aspect-[4/3] image-placeholder rounded-sm">
-                    <div className="text-center h-full flex flex-col justify-center">
-                      <div className="text-luxury-text/30 text-lg font-light mb-2">Grundriss</div>
-                      <div className="text-luxury-text/20 text-sm">Raumplanung</div>
-                    </div>
-                  </div>
-                  <div className="aspect-[4/3] image-placeholder rounded-sm">
-                    <div className="text-center h-full flex flex-col justify-center">
-                      <div className="text-luxury-text/30 text-lg font-light mb-2">3D-Ansicht</div>
-                      <div className="text-luxury-text/20 text-sm">Realistische Darstellung</div>
-                    </div>
-                  </div>
+                {/* Overlay with planning details */}
+                <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/70 to-transparent"></div>
+                <div className="absolute bottom-8 left-8 text-luxury-white">
+                  <p className="text-sm font-light mb-2">Projekt Beispiel</p>
+                  <p className="text-luxury-gold text-lg">Luxusbad Privatresidenz</p>
                 </div>
               </div>
             </div>
             
             {/* Content */}
-            <div className="lg:col-span-5 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="mb-12">
-                <div className="w-20 h-1 bg-luxury-gold mb-12"></div>
-                <h2 className="text-5xl lg:text-6xl xl:text-7xl font-thin mb-16 text-luxury-white tracking-tight leading-tight">
-                  3D-Badplanung –{' '}
-                  <span className="gold-accent font-serif italic block mt-4">Ihr Bad wird sichtbar</span>
-                </h2>
+            <div className="order-1 lg:order-2">
+              <h3 className="text-4xl lg:text-5xl xl:text-6xl font-light mb-16 text-luxury-white leading-tight">
+                Sehen Sie Ihr Traumbad, bevor es entsteht
+              </h3>
+              
+              <div className="space-y-12 text-luxury-text/80 mb-16">
+                <p className="text-2xl lg:text-3xl leading-relaxed font-light">
+                  Mit modernster 3D-Technologie erstellen wir fotorealistische Visualisierungen 
+                  Ihres zukünftigen Badezimmers.
+                </p>
+                
+                <p className="text-xl lg:text-2xl leading-relaxed font-light">
+                  Jedes Detail wird sichtbar – von der Lichtführung über Materialstrukturen 
+                  bis hin zur perfekten Raumaufteilung.
+                </p>
               </div>
               
-              <div className="mb-20">
-                <p className="text-2xl lg:text-3xl text-luxury-text/90 mb-16 leading-relaxed font-light">
-                  Mit unserer 3D-Planung erhalten Sie ein nahezu realistisches Bild Ihres zukünftigen Bades.
-                </p>
-                
-                <p className="text-xl lg:text-2xl text-luxury-text/70 mb-16 leading-relaxed font-light">
-                  Ob Gäste-WC, Wellnessbereich oder luxuriöses Familienbad: Wir übersetzen Ihre Ideen in konkrete Raumlösungen.
-                </p>
-                
-                <div className="space-y-8 mb-16">
-                  <h3 className="text-2xl lg:text-3xl font-light text-luxury-gold mb-12">
-                    Ihre Vorteile:
-                  </h3>
-                  {advantages.map((advantage, index) => (
-                    <div 
-                      key={index} 
-                      className="flex items-start space-x-6 animate-slide-in group"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                      <div className="w-3 h-3 bg-luxury-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 group-hover:scale-125"></div>
-                      <span className="text-xl lg:text-2xl text-luxury-text/80 font-light leading-relaxed group-hover:text-luxury-gold transition-colors duration-300">{advantage}</span>
-                    </div>
-                  ))}
+              <Button 
+                size="lg"
+                className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-lg px-16 py-8 font-light tracking-wide"
+              >
+                3D-Planung anfragen
+              </Button>
+            </div>
+          </div>
+
+          {/* Planning Features Grid */}
+          <div className="grid md:grid-cols-3 gap-16 lg:gap-20">
+            {[
+              {
+                title: "Detailgenauigkeit",
+                description: "Millimetergenaue Planung mit allen technischen Spezifikationen"
+              },
+              {
+                title: "Materialvisualisierung", 
+                description: "Originalgetreue Darstellung aller Oberflächen und Texturen"
+              },
+              {
+                title: "Lichtkonzept",
+                description: "Realistische Beleuchtungsszenarien für verschiedene Tageszeiten"
+              }
+            ].map((feature, index) => (
+              <div 
+                key={index}
+                className="text-center animate-fade-in"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className="w-16 h-16 border border-luxury-gold/30 rounded-full mx-auto mb-8 flex items-center justify-center">
+                  <div className="w-2 h-2 bg-luxury-gold rounded-full"></div>
                 </div>
-                
-                <p className="text-lg lg:text-xl text-luxury-text/50 font-light italic">
-                  Die Kosten unserer Planungspakete richten sich nach Größe und Anspruch des Projekts.
+                <h4 className="text-xl lg:text-2xl font-light mb-6 text-luxury-white">
+                  {feature.title}
+                </h4>
+                <p className="text-lg text-luxury-text/70 leading-relaxed font-light">
+                  {feature.description}
                 </p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
