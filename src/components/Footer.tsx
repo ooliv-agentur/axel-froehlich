@@ -52,8 +52,8 @@ export const Footer = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 lg:space-x-12 text-luxury-text/50 font-light text-sm sm:text-base">
-                <a href="#" className="hover:text-luxury-gold transition-colors duration-300">Impressum</a>
-                <a href="#" className="hover:text-luxury-gold transition-colors duration-300">Datenschutz</a>
+                <span>Impressum</span>
+                <span>Datenschutz</span>
                 <a 
                   href="https://froehlich-bad.de" 
                   target="_blank" 
