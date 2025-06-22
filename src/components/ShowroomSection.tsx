@@ -39,14 +39,8 @@ export const ShowroomSection = () => {
                 <div className="text-luxury-text/70 text-base sm:text-lg space-y-2">
                   <p>Axel Fröhlich GmbH<br/>Rheinallee 120, 55120 Mainz</p>
                   <p className="mt-3">
-                    Öffnungszeiten:<br/>
-                    Di–Fr: 10–18 Uhr<br/>
-                    Sa: 10–14 Uhr<br/>
-                    Mo: geschlossen
-                  </p>
-                  <p className="mt-3">
-                    Tel: +49 6131 945990<br/>
-                    Mail: info@axel-froehlich.de
+                    Telefon: +49 6131 945990<br/>
+                    E-Mail: info@axel-froehlich.de
                   </p>
                 </div>
               </div>
