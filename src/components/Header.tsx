@@ -22,9 +22,12 @@ export const Header = () => {
       <header className="fixed top-0 left-0 right-0 z-40 bg-luxury-black/95 backdrop-blur-sm border-b border-luxury-gray/10">
         <div className="container mx-auto px-4 sm:px-8 py-4 sm:py-8">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-light text-luxury-white tracking-tight">
+            <button 
+              onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-xl sm:text-2xl lg:text-3xl font-light text-luxury-white tracking-tight hover:text-luxury-gold transition-colors duration-300"
+            >
               Axel Fröhlich
-            </h1>
+            </button>
             
             <button 
               onClick={toggleMenu}
@@ -44,14 +47,12 @@ export const Header = () => {
           <div className="max-w-2xl">
             <nav className="space-y-4 sm:space-y-6 lg:space-y-8 mb-12 sm:mb-16">
               {menuItems.map((item, index) => (
-                <a
+                <div
                   key={index}
-                  href={`#${item.toLowerCase().replace(' & ', '-').replace(' ', '-')}`}
-                  className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-luxury-white hover:text-luxury-gold transition-colors duration-500 leading-tight py-2"
-                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-luxury-white hover:text-luxury-gold transition-colors duration-500 leading-tight py-2 cursor-pointer"
                 >
                   {item}
-                </a>
+                </div>
               ))}
             </nav>
             
