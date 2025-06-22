@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const TestimonialsSection = () => {
@@ -8,7 +7,7 @@ export const TestimonialsSection = () => {
       author: "Marcel W."
     },
     {
-      text: "Bad Fröhlich hat jetzt das zweite Projekt in unserem Haus verwirklicht – und das dritte ist bereits beauftragt.",
+      text: "Axel Fröhlich hat jetzt das zweite Projekt in unserem Haus verwirklicht – und das dritte ist bereits beauftragt.",
       author: "B. & E. im Taunus"
     }
   ];
