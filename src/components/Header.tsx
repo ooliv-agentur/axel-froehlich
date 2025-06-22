@@ -19,7 +19,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="bg-luxury-black/95 backdrop-blur-sm border-b border-luxury-gray/10">
+      <header className="absolute top-0 left-0 right-0 z-40">
         <div className="container mx-auto px-4 sm:px-8 py-4 sm:py-8">
           <div className="flex justify-between items-center">
             <button 
