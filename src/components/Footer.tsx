@@ -1,13 +1,12 @@
 
 import React from 'react';
-import { Facebook, Instagram, Youtube, Pinterest } from 'lucide-react';
+import { Facebook, Instagram, Youtube } from 'lucide-react';
 
 export const Footer = () => {
   const socialIcons = [
     { icon: Facebook, label: 'Facebook' },
     { icon: Instagram, label: 'Instagram' },
-    { icon: Youtube, label: 'YouTube' },
-    { icon: Pinterest, label: 'Pinterest' }
+    { icon: Youtube, label: 'YouTube' }
   ];
 
   return (
