@@ -6,7 +6,8 @@ export const Footer = () => {
   const socialIcons = [
     { icon: Facebook, label: 'Facebook' },
     { icon: Instagram, label: 'Instagram' },
-    { icon: Youtube, label: 'YouTube' }
+    { icon: Youtube, label: 'YouTube' },
+    { label: 'Pinterest', placeholder: 'P' } // Pinterest as text placeholder since icon not available
   ];
 
   return (
@@ -50,14 +51,20 @@ export const Footer = () => {
               </div>
               
               {/* Social Media Icons */}
-              <div className="flex justify-center sm:justify-start space-x-4 pt-4 border-t border-luxury-gray/10">
-                {socialIcons.map(({ icon: Icon, label }, index) => (
+              <div className="flex justify-center sm:justify-start space-x-6 pt-4 border-t border-luxury-gray/10">
+                {socialIcons.map((item, index) => (
                   <div
                     key={index}
-                    className="w-8 h-8 flex items-center justify-center rounded-full border border-luxury-gold/30 hover:border-luxury-gold hover:bg-luxury-gold/10 transition-colors duration-300 cursor-pointer"
-                    title={label}
+                    className="w-10 h-10 flex items-center justify-center rounded-full border border-luxury-gold/30 hover:border-luxury-gold hover:bg-luxury-gold/10 transition-colors duration-300 cursor-pointer"
+                    title={item.label}
                   >
-                    <Icon size={16} className="text-luxury-gold/70 hover:text-luxury-gold transition-colors duration-300" />
+                    {item.icon ? (
+                      <item.icon size={18} className="text-luxury-gold/70 hover:text-luxury-gold transition-colors duration-300" />
+                    ) : (
+                      <span className="text-luxury-gold/70 hover:text-luxury-gold transition-colors duration-300 font-light text-sm">
+                        {item.placeholder}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>
@@ -66,30 +73,16 @@ export const Footer = () => {
           
           {/* Bottom */}
           <div className="pt-12 sm:pt-16 border-t border-luxury-gray/10">
-            <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0 text-center lg:text-left">
-              <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8 text-luxury-text/50 font-light text-sm sm:text-base">
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-6 lg:space-y-0">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-8 text-luxury-text/50 font-light text-sm sm:text-base">
                 <span>© 2025 Axel Fröhlich GmbH. Alle Rechte vorbehalten.</span>
-                
-                {/* Händlerbund - dezent platziert */}
-                <div className="flex items-center space-x-2 text-xs text-luxury-text/40">
-                  <div className="w-4 h-4 image-placeholder rounded-sm">
-                    <span className="text-[8px]">HB</span>
-                  </div>
-                  <span>Mitglied im Händlerbund</span>
-                </div>
+                <span className="text-xs text-luxury-text/40">Mitglied im Händlerbund</span>
               </div>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 lg:space-x-12 text-luxury-text/50 font-light text-sm sm:text-base">
                 <span>Impressum</span>
                 <span>Datenschutz</span>
-                <a 
-                  href="https://froehlich-bad.de" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-luxury-gold transition-colors duration-300"
-                >
-                  Online-Shop
-                </a>
+                <span>Online-Shop</span>
               </div>
             </div>
           </div>
