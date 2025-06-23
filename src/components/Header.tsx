@@ -69,12 +69,20 @@ export const Header = () => {
             </div>
           </div>
 
-          <button
-            onClick={toggleMenu}
-            className="absolute top-4 sm:top-8 right-4 sm:right-8 text-luxury-white hover:text-luxury-gold transition-colors duration-300 text-base sm:text-lg font-light p-2"
-          >
-            Schließen
-          </button>
+          {/* Schließen Button - exakt gleiche Position wie Menü Button */}
+          <div className="absolute top-0 left-0 right-0">
+            <div className="container mx-auto px-4 sm:px-8 py-4 sm:py-8">
+              <div className="flex justify-between items-center">
+                <div></div> {/* Spacer für gleiche Struktur */}
+                <button
+                  onClick={toggleMenu}
+                  className="text-luxury-white hover:text-luxury-gold transition-colors duration-300 text-base sm:text-lg font-light p-2 -mr-2"
+                >
+                  Schließen
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
