@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,12 +10,12 @@ export const Header = () => {
   };
 
   const menuItems = [
-    'Beratung & Planung',
-    'Ausstellung', 
-    'Inspiration',
-    'Marken',
-    'Über uns',
-    'Kontakt'
+    { label: 'Beratung & Planung', path: '/' },
+    { label: '3D Badplanung', path: '/badplanung' },
+    { label: 'Ausstellung', path: '/ausstellung' }, 
+    { label: 'Inspiration', path: '/inspiration' },
+    { label: 'Luxus Bäder', path: '/luxus-baeder' },
+    { label: 'Kontakt', path: '/kontakt' }
   ];
 
   return (
@@ -22,12 +23,12 @@ export const Header = () => {
       <header className="absolute top-0 left-0 right-0 z-40">
         <div className="container mx-auto px-4 sm:px-8 py-4 sm:py-8">
           <div className="flex justify-between items-center">
-            <button 
-              onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
+            <Link 
+              to="/"
               className="text-xl sm:text-2xl lg:text-3xl font-light text-luxury-white tracking-tight hover:text-luxury-gold transition-colors duration-300"
             >
               Axel Fröhlich
-            </button>
+            </Link>
             
             <button 
               onClick={toggleMenu}
@@ -47,12 +48,14 @@ export const Header = () => {
           <div className="max-w-2xl">
             <nav className="space-y-4 sm:space-y-6 lg:space-y-8 mb-12 sm:mb-16">
               {menuItems.map((item, index) => (
-                <div
+                <Link
                   key={index}
-                  className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-luxury-white hover:text-luxury-gold transition-colors duration-500 leading-tight py-2 cursor-pointer"
+                  to={item.path}
+                  onClick={toggleMenu}
+                  className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-luxury-white hover:text-luxury-gold transition-colors duration-500 leading-tight py-2"
                 >
-                  {item}
-                </div>
+                  {item.label}
+                </Link>
               ))}
             </nav>
             
