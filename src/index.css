@@ -82,9 +82,12 @@
 
   .image-placeholder {
     @apply bg-gradient-to-br from-luxury-gray/40 to-luxury-black/60 border-2 border-luxury-gold/30 flex items-center justify-center text-white/60 font-light min-h-[200px] relative;
-    background-size: cover;
-    background-position: center;
+    background-image: none !important;
+    background-size: cover !important;
+    background-position: center !important;
     box-shadow: 0 4px 20px rgba(166, 131, 67, 0.15), 0 0 0 1px rgba(166, 131, 67, 0.1);
+    /* Force override any cached background images */
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.4) 0%, rgba(10, 10, 10, 0.6) 100%) !important;
   }
 
   .image-placeholder::before {
