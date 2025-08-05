@@ -53,13 +53,13 @@ Von der Sauna aus wird nicht nur der Blick ins Grüne gehalten sondern auch auf 
 In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spitze getrieben. Willkommen in einer Oase der Ruhe und des Wohlbefindens.`,
     floorPlans: [
       {
-        image: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?q=80&w=3011&auto=format&fit=crop',
+        image: '/floorplans/bathroom-blueprint-1.jpg',
         title: 'Hauptgrundriss',
         hotspots: [
           {
             id: 'waschtisch',
-            x: 25,
-            y: 40,
+            x: 15,
+            y: 30,
             title: 'Maßgefertigter Natursteinwaschtisch',
             description: 'Italienischer Naturstein Grigio di Tunisi mit perfekt abgestimmtem Unterschrank',
             details: [
@@ -71,8 +71,8 @@ In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spi
           },
           {
             id: 'badewanne',
-            x: 60,
-            y: 25,
+            x: 75,
+            y: 20,
             title: 'Freistehende Badewanne',
             description: 'Positioniert vor der Fensterfront mit Weinberg-Blick',
             details: [
@@ -84,8 +84,8 @@ In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spi
           },
           {
             id: 'glastrennwand',
-            x: 70,
-            y: 50,
+            x: 60,
+            y: 45,
             title: 'Elegante Glastrennwand',
             description: 'Getöntes Rauchglas zwischen Wanne und Dusche',
             details: [
@@ -97,8 +97,8 @@ In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spi
           },
           {
             id: 'armaturen',
-            x: 65,
-            y: 35,
+            x: 70,
+            y: 25,
             title: 'Fantini Armaturen',
             description: 'Farblich auf das Raumkonzept abgestimmte Armaturen',
             details: [
@@ -110,8 +110,8 @@ In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spi
           },
           {
             id: 'sauna',
-            x: 85,
-            y: 70,
+            x: 25,
+            y: 75,
             title: 'Private Sauna',
             description: 'Mit Blick auf den Petrolofen und ins Grüne',
             details: [
@@ -123,8 +123,8 @@ In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spi
           },
           {
             id: 'petrolofen',
-            x: 75,
-            y: 80,
+            x: 50,
+            y: 85,
             title: 'Petrolofen',
             description: 'Eingebauter Ofen gegenüber der Sauna',
             details: [
@@ -153,13 +153,13 @@ In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spi
     description: '200m² Wellness-Oase mit freistehender Badewanne und Panoramablick. Ein außergewöhnliches Badprojekt im Herzen Münchens, das höchste Ansprüche an Design und Funktionalität erfüllt.',
     floorPlans: [
       {
-        image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?q=80&w=5760&auto=format&fit=crop',
+        image: '/floorplans/bathroom-blueprint-2.jpg',
         title: 'Penthouse Grundriss',
         hotspots: [
           {
             id: 'penthouse-wanne',
-            x: 50,
-            y: 30,
+            x: 65,
+            y: 35,
             title: 'Designer Badewanne',
             description: 'Freistehende Luxuswanne mit Panoramablick',
             details: ['Premium Mineralwerkstoff', 'Panoramablick über München', 'Temperaturstabile Oberfläche']
@@ -183,7 +183,7 @@ In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spi
     description: 'Klassisches Design mit modernen Komfort-Features. Eine harmonische Verbindung von traditioneller Ästhetik und zeitgemäßer Funktionalität.',
     floorPlans: [
       {
-        image: 'https://images.unsplash.com/photo-1473091534298-04dcbce3278c?q=80&w=4896&auto=format&fit=crop',
+        image: '/floorplans/bathroom-blueprint-3.jpg',
         title: 'Villa Grundriss',
         hotspots: []
       }
