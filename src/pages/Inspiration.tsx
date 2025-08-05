@@ -7,9 +7,9 @@ import { projectsData } from '@/data/projects';
 
 const Inspiration = () => {
   const heroSlides = [
-    { image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2000&q=80' },
-    { image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2000&q=80' },
-    { image: 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=2000&q=80' }
+    { image: '' },
+    { image: '' },
+    { image: '' }
   ];
 
   return (

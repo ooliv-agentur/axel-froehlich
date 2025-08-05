@@ -138,7 +138,7 @@ In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spi
       }
     ],
     photos: Array.from({ length: 15 }, (_, i) => ({
-      image: `https://images.unsplash.com/photo-${721322800607 + i}?q=80&w=1920&auto=format&fit=crop`,
+      image: '',
       title: `Masterbad Detail ${i + 1}`,
       alt: `Detailaufnahme des Masterbads ${i + 1}`
     })),
@@ -165,7 +165,7 @@ Die exklusiven Armaturen und passenden Accessoires von Fantini fügen sich nahtl
       }
     ],
     photos: Array.from({ length: 12 }, (_, i) => ({
-      image: `https://images.unsplash.com/photo-${500375592092 + i}?q=80&w=1920&auto=format&fit=crop`,
+      image: '',
       title: `Dunkles Gäste-WC Detail ${i + 1}`,
       alt: `Dunkles Gäste-WC Detail ${i + 1}`
     })),
@@ -192,7 +192,7 @@ Das Designkonzept setzt auf maximale Raumwirkung bei minimaler Gestaltung – ei
       }
     ],
     photos: Array.from({ length: 10 }, (_, i) => ({
-      image: `https://images.unsplash.com/photo-${721322800607 + i + 20}?q=80&w=1920&auto=format&fit=crop`,
+      image: '',
       title: `Minimalbad Detail ${i + 1}`,
       alt: `Warmes Minimalbad Detail ${i + 1}`
     })),
@@ -219,7 +219,7 @@ Ein Bad für Menschen, die nicht nur höchste Qualität suchen, sondern Atmosph�
       }
     ],
     photos: Array.from({ length: 8 }, (_, i) => ({
-      image: `https://images.unsplash.com/photo-${721322800607 + i + 40}?q=80&w=1920&auto=format&fit=crop`,
+      image: '',
       title: `Spa-Bad Detail ${i + 1}`,
       alt: `Spa-Bad in Stein & Bronze Detail ${i + 1}`
     })),
@@ -250,7 +250,7 @@ Dieses Wellness-Refugium im Altbau vereint meisterhaft Funktionalität, Individu
       }
     ],
     photos: Array.from({ length: 6 }, (_, i) => ({
-      image: `https://images.unsplash.com/photo-${721322800607 + i + 60}?q=80&w=1920&auto=format&fit=crop`,
+      image: '',
       title: `Saunaosase Detail ${i + 1}`,
       alt: `Saunaosase unterm Dach Detail ${i + 1}`
     })),
@@ -277,7 +277,7 @@ Dieses Bad ist mehr als funktionaler Raum – es ist ein Ausdruck von Haltung, v
       }
     ],
     photos: Array.from({ length: 14 }, (_, i) => ({
-      image: `https://images.unsplash.com/photo-${721322800607 + i + 80}?q=80&w=1920&auto=format&fit=crop`,
+      image: '',
       title: `Kunstvolles Bad Detail ${i + 1}`,
       alt: `Kunstvolles Bad mit barockem Statement Detail ${i + 1}`
     })),
