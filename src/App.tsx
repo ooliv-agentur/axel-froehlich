@@ -8,6 +8,7 @@ import Ausstellung from "./pages/Ausstellung";
 import Inspiration from "./pages/Inspiration";
 import ProjectDetail from "./pages/ProjectDetail";
 import Marken from "./pages/Marken";
+import BrandDetail from "./pages/BrandDetail";
 import UeberUns from "./pages/UeberUns";
 import Kontakt from "./pages/Kontakt";
 import NotFound from "./pages/NotFound";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/inspiration" element={<Inspiration />} />
           <Route path="/inspiration/:projectSlug" element={<ProjectDetail />} />
           <Route path="/marken" element={<Marken />} />
+          <Route path="/marken/:brandSlug" element={<BrandDetail />} />
           <Route path="/ueber-uns" element={<UeberUns />} />
           <Route path="/kontakt" element={<Kontakt />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
