@@ -53,7 +53,7 @@ Von der Sauna aus wird nicht nur der Blick ins Grüne gehalten sondern auch auf 
 In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spitze getrieben. Willkommen in einer Oase der Ruhe und des Wohlbefindens.`,
     floorPlans: [
       {
-        image: '/floorplans/bathroom-blueprint-1.jpg',
+        image: '',
         title: 'Hauptgrundriss',
         hotspots: [
           {
@@ -159,7 +159,7 @@ Die Gemütlichkeit wird weiter betont durch die geschickte Nutzung von indirekte
 Die exklusiven Armaturen und passenden Accessoires von Fantini fügen sich nahtlos in das Gesamtbild ein. Durch ihre exklusive Beschichtung erhalten sie eine besondere Wirkung, die das Design und die Funktionalität harmonisch vereint. Insgesamt entsteht so ein Raum, der nicht nur ästhetisch ansprechend ist, sondern auch höchsten Komfort und vielseitige Nutzungsmöglichkeiten bietet.`,
     floorPlans: [
       {
-        image: '/floorplans/bathroom-blueprint-2.jpg',
+        image: '',
         title: 'Penthouse Grundriss',
         hotspots: []
       }
@@ -186,7 +186,7 @@ Ein maßgefertigter Waschtisch mit durchgehender Mineralgussfläche sorgt für k
 Das Designkonzept setzt auf maximale Raumwirkung bei minimaler Gestaltung – ein durch und durch modernes Bad, das durch seine stille Eleganz begeistert.`,
     floorPlans: [
       {
-        image: '/floorplans/bathroom-blueprint-3.jpg',
+        image: '',
         title: 'Villa Grundriss',
         hotspots: []
       }
@@ -213,7 +213,7 @@ Jedes Detail ist durchdacht: Die Regendusche verschmilzt mit der Decke, die Bedi
 Ein Bad für Menschen, die nicht nur höchste Qualität suchen, sondern Atmosphäre. Dieses Raumkonzept steht exemplarisch für den Anspruch der Axel Fröhlich GmbH, Bäder in Erlebnisräume zu verwandeln – kompromisslos in Material, Wirkung und Funktion.`,
     floorPlans: [
       {
-        image: '/floorplans/bathroom-blueprint-2.jpg',
+        image: '',
         title: 'Spa-Bad Grundriss',
         hotspots: []
       }
@@ -244,7 +244,7 @@ Die Kombination aus Natursteinoptik-Fliesen und leicht geöltem Holz verleiht de
 Dieses Wellness-Refugium im Altbau vereint meisterhaft Funktionalität, Individualität und ästhetischen in einem Raum der Entspannung.`,
     floorPlans: [
       {
-        image: '/floorplans/bathroom-blueprint-3.jpg',
+        image: '',
         title: 'Saunaosase Grundriss',
         hotspots: []
       }
@@ -271,7 +271,7 @@ Besonderes Detail: eine feine Marmorstatue im Duschbereich, die dem Raum eine fa
 Dieses Bad ist mehr als funktionaler Raum – es ist ein Ausdruck von Haltung, von Wertigkeit und von Mut zum Stil.`,
     floorPlans: [
       {
-        image: '/floorplans/bathroom-blueprint-3.jpg',
+        image: '',
         title: 'Kunstvolles Bad Grundriss',
         hotspots: []
       }
