@@ -36,8 +36,8 @@ export const projectsData: Project[] = [
     id: '1',
     slug: 'masterbad-mit-ofen-und-sauna',
     title: 'Masterbad mit Ofen und Sauna',
-    subtitle: 'Wellness-Oase mit Weinberg-Blick',
-    category: 'Wellness',
+    subtitle: 'Natursteinwaschtisch Fröhlich-Bad.de',
+    category: 'Luxus',
     description: `Tauchen Sie ein in die traumhafte Welt dieser jungen Familie, die sich ihren Lebensmittelpunkt direkt an den idyllischen Weinbergen in der Nähe von Bad Kreuznach geschaffen hat.
 
 Ein besonderes Highlight ist das Masterbad, das bewusst verwinkelt angelegt wurde, um ein Gefühl von Gemütlichkeit und Geborgenheit zu vermitteln. Diese Wellnessoase ist der ideale Ort für eine Auszeit vom hektischen Alltag.
@@ -146,41 +146,44 @@ In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spi
   },
   {
     id: '2',
-    slug: 'penthouse-muenchen',
-    title: 'Penthouse München',
-    subtitle: 'Luxus trifft Minimalismus',
+    slug: 'dunkles-gaeste-wc',
+    title: 'Dunkles Gäste-WC',
+    subtitle: 'Mut und Raffinesse vereint',
     category: 'Luxus',
-    description: '200m² Wellness-Oase mit freistehender Badewanne und Panoramablick. Ein außergewöhnliches Badprojekt im Herzen Münchens, das höchste Ansprüche an Design und Funktionalität erfüllt.',
+    description: `Dieses einzigartig gestaltete Gäste WC überzeugt nicht nur mit Funktionalität, sondern vereint auch Mut und Raffinesse. Das WC wurde mit Bedacht konzipiert und bietet Zugang von zwei Seiten. Das Gästezimmer kann bequem vom Familienwohnzimmer aus erreicht werden, während das eigene Büro die Möglichkeit hat, dieses stilvolle WC auch für geschäftliche Gäste zu nutzen.
+
+Ein zentrales Element dieses Raumes ist das von Antonio Lupi eingebaute und verputzte Waschbecken, das geschickt in die Wand integriert wurde. Um die Wirkung der weißen Innenfläche zu verstärken, wurden die übrigen Wände mit einer tiefen, dunklen Wandfarbe versehen. Diese Dunkelheit wird durch eine raffinierte Tapete an der Rückseite aufgegriffen und verstärkt. Durch das gewählte Motiv und die Papierartige Struktur der Tapete wird trotzdem eine gemütliche Atmosphäre geschaffen.
+
+Die Gemütlichkeit wird weiter betont durch die geschickte Nutzung von indirekten Lichtquellen in dem kleinen Raum. Diese schaffen eine warme und einladende Atmosphäre, die das minimalistische Design aufwertet.
+
+Die exklusiven Armaturen und passenden Accessoires von Fantini fügen sich nahtlos in das Gesamtbild ein. Durch ihre exklusive Beschichtung erhalten sie eine besondere Wirkung, die das Design und die Funktionalität harmonisch vereint. Insgesamt entsteht so ein Raum, der nicht nur ästhetisch ansprechend ist, sondern auch höchsten Komfort und vielseitige Nutzungsmöglichkeiten bietet.`,
     floorPlans: [
       {
         image: '/floorplans/bathroom-blueprint-2.jpg',
         title: 'Penthouse Grundriss',
-        hotspots: [
-          {
-            id: 'penthouse-wanne',
-            x: 65,
-            y: 35,
-            title: 'Designer Badewanne',
-            description: 'Freistehende Luxuswanne mit Panoramablick',
-            details: ['Premium Mineralwerkstoff', 'Panoramablick über München', 'Temperaturstabile Oberfläche']
-          }
-        ]
+        hotspots: []
       }
     ],
     photos: Array.from({ length: 12 }, (_, i) => ({
       image: `https://images.unsplash.com/photo-${500375592092 + i}?q=80&w=1920&auto=format&fit=crop`,
-      title: `Penthouse Detail ${i + 1}`,
-      alt: `Penthouse München Detail ${i + 1}`
+      title: `Dunkles Gäste-WC Detail ${i + 1}`,
+      alt: `Dunkles Gäste-WC Detail ${i + 1}`
     })),
     featured: true
   },
   {
     id: '3',
-    slug: 'villa-frankfurt',
-    title: 'Villa Frankfurt',
-    subtitle: 'Zeitlose Eleganz',
-    category: 'Klassisch',
-    description: 'Klassisches Design mit modernen Komfort-Features. Eine harmonische Verbindung von traditioneller Ästhetik und zeitgemäßer Funktionalität.',
+    slug: 'warmes-minimalbad-kupferakzente',
+    title: 'Warmes Minimalbad mit Kupferakzenten',
+    subtitle: 'Ruhe, Wärme und moderne Zurückhaltung',
+    category: 'Luxus',
+    description: `In einem privaten Wohnprojekt bei Frankfurt am Main entstand ein elegantes Badezimmer, das Ruhe, Wärme und moderne Zurückhaltung vereint. Die Gestaltung folgt einem minimalistischen Designkonzept, das durch gezielte Materialwahl und harmonische Lichtführung überzeugt.
+
+Der dunkle Mosaikstein in der Dusche steht in kontrastreichem Dialog mit den hellen Wand- und Bodenfliesen in Natursteinoptik. Dabei entsteht eine spannungsreiche, aber ausgewogene Atmosphäre, die durch warme Kupferakzente bei Armaturen, Haken und Accessoires unterstrichen wird.
+
+Ein maßgefertigter Waschtisch mit durchgehender Mineralgussfläche sorgt für klare Linien und maximale Funktionalität. Der große runde Spiegel greift die organische Formensprache auf, während zwei filigrane Pendelleuchten eine weiche Lichtstimmung erzeugen – ideal für entspannte Morgen- und Abendroutinen.
+
+Das Designkonzept setzt auf maximale Raumwirkung bei minimaler Gestaltung – ein durch und durch modernes Bad, das durch seine stille Eleganz begeistert.`,
     floorPlans: [
       {
         image: '/floorplans/bathroom-blueprint-3.jpg',
@@ -190,92 +193,93 @@ In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spi
     ],
     photos: Array.from({ length: 10 }, (_, i) => ({
       image: `https://images.unsplash.com/photo-${721322800607 + i + 20}?q=80&w=1920&auto=format&fit=crop`,
-      title: `Villa Detail ${i + 1}`,
-      alt: `Villa Frankfurt Detail ${i + 1}`
+      title: `Minimalbad Detail ${i + 1}`,
+      alt: `Warmes Minimalbad Detail ${i + 1}`
     })),
     featured: false
   },
   {
     id: '4',
-    slug: 'loft-berlin',
-    title: 'Loft Berlin',
-    subtitle: 'Industrial Chic',
-    category: 'Modern',
-    description: 'Industrieller Stil mit hochwertigen Materialien. Ein außergewöhnliches Loft-Projekt, das urbane Ästhetik mit luxuriöser Ausstattung verbindet.',
+    slug: 'spa-bad-stein-bronze',
+    title: 'Spa-Bad in Stein & Bronze',
+    subtitle: 'Eleganz in Schichten',
+    category: 'Luxus',
+    description: `Dieses außergewöhnliche Badezimmerprojekt vereint die Wirkung eines Private Spas mit der architektonischen Präzision einer Galeriewohnung. Das Zentrum bildet eine freistehende Badewanne vor einer eindrucksvoll strukturierten Natursteinwand, die wie ein Kunstwerk inszeniert ist.
+
+In der großzügigen Walk-in-Dusche wird dieselbe Steinfläche zur Bühne für ein minimalistisches Raumkonzept: warme Beige- und Sandtöne kontrastieren mit einem dunklen Deckenelement und filigranen Armaturen in gebürstetem Bronze. Eine maßgefertigte Sitzbank aus Naturmaterialien rundet die klare Linienführung ab.
+
+Jedes Detail ist durchdacht: Die Regendusche verschmilzt mit der Decke, die Bedienelemente treten optisch zurück, und selbst die Nischen und Schubladen des Waschtischs sind formal wie funktional reduziert. Das Lichtkonzept – dezent, indirekt, akzentuierend – verleiht dem Raum Tiefe und Ruhe.
+
+Ein Bad für Menschen, die nicht nur höchste Qualität suchen, sondern Atmosphäre. Dieses Raumkonzept steht exemplarisch für den Anspruch der Axel Fröhlich GmbH, Bäder in Erlebnisräume zu verwandeln – kompromisslos in Material, Wirkung und Funktion.`,
     floorPlans: [
       {
-        image: 'https://images.unsplash.com/photo-1500375592092-4095x5909?q=80&w=3945&auto=format&fit=crop',
-        title: 'Loft Grundriss',
+        image: '/floorplans/bathroom-blueprint-2.jpg',
+        title: 'Spa-Bad Grundriss',
         hotspots: []
       }
     ],
     photos: Array.from({ length: 8 }, (_, i) => ({
       image: `https://images.unsplash.com/photo-${721322800607 + i + 40}?q=80&w=1920&auto=format&fit=crop`,
-      title: `Loft Detail ${i + 1}`,
-      alt: `Loft Berlin Detail ${i + 1}`
+      title: `Spa-Bad Detail ${i + 1}`,
+      alt: `Spa-Bad in Stein & Bronze Detail ${i + 1}`
     })),
     featured: false
   },
   {
     id: '5',
-    slug: 'stadthaus-hamburg',
-    title: 'Stadthaus Hamburg',
-    subtitle: 'Clevere Raumnutzung',
-    category: 'Kompakt',
-    description: 'Maximaler Komfort auf kleinstem Raum. Eine intelligente Lösung für urbanes Wohnen mit durchdachten Details.',
+    slug: 'saunaosase-unterm-dach',
+    title: 'Saunaosase unterm Dach auf Maß',
+    subtitle: 'Meisterwerk der Anpassung',
+    category: 'Luxus',
+    description: `In einem kleinen Dachstuhl in der Umgebung von Mainz wurde eine einzigartige Ruheoase geschaffen, wo jedes Detail individuell geplant und auf Maß angepasst wurde. Hier hat das Team von Axel-Fröhlich GmbH eine Saunalandschaft geschaffen, die perfekt in die architektonischen Gegebenheiten des Dachs integriert ist – ein Meisterwerk der Anpassung.
+
+Das Innere der Sauna bietet nicht nur ausreichend Sitz- und Liegeflächen, sondern auch im angrenzenden Vorraum wurde für Komfort gesorgt. Hier trifft Funktionalität auf Ästhetik.
+
+Ein Blickfang im Wellnesskonzept ist das freistehende Waschbecken von Antonio Lupi, das sich wertvoll in das Gesamtbild einfügt und höchste Qualität repräsentiert.
+
+Das Lichtkonzept des Raums ist ebenso durchdacht wie ansprechend. Die indirekte Beleuchtung schafft eine warme und gemütliche Atmosphäre, perfekt abgestimmt auf die Stimmung des Raumes.
+
+Die Kombination aus Natursteinoptik-Fliesen und leicht geöltem Holz verleiht dem Raum eine natürliche Wärme und eine zeitlose Eleganz. Jeder Zentimeter wurde dabei effektiv genutzt, und durch geschickte Integration von kleinen Nischen und Klappen wurde ein wahres Wunder an Stauraum geschaffen.
+
+Dieses Wellness-Refugium im Altbau vereint meisterhaft Funktionalität, Individualität und ästhetischen in einem Raum der Entspannung.`,
     floorPlans: [
       {
-        image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?q=80&w=5760&auto=format&fit=crop',
-        title: 'Stadthaus Grundriss',
+        image: '/floorplans/bathroom-blueprint-3.jpg',
+        title: 'Saunaosase Grundriss',
         hotspots: []
       }
     ],
     photos: Array.from({ length: 6 }, (_, i) => ({
       image: `https://images.unsplash.com/photo-${721322800607 + i + 60}?q=80&w=1920&auto=format&fit=crop`,
-      title: `Stadthaus Detail ${i + 1}`,
-      alt: `Stadthaus Hamburg Detail ${i + 1}`
+      title: `Saunaosase Detail ${i + 1}`,
+      alt: `Saunaosase unterm Dach Detail ${i + 1}`
     })),
     featured: false
   },
   {
     id: '6',
-    slug: 'residenz-koeln',
-    title: 'Residenz Köln',
-    subtitle: 'Private Spa-Welt',
-    category: 'Wellness',
-    description: 'Wellness-Bereich mit Sauna und Dampfbad. Ein privates Spa-Erlebnis in den eigenen vier Wänden.',
+    slug: 'kunstvolles-bad-barockes-statement',
+    title: 'Kunstvolles Bad mit barockem Statement',
+    subtitle: 'Ausdruck von Haltung und Wertigkeit',
+    category: 'Luxus',
+    description: `In diesem außergewöhnlichen Badprojekt verschmelzen moderne Linienführung und klassische Ornamentik zu einem einzigartigen Raumkonzept. Der Blickfang: eine vollflächige Wandgestaltung im Stil barocker Textiltapeten, umgesetzt in hochauflösend strukturierter Fliese – dramatisch, edel, ikonisch.
+
+Die klassische Ästhetik wird gezielt kontrastiert durch eine minimalistisch gehaltene Einrichtung: ein klar gezeichneter Waschtisch, eingelassene Nischen, eine fugenlos integrierte Bank in der Dusche. Warme Natursteinoberflächen bringen Ruhe in die Komposition und betonen den wohnlichen Charakter.
+
+Besonderes Detail: eine feine Marmorstatue im Duschbereich, die dem Raum eine fast museale Wirkung verleiht – als wäre dieses Badezimmer selbst ein Kunstwerk. Gekrönt wird die Gestaltung durch dezente Bronze-Armaturen, die das Farbspiel aus Grau, Beige und Off-White harmonisch ergänzen.
+
+Dieses Bad ist mehr als funktionaler Raum – es ist ein Ausdruck von Haltung, von Wertigkeit und von Mut zum Stil.`,
     floorPlans: [
       {
-        image: 'https://images.unsplash.com/photo-1473091534298-04dcbce3278c?q=80&w=4896&auto=format&fit=crop',
-        title: 'Residenz Grundriss',
+        image: '/floorplans/bathroom-blueprint-3.jpg',
+        title: 'Kunstvolles Bad Grundriss',
         hotspots: []
       }
     ],
     photos: Array.from({ length: 14 }, (_, i) => ({
       image: `https://images.unsplash.com/photo-${721322800607 + i + 80}?q=80&w=1920&auto=format&fit=crop`,
-      title: `Residenz Detail ${i + 1}`,
-      alt: `Residenz Köln Detail ${i + 1}`
-    })),
-    featured: false
-  },
-  {
-    id: '7',
-    slug: 'apartment-stuttgart',
-    title: 'Apartment Stuttgart',
-    subtitle: 'Puristische Ästhetik',
-    category: 'Modern',
-    description: 'Klare Linien und natürliche Materialien. Ein minimalistisches Badkonzept, das durch seine Reduktion auf das Wesentliche besticht.',
-    floorPlans: [
-      {
-        image: 'https://images.unsplash.com/photo-1500375592092-4095x5909?q=80&w=3945&auto=format&fit=crop',
-        title: 'Apartment Grundriss',
-        hotspots: []
-      }
-    ],
-    photos: Array.from({ length: 9 }, (_, i) => ({
-      image: `https://images.unsplash.com/photo-${721322800607 + i + 100}?q=80&w=1920&auto=format&fit=crop`,
-      title: `Apartment Detail ${i + 1}`,
-      alt: `Apartment Stuttgart Detail ${i + 1}`
+      title: `Kunstvolles Bad Detail ${i + 1}`,
+      alt: `Kunstvolles Bad mit barockem Statement Detail ${i + 1}`
     })),
     featured: false
   }
