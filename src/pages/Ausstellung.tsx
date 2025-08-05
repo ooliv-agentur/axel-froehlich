@@ -66,37 +66,25 @@ const Ausstellung = () => {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-luxury-white mb-16 text-center">
               Unsere Ausstellungsbereiche
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
               {[
                 {
-                  title: "Luxus-Suiten",
-                  description: "Komplette Badezimmer im Premium-Segment mit exklusiven Materialien"
+                  title: "Beratungsarea",
+                  description: "Persönliche Planungsgespräche mit Axel Fröhlich und Team. 3D-Visualisierung und individuelle Beratung für Ihr Traumbad."
                 },
                 {
-                  title: "Moderne Lösungen", 
-                  description: "Zeitgemäße Badgestaltung mit innovativer Technik und klaren Linien"
+                  title: "Show-Bäder", 
+                  description: "Komplette Badinstallationen zum Anfassen und Testen. Von modernen Designlösungen bis zu klassischen Badezimmern."
                 },
                 {
-                  title: "Klassische Eleganz",
-                  description: "Zeitlose Badezimmer mit hochwertigen Materialien und bewährtem Design"
-                },
-                {
-                  title: "Wellness-Bereich",
-                  description: "Spa-Atmosphäre für zu Hause mit Sauna, Dampfbad und Entspannung"
-                },
-                {
-                  title: "Kompakte Bäder",
-                  description: "Intelligente Lösungen für kleine Räume ohne Kompromisse bei der Qualität"
-                },
-                {
-                  title: "Barrierefreie Bäder",
-                  description: "Komfortable und sichere Badlösungen für jede Lebenssituation"
+                  title: "Fliesenwelt",
+                  description: "Große Auswahl verschiedenster Hersteller und Materialien. Naturstein, Keramik, Mosaik von Premium-Marken."
                 }
               ].map((bereich, index) => (
                 <div key={index} className="group">
-                  <div className="aspect-[4/3] image-placeholder bg-luxury-gray/20 mb-4 group-hover:bg-luxury-gray/30 transition-colors duration-300"></div>
-                  <h3 className="text-xl font-light text-luxury-white mb-2">{bereich.title}</h3>
-                  <p className="text-luxury-text">{bereich.description}</p>
+                  <div className="aspect-[4/3] image-placeholder bg-luxury-gray/20 mb-6 group-hover:bg-luxury-gray/30 transition-colors duration-300"></div>
+                  <h3 className="text-2xl font-light text-luxury-white mb-4">{bereich.title}</h3>
+                  <p className="text-luxury-text text-lg leading-relaxed">{bereich.description}</p>
                 </div>
               ))}
             </div>
