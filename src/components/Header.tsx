@@ -11,10 +11,10 @@ export const Header = () => {
 
   const menuItems = [
     { label: 'Beratung & Planung', path: '/' },
-    { label: '3D Badplanung', path: '/badplanung' },
     { label: 'Ausstellung', path: '/ausstellung' }, 
     { label: 'Inspiration', path: '/inspiration' },
-    { label: 'Luxus Bäder', path: '/luxus-baeder' },
+    { label: 'Marken', path: '/marken' },
+    { label: 'Über uns', path: '/ueber-uns' },
     { label: 'Kontakt', path: '/kontakt' }
   ];
 
