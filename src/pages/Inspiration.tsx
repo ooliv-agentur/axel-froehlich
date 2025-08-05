@@ -1,67 +1,18 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import { projectsData } from '@/data/projects';
 
 const Inspiration = () => {
   const [activeFilter, setActiveFilter] = useState('Alle');
   
   const filters = ['Alle', 'Luxus', 'Modern', 'Klassisch', 'Kompakt', 'Wellness'];
   
-  const projects = [
-    {
-      title: "Penthouse München",
-      subtitle: "Luxus trifft Minimalismus", 
-      category: "Luxus",
-      description: "200m² Wellness-Oase mit freistehender Badewanne und Panoramablick"
-    },
-    {
-      title: "Villa Frankfurt",
-      subtitle: "Zeitlose Eleganz",
-      category: "Klassisch", 
-      description: "Klassisches Design mit modernen Komfort-Features"
-    },
-    {
-      title: "Loft Berlin",
-      subtitle: "Industrial Chic",
-      category: "Modern",
-      description: "Industrieller Stil mit hochwertigen Materialien"
-    },
-    {
-      title: "Stadthaus Hamburg", 
-      subtitle: "Clevere Raumnutzung",
-      category: "Kompakt",
-      description: "Maximaler Komfort auf kleinstem Raum"
-    },
-    {
-      title: "Residenz Köln",
-      subtitle: "Private Spa-Welt", 
-      category: "Wellness",
-      description: "Wellness-Bereich mit Sauna und Dampfbad"
-    },
-    {
-      title: "Apartment Stuttgart",
-      subtitle: "Puristische Ästhetik",
-      category: "Modern", 
-      description: "Klare Linien und natürliche Materialien"
-    },
-    {
-      title: "Villa Wiesbaden",
-      subtitle: "Barock meets Modern",
-      category: "Klassisch",
-      description: "Traditionelle Elemente in zeitgemäßer Interpretation"
-    },
-    {
-      title: "Penthouse Düsseldorf", 
-      subtitle: "Gold & Marmor",
-      category: "Luxus",
-      description: "Exklusive Materialien und maßgefertigte Lösungen"
-    }
-  ];
-
   const filteredProjects = activeFilter === 'Alle' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+    ? projectsData 
+    : projectsData.filter(project => project.category === activeFilter);
 
   return (
     <div className="min-h-screen bg-luxury-black">
@@ -109,7 +60,7 @@ const Inspiration = () => {
           <div className="container mx-auto px-4 sm:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
               {filteredProjects.map((project, index) => (
-                <div key={index} className="group cursor-pointer">
+                <Link key={index} to={`/inspiration/${project.slug}`} className="group cursor-pointer block">
                   <div className="relative mb-6">
                     <div className="aspect-[4/3] image-placeholder bg-luxury-gray/20 group-hover:bg-luxury-gray/30 transition-colors duration-300"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -123,10 +74,10 @@ const Inspiration = () => {
                       {project.title}
                     </h3>
                     <p className="text-luxury-text text-sm leading-relaxed">
-                      {project.description}
+                      {project.description.split('\n\n')[0].substring(0, 150)}...
                     </p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
