@@ -2,32 +2,53 @@ import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import { HeroSlider } from '@/components/HeroSlider';
 
 const Ausstellung = () => {
   return (
     <div className="min-h-screen bg-luxury-black">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-luxury-black/60 via-luxury-black/40 to-luxury-black/80 z-10"></div>
-          <div className="absolute inset-0 image-placeholder bg-luxury-gray/20"></div>
-          
-          <div className="relative z-20 container mx-auto px-4 sm:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-luxury-white mb-8 tracking-tight leading-tight">
-              Showroom Mainz
-            </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl text-luxury-text/80 mb-12 max-w-3xl mx-auto">
-              500m² Badausstellung – Erleben Sie Luxus, Materialien und Design hautnah
-            </p>
-            <Button 
-              className="bg-luxury-gold hover:bg-luxury-gold/90 text-luxury-black text-lg px-8 py-4"
-              onClick={() => document.getElementById('termin')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Showroom-Termin vereinbaren
-            </Button>
+        {/* Hero Section with Slider */}
+        <HeroSlider 
+          slides={[
+            { image: '' }, // Showroom entrance/exterior
+            { image: '' }, // Bathroom displays area
+            { image: '' }, // Consultation area with 3D planning
+            { image: '' }  // Materials and tiles showcase
+          ]}
+          autoplay={true}
+          showControls={true}
+          overlay={true}
+        >
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="max-w-6xl mx-auto">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-thin mb-8 sm:mb-10 lg:mb-12 leading-tight tracking-tight text-white">
+                <span className="block">Showroom</span>
+                <span className="block text-luxury-gold font-light">Mainz</span>
+              </h1>
+              
+              <p className="text-xl sm:text-2xl lg:text-3xl mb-12 sm:mb-16 lg:mb-20 text-white/90 font-light leading-relaxed max-w-3xl mx-auto px-4">
+                500m² Badausstellung – Erleben Sie Luxus, Materialien und Design hautnah
+              </p>
+              
+              <Button 
+                size="lg"
+                className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-lg sm:text-xl px-8 sm:px-12 lg:px-16 py-4 sm:py-6 lg:py-8 font-light tracking-wide transition-all duration-500 hover:scale-105"
+                onClick={() => document.getElementById('termin')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Showroom-Termin vereinbaren
+              </Button>
+            </div>
           </div>
-        </section>
+          
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+            <div className="w-5 sm:w-6 h-10 sm:h-12 border border-white/30 rounded-full flex justify-center">
+              <div className="w-1 h-3 sm:h-4 bg-luxury-gold/60 rounded-full mt-2 sm:mt-3"></div>
+            </div>
+          </div>
+        </HeroSlider>
 
         {/* Showroom Experience */}
         <section className="py-16 sm:py-24 bg-luxury-black">
