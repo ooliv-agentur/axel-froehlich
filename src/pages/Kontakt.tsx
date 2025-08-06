@@ -1,11 +1,74 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { format } from 'date-fns';
+import { de } from 'date-fns/locale';
+import { CalendarIcon } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { cn } from '@/lib/utils';
+import { toast } from '@/hooks/use-toast';
+
+// Form validation schema
+const formSchema = z.object({
+  firstName: z.string().min(2, { message: "Vorname muss mindestens 2 Zeichen haben" }),
+  lastName: z.string().min(2, { message: "Nachname muss mindestens 2 Zeichen haben" }),
+  email: z.string().email({ message: "Bitte geben Sie eine gültige E-Mail-Adresse ein" }),
+  phone: z.string().min(10, { message: "Bitte geben Sie eine gültige Telefonnummer ein" }),
+  subject: z.string().min(5, { message: "Betreff muss mindestens 5 Zeichen haben" }),
+  services: z.array(z.string()).min(1, { message: "Bitte wählen Sie mindestens einen Service aus" }),
+  showroomDate: z.date().optional(),
+  message: z.string().min(10, { message: "Nachricht muss mindestens 10 Zeichen haben" }),
+  privacyConsent: z.boolean().refine((val) => val === true, {
+    message: "Sie müssen den Datenschutzhinweisen zustimmen"
+  })
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 const Kontakt = () => {
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      subject: "",
+      services: [],
+      message: "",
+      privacyConsent: false
+    }
+  });
+
+  const onSubmit = (data: FormData) => {
+    console.log("Form submitted:", data);
+    toast({
+      title: "Beratungstermin angefragt",
+      description: "Wir melden uns in Kürze bei Ihnen.",
+    });
+  };
+
+  const serviceOptions = [
+    { id: "3d-badplanung", label: "3D-Badplanung (Bad, Wellness, Sauna)" },
+    { id: "sanitaerverkauf", label: "Sanitärverkauf" },
+    { id: "fliesenverkauf", label: "Fliesenverkauf" },
+    { id: "sonstiges", label: "Sonstiges" }
+  ];
+
+  // Function to check if date is Tuesday-Saturday
+  const isAvailableDate = (date: Date) => {
+    const day = date.getDay();
+    return day >= 2 && day <= 6; // Tuesday (2) to Saturday (6)
+  };
   return (
     <div className="min-h-screen bg-luxury-black">
       <Header />
@@ -45,40 +108,260 @@ const Kontakt = () => {
                 <div className="bg-luxury-black/90 backdrop-blur-sm p-8 border border-luxury-gold/20 hover:border-luxury-gold/40 transition-colors duration-300">
                   <h3 className="text-2xl font-light text-luxury-white mb-6 tracking-wider">BERATUNGSTERMIN ANFRAGEN</h3>
                   <div className="w-12 h-px bg-luxury-gold mb-6"></div>
-                  <form className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <Input 
-                        placeholder="Vorname" 
-                        className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50"
+                  
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      {/* Name Fields */}
+                      <div className="grid grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="firstName"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-luxury-white text-base font-light">
+                                Vorname <span className="text-luxury-gold">*</span>
+                              </FormLabel>
+                              <FormControl>
+                                <Input
+                                  {...field}
+                                  className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50 text-base h-12"
+                                />
+                              </FormControl>
+                              <FormMessage className="text-red-400" />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="lastName"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-luxury-white text-base font-light">
+                                Nachname <span className="text-luxury-gold">*</span>
+                              </FormLabel>
+                              <FormControl>
+                                <Input
+                                  {...field}
+                                  className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50 text-base h-12"
+                                />
+                              </FormControl>
+                              <FormMessage className="text-red-400" />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      {/* Email */}
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-luxury-white text-base font-light">
+                              E-Mail <span className="text-luxury-gold">*</span>
+                            </FormLabel>
+                            <FormControl>
+                              <Input
+                                type="email"
+                                {...field}
+                                className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50 text-base h-12"
+                              />
+                            </FormControl>
+                            <FormMessage className="text-red-400" />
+                          </FormItem>
+                        )}
                       />
-                      <Input 
-                        placeholder="Nachname" 
-                        className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50"
+
+                      {/* Phone */}
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-luxury-white text-base font-light">
+                              Telefonnummer <span className="text-luxury-gold">*</span>
+                            </FormLabel>
+                            <FormControl>
+                              <Input
+                                type="tel"
+                                {...field}
+                                className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50 text-base h-12"
+                              />
+                            </FormControl>
+                            <FormMessage className="text-red-400" />
+                          </FormItem>
+                        )}
                       />
-                    </div>
-                    <Input 
-                      type="email" 
-                      placeholder="E-Mail Adresse" 
-                      className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50"
-                    />
-                    <Input 
-                      type="tel" 
-                      placeholder="Telefonnummer" 
-                      className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50"
-                    />
-                    <Input 
-                      placeholder="PLZ / Ort" 
-                      className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50"
-                    />
-                    <Textarea 
-                      placeholder="Beschreiben Sie kurz Ihr Badprojekt..."
-                      rows={4}
-                      className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50"
-                    />
-                    <Button className="w-full bg-luxury-gold hover:bg-luxury-gold/90 text-luxury-black text-lg py-3 font-light tracking-wider">
-                      BERATUNGSTERMIN ANFRAGEN
-                    </Button>
-                  </form>
+
+                      {/* Subject */}
+                      <FormField
+                        control={form.control}
+                        name="subject"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-luxury-white text-base font-light">
+                              Betreff <span className="text-luxury-gold">*</span>
+                            </FormLabel>
+                            <FormControl>
+                              <Input
+                                {...field}
+                                className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50 text-base h-12"
+                              />
+                            </FormControl>
+                            <FormMessage className="text-red-400" />
+                          </FormItem>
+                        )}
+                      />
+
+                      {/* Services */}
+                      <FormField
+                        control={form.control}
+                        name="services"
+                        render={() => (
+                          <FormItem>
+                            <FormLabel className="text-luxury-white text-base font-light mb-4 block">
+                              Welche Services interessieren Sie? <span className="text-luxury-gold">*</span>
+                            </FormLabel>
+                            <div className="space-y-3">
+                              {serviceOptions.map((service) => (
+                                <FormField
+                                  key={service.id}
+                                  control={form.control}
+                                  name="services"
+                                  render={({ field }) => {
+                                    return (
+                                      <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                                        <FormControl>
+                                          <Checkbox
+                                            checked={field.value?.includes(service.id)}
+                                            onCheckedChange={(checked) => {
+                                              return checked
+                                                ? field.onChange([...field.value, service.id])
+                                                : field.onChange(
+                                                    field.value?.filter(
+                                                      (value) => value !== service.id
+                                                    )
+                                                  )
+                                            }}
+                                            className="border-luxury-gold/50 data-[state=checked]:bg-luxury-gold data-[state=checked]:text-luxury-black"
+                                          />
+                                        </FormControl>
+                                        <FormLabel className="text-luxury-text text-base font-light leading-6">
+                                          {service.label}
+                                        </FormLabel>
+                                      </FormItem>
+                                    )
+                                  }}
+                                />
+                              ))}
+                            </div>
+                            <FormMessage className="text-red-400" />
+                          </FormItem>
+                        )}
+                      />
+
+                      {/* Date Picker */}
+                      <FormField
+                        control={form.control}
+                        name="showroomDate"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-col">
+                            <FormLabel className="text-luxury-white text-base font-light">
+                              Wunschtermin für den Showroom Besuch (Di-Sa)
+                            </FormLabel>
+                            <Popover>
+                              <PopoverTrigger asChild>
+                                <FormControl>
+                                  <Button
+                                    variant="outline"
+                                    className={cn(
+                                      "w-full pl-3 text-left font-normal h-12 bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white hover:bg-luxury-gray/20 hover:text-luxury-white hover:border-luxury-gold/50",
+                                      !field.value && "text-luxury-text/60"
+                                    )}
+                                  >
+                                    {field.value ? (
+                                      format(field.value, "PPP", { locale: de })
+                                    ) : (
+                                      <span>Datum wählen</span>
+                                    )}
+                                    <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                                  </Button>
+                                </FormControl>
+                              </PopoverTrigger>
+                              <PopoverContent className="w-auto p-0 bg-luxury-black border-luxury-gold/30" align="start">
+                                <Calendar
+                                  mode="single"
+                                  selected={field.value}
+                                  onSelect={field.onChange}
+                                  disabled={(date) =>
+                                    date < new Date() || !isAvailableDate(date)
+                                  }
+                                  initialFocus
+                                  className="pointer-events-auto bg-luxury-black text-luxury-white"
+                                />
+                              </PopoverContent>
+                            </Popover>
+                            <FormMessage className="text-red-400" />
+                          </FormItem>
+                        )}
+                      />
+
+                      {/* Message */}
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-luxury-white text-base font-light">
+                              Ihre Nachricht <span className="text-luxury-gold">*</span>
+                            </FormLabel>
+                            <FormControl>
+                              <Textarea
+                                {...field}
+                                rows={4}
+                                placeholder="Beschreiben Sie kurz Ihr Badprojekt..."
+                                className="bg-luxury-gray/10 border-luxury-gray/30 text-luxury-white placeholder:text-luxury-text/60 focus:border-luxury-gold/50 text-base"
+                              />
+                            </FormControl>
+                            <FormMessage className="text-red-400" />
+                          </FormItem>
+                        )}
+                      />
+
+                      {/* Privacy Consent */}
+                      <FormField
+                        control={form.control}
+                        name="privacyConsent"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-row items-start space-x-3 space-y-0 border border-luxury-gold/20 p-4 rounded">
+                            <FormControl>
+                              <Checkbox
+                                checked={field.value}
+                                onCheckedChange={field.onChange}
+                                className="border-luxury-gold/50 data-[state=checked]:bg-luxury-gold data-[state=checked]:text-luxury-black mt-1"
+                              />
+                            </FormControl>
+                            <div className="space-y-1 leading-none">
+                              <FormLabel className="text-luxury-white text-sm font-light leading-relaxed">
+                                <strong>Datenschutzhinweis:</strong> <span className="text-luxury-gold">*</span>
+                              </FormLabel>
+                              <p className="text-luxury-text/80 text-sm font-light leading-relaxed">
+                                Ihre Angaben werden mit SSL-Verschlüsselung übertragen. Mit der Verarbeitung meiner personenbezogenen Daten nach Maßgabe der Datenschutzhinweise bin ich einverstanden.
+                              </p>
+                            </div>
+                            <FormMessage className="text-red-400" />
+                          </FormItem>
+                        )}
+                      />
+
+                      <Button 
+                        type="submit" 
+                        className="w-full bg-luxury-gold hover:bg-luxury-gold/90 text-luxury-black text-lg py-6 font-light tracking-wider h-auto"
+                      >
+                        BERATUNGSTERMIN ANFRAGEN
+                      </Button>
+                    </form>
+                  </Form>
                 </div>
               </div>
             </div>
