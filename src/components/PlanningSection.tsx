@@ -69,6 +69,97 @@ export const PlanningSection = () => {
             </div>
           </div>
 
+          {/* 3D Planning Pricing Section */}
+          <div className="mb-20 sm:mb-28 lg:mb-32">
+            <div className="text-center mb-16 sm:mb-20">
+              <div className="w-16 sm:w-20 h-1 bg-luxury-gold mx-auto mb-10 sm:mb-12"></div>
+              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-10 sm:mb-12 text-luxury-white tracking-tight">
+                Professionelle <span className="gold-accent font-serif italic">Planung</span>
+              </h3>
+              <p className="text-xl sm:text-2xl lg:text-3xl text-luxury-text/70 font-light leading-relaxed max-w-4xl mx-auto">
+                Unsere 3D-Planungsleistungen sind eine Investition in Ihr Projekt. 
+                Bei Beauftragung der Realisierung wird der Planungspreis vollständig angerechnet.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
+              {[
+                {
+                  title: "Gäste WC",
+                  price: "490€",
+                  description: "Kompakte Planung für optimale Raumnutzung"
+                },
+                {
+                  title: "Bad Planung",
+                  subtitle: "bis 8m²",
+                  price: "790€", 
+                  description: "Durchdachte Lösung für kleinere Bäder"
+                },
+                {
+                  title: "Bad Planung",
+                  subtitle: "bis 15m²",
+                  price: "890€",
+                  description: "Komfortable Planung für Familienbäder"
+                },
+                {
+                  title: "Wellness Planung",
+                  subtitle: "bis 25m²",
+                  price: "1.290€",
+                  description: "Luxuriöse Planung für Spa-Erlebnis"
+                }
+              ].map((plan, index) => (
+                <div 
+                  key={index}
+                  className="bg-luxury-gray/5 border border-luxury-gold/20 p-8 sm:p-10 relative overflow-hidden hover:border-luxury-gold/40 transition-all duration-300 group"
+                >
+                  {/* Architectural corner elements */}
+                  <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-luxury-gold/40 transition-colors duration-300 group-hover:border-luxury-gold/60"></div>
+                  <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-luxury-gold/40 transition-colors duration-300 group-hover:border-luxury-gold/60"></div>
+                  <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-luxury-gold/40 transition-colors duration-300 group-hover:border-luxury-gold/60"></div>
+                  <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-luxury-gold/40 transition-colors duration-300 group-hover:border-luxury-gold/60"></div>
+                  
+                  <div className="text-center">
+                    <h4 className="text-xl sm:text-2xl font-light mb-2 text-luxury-white">
+                      {plan.title}
+                    </h4>
+                    {plan.subtitle && (
+                      <p className="text-luxury-gold/80 text-sm sm:text-base font-light mb-4 tracking-wide">
+                        {plan.subtitle}
+                      </p>
+                    )}
+                    <div className="mb-6">
+                      <div className="text-3xl sm:text-4xl lg:text-5xl font-light text-luxury-gold mb-2">
+                        {plan.price}
+                      </div>
+                      <div className="w-8 h-px bg-luxury-gold/50 mx-auto"></div>
+                    </div>
+                    <p className="text-luxury-text/70 text-sm sm:text-base font-light leading-relaxed">
+                      {plan.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-16 sm:mt-20">
+              <div className="bg-luxury-gray/5 border border-luxury-gold/20 p-8 sm:p-10 inline-block relative">
+                {/* Architectural corner elements */}
+                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-luxury-gold/40"></div>
+                <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-luxury-gold/40"></div>
+                <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-luxury-gold/40"></div>
+                <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-luxury-gold/40"></div>
+                
+                <p className="text-lg sm:text-xl text-luxury-gold font-light mb-4">
+                  Professionelle Planung verhindert kostspielige Fehler
+                </p>
+                <p className="text-luxury-text/80 font-light leading-relaxed max-w-2xl">
+                  Eine durchdachte 3D-Planung ist die Grundlage für jedes erfolgreiche Badprojekt. 
+                  Sie sparen Zeit, Kosten und erhalten die Sicherheit, dass Ihr Traumbad genau so entsteht, wie Sie es sich vorstellen.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Planning Features Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-16 sm:gap-20 lg:gap-24">
             {[

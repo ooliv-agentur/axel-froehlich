@@ -58,7 +58,10 @@ const Kontakt = () => {
   };
 
   const serviceOptions = [
-    { id: "3d-badplanung", label: "3D-Badplanung (Bad, Wellness, Sauna)" },
+    { id: "gaeste-wc-planung", label: "Gäste WC Planung (490€)" },
+    { id: "bad-planung-8qm", label: "Bad Planung bis 8m² (790€)" },
+    { id: "bad-planung-15qm", label: "Bad Planung bis 15m² (890€)" },
+    { id: "wellness-planung-25qm", label: "Wellness Planung bis 25m² (1.290€)" },
     { id: "sanitaerverkauf", label: "Sanitärverkauf" },
     { id: "fliesenverkauf", label: "Fliesenverkauf" },
     { id: "sonstiges", label: "Sonstiges" }
@@ -109,6 +112,50 @@ const Kontakt = () => {
                   <div className="w-12 h-px bg-luxury-gold/40"></div>
                   <span className="text-sm font-light tracking-widest">3D PLANUNG</span>
                   <div className="w-12 h-px bg-luxury-gold/40"></div>
+                </div>
+              </div>
+
+              {/* Planning Investment Section */}
+              <div className="max-w-5xl mx-auto mb-20 lg:mb-24">
+                <div className="bg-luxury-gray/5 border border-luxury-gold/20 p-8 lg:p-12 relative">
+                  {/* Architectural corner elements */}
+                  <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-luxury-gold/40"></div>
+                  <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-luxury-gold/40"></div>
+                  <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-luxury-gold/40"></div>
+                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-luxury-gold/40"></div>
+                  
+                  <div className="text-center mb-12">
+                    <div className="w-12 h-px bg-luxury-gold mb-4 mx-auto"></div>
+                    <h2 className="text-2xl lg:text-3xl font-light text-luxury-white mb-3 tracking-wide">
+                      Planungs-Investment
+                    </h2>
+                    <p className="text-luxury-text/70 font-light">
+                      Bei Beauftragung der Realisierung wird der Planungspreis vollständig angerechnet
+                    </p>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {[
+                      { title: "Gäste WC", price: "490€" },
+                      { title: "Bad bis 8m²", price: "790€" },
+                      { title: "Bad bis 15m²", price: "890€" },
+                      { title: "Wellness bis 25m²", price: "1.290€" }
+                    ].map((plan, index) => (
+                      <div key={index} className="text-center p-4 border border-luxury-gold/10 bg-luxury-black/20">
+                        <div className="text-lg font-light text-luxury-white mb-2">{plan.title}</div>
+                        <div className="text-2xl text-luxury-gold font-light">{plan.price}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="text-center mt-8">
+                    <p className="text-luxury-gold font-light text-lg mb-2">
+                      Vereinbaren Sie jetzt direkt ein unverbindliches Erstgespräch!
+                    </p>
+                    <p className="text-luxury-text/60 text-sm font-light">
+                      Professionelle Planung verhindert kostspielige Fehler und sichert optimale Ergebnisse
+                    </p>
+                  </div>
                 </div>
               </div>
               
@@ -594,7 +641,7 @@ const Kontakt = () => {
                 },
                 {
                   question: "Was kostet eine 3D-Planung?",
-                  answer: "Die erste 3D-Planung ist kostenfrei. Bei Beauftragung wird sie vollständig angerechnet."
+                  answer: "Unsere Planungspreise: Gäste WC 490€, Bad bis 8m² 790€, Bad bis 15m² 890€, Wellness bis 25m² 1.290€. Bei Beauftragung der Realisierung wird der Planungspreis vollständig angerechnet."
                 },
                 {
                   question: "Führen Sie auch die Sanierung durch?",
