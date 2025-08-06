@@ -215,9 +215,7 @@ const UeberUns = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-luxury-dark border border-luxury-gold/20 p-8 relative">
-              <div className="w-16 h-16 bg-luxury-gold/10 mb-6 flex items-center justify-center">
-                <div className="w-8 h-8 bg-luxury-gold/50"></div>
-              </div>
+              <div className="w-16 h-16 bg-luxury-gold/20 mb-6"></div>
               <h3 className="text-xl font-light text-luxury-white mb-4 tracking-wider">DESIGN & ÄSTHETIK</h3>
               <p className="text-luxury-text text-sm leading-relaxed">
                 Die Balance zwischen Form, Funktion und Material – mit eigenem Anspruch an Design und Feingefühl.
@@ -225,9 +223,7 @@ const UeberUns = () => {
             </div>
 
             <div className="bg-luxury-dark border border-luxury-gold/20 p-8 relative">
-              <div className="w-16 h-16 bg-luxury-gold/10 mb-6 flex items-center justify-center">
-                <div className="w-8 h-8 bg-luxury-gold/50"></div>
-              </div>
+              <div className="w-16 h-16 bg-luxury-gold/20 mb-6"></div>
               <h3 className="text-xl font-light text-luxury-white mb-4 tracking-wider">QUALITÄT & PRÄZISION</h3>
               <p className="text-luxury-text text-sm leading-relaxed">
                 Fachkompetenz und Erfahrung für emotionale Raumkonzepte – immer unter Berücksichtigung des Machbaren.
@@ -235,9 +231,7 @@ const UeberUns = () => {
             </div>
 
             <div className="bg-luxury-dark border border-luxury-gold/20 p-8 relative">
-              <div className="w-16 h-16 bg-luxury-gold/10 mb-6 flex items-center justify-center">
-                <div className="w-8 h-8 bg-luxury-gold/50"></div>
-              </div>
+              <div className="w-16 h-16 bg-luxury-gold/20 mb-6"></div>
               <h3 className="text-xl font-light text-luxury-white mb-4 tracking-wider">MUT & INNOVATION</h3>
               <p className="text-luxury-text text-sm leading-relaxed">
                 Begeisterung und Kreativität gepaart mit dem Mut, neue Wege zu gehen und Visionen zu verwirklichen.
