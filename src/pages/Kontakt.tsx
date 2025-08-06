@@ -404,7 +404,6 @@ const Kontakt = () => {
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Showroom */}
               <div className="bg-luxury-gray/5 border border-luxury-gold/20 p-8 hover:border-luxury-gold/40 transition-colors duration-300">
-                <div className="w-12 h-12 bg-luxury-gold/20 mb-6"></div>
                 <h3 className="text-xl font-light text-luxury-white mb-6 tracking-wider">SHOWROOM BESUCHEN</h3>
                 <div className="w-8 h-px bg-luxury-gold mb-6"></div>
                 <div className="space-y-4 text-luxury-text">
@@ -425,7 +424,6 @@ const Kontakt = () => {
 
               {/* Direktkontakt */}
               <div className="bg-luxury-gray/5 border border-luxury-gold/20 p-8 hover:border-luxury-gold/40 transition-colors duration-300">
-                <div className="w-12 h-12 bg-luxury-gold/20 mb-6"></div>
                 <h3 className="text-xl font-light text-luxury-white mb-6 tracking-wider">DIREKTKONTAKT</h3>
                 <div className="w-8 h-px bg-luxury-gold mb-6"></div>
                 <div className="space-y-4 text-luxury-text">
@@ -450,7 +448,6 @@ const Kontakt = () => {
 
               {/* Online-Shop */}
               <div className="bg-luxury-gray/5 border border-luxury-gold/20 p-8 hover:border-luxury-gold/40 transition-colors duration-300">
-                <div className="w-12 h-12 bg-luxury-gold/20 mb-6"></div>
                 <h3 className="text-xl font-light text-luxury-white mb-6 tracking-wider">ONLINE-SHOP</h3>
                 <div className="w-8 h-px bg-luxury-gold mb-6"></div>
                 <div className="space-y-4 text-luxury-text">
@@ -511,7 +508,6 @@ const Kontakt = () => {
               
               <div className="space-y-8">
                 <div className="bg-luxury-black/40 border border-luxury-gold/20 p-6 hover:border-luxury-gold/40 transition-colors duration-300">
-                  <div className="w-8 h-8 bg-luxury-gold/20 mb-4"></div>
                   <h3 className="text-lg text-luxury-gold mb-3 font-light tracking-wider">MIT DEM AUTO</h3>
                   <p className="text-luxury-text font-light leading-relaxed">
                     Über die A60 Abfahrt Mainz-Finthen, dann 5 Minuten stadteinwärts. 
@@ -520,7 +516,6 @@ const Kontakt = () => {
                 </div>
                 
                 <div className="bg-luxury-black/40 border border-luxury-gold/20 p-6 hover:border-luxury-gold/40 transition-colors duration-300">
-                  <div className="w-8 h-8 bg-luxury-gold/20 mb-4"></div>
                   <h3 className="text-lg text-luxury-gold mb-3 font-light tracking-wider">ÖPNV</h3>
                   <p className="text-luxury-text font-light leading-relaxed">
                     Straßenbahn Linie 53 bis Haltestelle "Mombacher Straße", 
@@ -529,7 +524,6 @@ const Kontakt = () => {
                 </div>
                 
                 <div className="bg-luxury-black/40 border border-luxury-gold/20 p-6 hover:border-luxury-gold/40 transition-colors duration-300">
-                  <div className="w-8 h-8 bg-luxury-gold/20 mb-4"></div>
                   <h3 className="text-lg text-luxury-gold mb-3 font-light tracking-wider">BUNDESWEITE ANREISE</h3>
                   <p className="text-luxury-text font-light leading-relaxed">
                     Mainz Hauptbahnhof 15 Minuten entfernt. Flughafen Frankfurt 
@@ -583,10 +577,6 @@ const Kontakt = () => {
                 }
               ].map((faq, index) => (
                 <div key={index} className="bg-luxury-gray/5 border border-luxury-gold/20 p-8 hover:border-luxury-gold/40 transition-colors duration-300">
-                  <div className="w-8 h-8 bg-luxury-gold/20 mb-4 flex items-center justify-center">
-                    <div className="w-3 h-3 bg-luxury-gold/60"></div>
-                  </div>
-                  
                   <h3 className="text-xl font-light text-luxury-white mb-4 tracking-wide">{faq.question}</h3>
                   <div className="w-12 h-px bg-luxury-gold/50 mb-4"></div>
                   <p className="text-luxury-text font-light leading-relaxed">{faq.answer}</p>
