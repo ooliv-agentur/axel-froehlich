@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
@@ -55,14 +56,6 @@ const ProjectDetail = () => {
     <div className="min-h-screen bg-luxury-black">
       <Header />
       <main className="relative">
-        {/* Minimal Navigation */}
-        <div className="absolute top-6 left-6 z-40">
-          <Link to="/inspiration" className="inline-flex items-center text-luxury-gold/80 hover:text-luxury-gold transition-colors group">
-            <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-            <span className="text-sm font-light tracking-wide">Zurück</span>
-          </Link>
-        </div>
-
         {/* Full-Screen Hero with Minimal Overlay */}
         <section className="relative h-screen flex items-end overflow-hidden">
           <div className="absolute inset-0 image-placeholder bg-luxury-gray/10"></div>
@@ -83,9 +76,17 @@ const ProjectDetail = () => {
           </div>
         </section>
 
-        {/* Specifications Grid */}
+        {/* Specifications Grid with integrated Back Button */}
         <section className="py-20 bg-luxury-black">
           <div className="container mx-auto px-8">
+            {/* Back Button integrated into content flow */}
+            <div className="mb-12">
+              <Link to="/inspiration" className="inline-flex items-center text-luxury-gold/80 hover:text-luxury-gold transition-colors group">
+                <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+                <span className="text-sm font-light tracking-wide">Zurück zur Inspiration</span>
+              </Link>
+            </div>
+            
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {specifications.map((spec, index) => (
                 <div key={index} className="text-center">
