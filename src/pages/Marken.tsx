@@ -62,16 +62,7 @@ const Marken = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center py-8 border-b border-luxury-gray/10 last:border-b-0 hover:border-luxury-gold/30 transition-all duration-500">
                       {/* Brand Image */}
                       <div className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'} aspect-[21/9] image-placeholder relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-700`}>
-                        <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/5 to-luxury-gold/15 flex items-center justify-center">
-                          <div className="text-center">
-                            <div className="w-20 h-20 bg-luxury-gold/20 rounded-sm flex items-center justify-center mx-auto mb-4">
-                              <div className="text-luxury-gold font-light text-2xl">{brand.name.charAt(0)}</div>
-                            </div>
-                            <div className="text-luxury-white/40 text-sm font-light tracking-wider">
-                              PRODUCT SHOWCASE
-                            </div>
-                          </div>
-                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/5 to-luxury-gold/15"></div>
                       </div>
                       
                       {/* Brand Info */}
@@ -124,23 +115,17 @@ const Marken = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
-              <div className="w-16 h-16 bg-luxury-gold/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 bg-luxury-gold/30 rounded-sm"></div>
-              </div>
+              <div className="w-16 h-16 bg-luxury-gold/10 rounded-sm flex items-center justify-center mx-auto mb-4"></div>
               <h3 className="text-xl font-light text-luxury-white mb-2">Italienisches Design</h3>
               <p className="text-luxury-text text-sm">Luxuriöses Baddesign aus Italien</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-luxury-gold/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 bg-luxury-gold/30 rounded-sm"></div>
-              </div>
+              <div className="w-16 h-16 bg-luxury-gold/10 rounded-sm flex items-center justify-center mx-auto mb-4"></div>
               <h3 className="text-xl font-light text-luxury-white mb-2">Skandinavischer Minimalismus</h3>
               <p className="text-luxury-text text-sm">Puristische Eleganz aus dem Norden</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-luxury-gold/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 bg-luxury-gold/30 rounded-sm"></div>
-              </div>
+              <div className="w-16 h-16 bg-luxury-gold/10 rounded-sm flex items-center justify-center mx-auto mb-4"></div>
               <h3 className="text-xl font-light text-luxury-white mb-2">Wellness-Oasen</h3>
               <p className="text-luxury-text text-sm">Erfüllung Ihres Traums der eigenen Wellness-Oase</p>
             </div>
