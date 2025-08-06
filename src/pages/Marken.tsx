@@ -68,6 +68,9 @@ const Marken = () => {
                       {/* Brand Info */}
                       <div className={`${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'} space-y-6`}>
                         <div>
+                          {/* Brand Logo Placeholder */}
+                          <div className="w-32 h-12 bg-luxury-gold/10 rounded-sm mb-4"></div>
+                          
                           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-thin text-luxury-white mb-3 group-hover:text-luxury-gold transition-colors duration-300">
                             {brand.name}
                           </h2>
