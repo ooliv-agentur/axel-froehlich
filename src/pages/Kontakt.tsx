@@ -74,40 +74,62 @@ const Kontakt = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          {/* Subtle Grid Background */}
-          <div className="absolute inset-0 opacity-3">
+        <section className="pt-24 lg:pt-32 pb-16 lg:pb-20 bg-luxury-black relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
             <div className="w-full h-full" style={{
-              backgroundImage: `
-                linear-gradient(90deg, hsl(var(--luxury-gold) / 0.3) 1px, transparent 1px),
-                linear-gradient(0deg, hsl(var(--luxury-gold) / 0.3) 1px, transparent 1px)
-              `,
-              backgroundSize: '80px 80px'
+              backgroundImage: `linear-gradient(45deg, transparent 40%, #a68343 41%, #a68343 42%, transparent 43%)`,
+              backgroundSize: '60px 60px'
             }}></div>
           </div>
           
-          <div className="absolute inset-0 bg-gradient-to-b from-luxury-black/60 via-luxury-black/40 to-luxury-black/80 z-10"></div>
-          <div className="absolute inset-0 image-placeholder bg-luxury-gray/20"></div>
-          
-          <div className="relative z-20 container mx-auto px-4 sm:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative">
-              <div className="relative">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-luxury-white mb-8 tracking-tight leading-tight">
-                  Lassen Sie uns<br />
-                  <span className="text-luxury-gold">sprechen</span>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-7xl mx-auto">
+              {/* Hero Content - Centered */}
+              <div className="text-center mb-20 lg:mb-24">
+                <div className="w-16 h-1 bg-luxury-gold mb-8 lg:mb-10 mx-auto"></div>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-thin mb-8 lg:mb-10 text-luxury-white tracking-tight leading-tight">
+                  Ihr Beratungs<span className="gold-accent font-serif italic">termin</span>
                 </h1>
-                <div className="w-16 h-px bg-luxury-gold mb-6"></div>
-                <p className="text-lg sm:text-xl text-luxury-text/80 mb-8 font-light">
-                  Ihr Traumbad beginnt mit einem Gespräch. Kontaktieren Sie uns für eine 
-                  unverbindliche Beratung in unserem Mainzer Showroom.
-                </p>
+                
+                <div className="space-y-6 lg:space-y-8 text-luxury-text/80 mb-12 lg:mb-16 max-w-4xl mx-auto">
+                  <p className="text-xl sm:text-2xl lg:text-3xl leading-relaxed font-light">
+                    Lassen Sie uns über Ihre Badträume sprechen – 
+                    in einem unverbindlichen Beratungsgespräch.
+                  </p>
+                  
+                  <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed font-light">
+                    Ob in unserem Showroom in Mainz oder bei Ihnen vor Ort – 
+                    wir entwickeln gemeinsam Ihr perfektes Bad.
+                  </p>
+                </div>
+                
+                {/* Architectural accent */}
+                <div className="flex items-center justify-center space-x-4 text-luxury-gold/60 mb-16">
+                  <div className="w-12 h-px bg-luxury-gold/40"></div>
+                  <span className="text-sm font-light tracking-widest">3D PLANUNG</span>
+                  <div className="w-12 h-px bg-luxury-gold/40"></div>
+                </div>
               </div>
               
-              {/* Contact Form */}
-              <div className="relative">
-                <div className="bg-luxury-black/90 backdrop-blur-sm p-8 border border-luxury-gold/20 hover:border-luxury-gold/40 transition-colors duration-300">
-                  <h3 className="text-2xl font-light text-luxury-white mb-6 tracking-wider">BERATUNGSTERMIN ANFRAGEN</h3>
-                  <div className="w-12 h-px bg-luxury-gold mb-6"></div>
+              {/* Contact Form - Centered below hero */}
+              <div className="max-w-3xl mx-auto">
+                <div className="bg-luxury-gray/5 border border-luxury-gold/20 p-8 lg:p-12 relative">
+                  {/* Architectural corner elements */}
+                  <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-luxury-gold/40"></div>
+                  <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-luxury-gold/40"></div>
+                  <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-luxury-gold/40"></div>
+                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-luxury-gold/40"></div>
+                  
+                  <div className="text-center mb-10">
+                    <div className="w-12 h-px bg-luxury-gold mb-4 mx-auto"></div>
+                    <h2 className="text-2xl lg:text-3xl font-light text-luxury-white mb-3 tracking-wide">
+                      Termin anfragen
+                    </h2>
+                    <p className="text-luxury-text/70 font-light text-sm">
+                      Alle Felder sind optional – wir melden uns schnellstmöglich zurück
+                    </p>
+                  </div>
                   
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -354,12 +376,15 @@ const Kontakt = () => {
                         )}
                       />
 
-                      <Button 
-                        type="submit" 
-                        className="w-full bg-luxury-gold hover:bg-luxury-gold/90 text-luxury-black text-lg py-6 font-light tracking-wider h-auto"
-                      >
-                        BERATUNGSTERMIN ANFRAGEN
-                      </Button>
+                      <div className="pt-4">
+                        <Button 
+                          type="submit" 
+                          className="w-full bg-luxury-gold hover:bg-luxury-gold/90 text-luxury-black font-light tracking-wide transition-all duration-300 hover:scale-[1.02] relative group overflow-hidden"
+                        >
+                          <span className="relative z-10">Beratungstermin anfragen</span>
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+                        </Button>
+                      </div>
                     </form>
                   </Form>
                 </div>
