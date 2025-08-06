@@ -27,7 +27,7 @@ export const HeroSection = () => {
           <Button 
             size="lg"
             className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-lg sm:text-xl px-8 sm:px-12 lg:px-16 py-4 sm:py-6 lg:py-8 font-light tracking-wide transition-all duration-500 hover:scale-105"
-            onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => window.location.href = '/kontakt'}
           >
             Beratungstermin vereinbaren
           </Button>

@@ -4,24 +4,24 @@ import React from 'react';
 export const ProjectsSection = () => {
   const projects = [
     {
-      title: "Penthouse München",
+      title: "Wellness-Oase Wiesbaden",
+      subtitle: "Spa-Atmosphäre zuhause",
+      description: "Freistehende Badewanne, begehbare Dusche und edle Natursteinverkleidung schaffen eine luxuriöse Wellness-Atmosphäre."
+    },
+    {
+      title: "Moderne Eleganz Mainz", 
       subtitle: "Minimalistisches Design",
-      description: "Reduzierte Formensprache mit hochwertigen Materialien"
+      description: "Klare Linien, hochwertige Materialien und intelligente Beleuchtung vereinen sich zu einem zeitlos eleganten Badezimmer."
     },
     {
-      title: "Villa Frankfurt", 
-      subtitle: "Klassische Eleganz",
-      description: "Zeitlose Gestaltung mit modernen Akzenten"
+      title: "Familientraum Taunus",
+      subtitle: "Funktional & stilvoll", 
+      description: "Großzügiger Waschtisch, praktische Stauraumlösungen und kindgerechte Elemente – perfekt für die ganze Familie."
     },
     {
-      title: "Loft Berlin",
-      subtitle: "Industrial Chic", 
-      description: "Urbane Ästhetik trifft auf Luxus"
-    },
-    {
-      title: "Residenz Hamburg",
-      subtitle: "Exklusive Ausstattung",
-      description: "Maßgeschneiderte Lösungen für höchste Ansprüche"
+      title: "Penthouse Frankfurt",
+      subtitle: "Luxus pur",
+      description: "Exklusive Armaturen, maßgefertigte Möbel und eine spektakuläre Skyline-Aussicht machen dieses Bad zu etwas Besonderem."
     }
   ];
 

@@ -38,6 +38,7 @@ export const ContactSection = () => {
               <Button 
                 size="lg"
                 className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 font-light tracking-wide mb-8 lg:mb-10 w-full sm:w-auto"
+                onClick={() => window.location.href = '/kontakt'}
               >
                 Beratungstermin vereinbaren
               </Button>
