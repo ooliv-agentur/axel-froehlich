@@ -4,14 +4,12 @@ import { useParams, Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { projectsData } from '@/data/projects';
 
 const ProjectDetail = () => {
   const { projectSlug } = useParams();
   const [currentFloorPlan, setCurrentFloorPlan] = useState(0);
-  const [currentPhoto, setCurrentPhoto] = useState(0);
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [selectedHotspot, setSelectedHotspot] = useState<any>(null);
 
   const project = projectsData.find(p => p.slug === projectSlug);
@@ -38,19 +36,6 @@ const ProjectDetail = () => {
     { label: "Material", value: "Naturstein" },
     { label: "Besonderheit", value: "Sauna & Ofen" }
   ];
-
-  const openLightbox = (index: number) => {
-    setCurrentPhoto(index);
-    setIsLightboxOpen(true);
-  };
-
-  const nextPhoto = () => {
-    setCurrentPhoto((prev) => (prev + 1) % project.photos.length);
-  };
-
-  const prevPhoto = () => {
-    setCurrentPhoto((prev) => (prev - 1 + project.photos.length) % project.photos.length);
-  };
 
   return (
     <div className="min-h-screen bg-luxury-black">
@@ -198,7 +183,7 @@ const ProjectDetail = () => {
           </div>
         </section>
 
-        {/* Gallery Section - Magazine Style */}
+        {/* Modern Gallery Section - Masonry Style */}
         <section className="py-24 bg-luxury-black">
           <div className="container mx-auto px-8">
             <div className="text-center mb-20">
@@ -209,81 +194,47 @@ const ProjectDetail = () => {
             </div>
             
             <div className="max-w-7xl mx-auto">
-              {/* Large Featured Images */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-                {project.photos.slice(0, 2).map((photo, index) => (
-                  <div key={index} className="group cursor-pointer" onClick={() => openLightbox(index)}>
-                    <div className="aspect-[4/3] image-placeholder bg-luxury-gray/10 group-hover:bg-luxury-gray/20 transition-all duration-500 relative overflow-hidden border border-luxury-gold/10">
-                      <div className="absolute inset-0 bg-luxury-black/0 group-hover:bg-luxury-black/10 transition-all duration-500 flex items-center justify-center">
-                        <div className="text-luxury-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                          <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                          </svg>
-                        </div>
+              {/* Hero Image */}
+              <div className="mb-16">
+                <div className="aspect-[21/9] image-placeholder bg-luxury-gray/10 border border-luxury-gold/5 animate-fade-in"></div>
+              </div>
+
+              {/* Masonry Grid Layout */}
+              <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                {project.photos.slice(1).map((photo, index) => (
+                  <div 
+                    key={index + 1} 
+                    className="break-inside-avoid animate-fade-in"
+                    style={{ animationDelay: `${(index + 1) * 0.1}s` }}
+                  >
+                    <div className={`
+                      image-placeholder bg-luxury-gray/10 border border-luxury-gold/5 transition-all duration-500 hover:border-luxury-gold/20
+                      ${index % 4 === 0 ? 'aspect-[4/5]' : 
+                        index % 4 === 1 ? 'aspect-[3/4]' : 
+                        index % 4 === 2 ? 'aspect-[5/4]' : 
+                        'aspect-[4/3]'}
+                    `}>
+                      <div className="absolute bottom-4 left-4 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-luxury-gold/80 text-xs font-light tracking-wide">
+                          {photo.title}
+                        </p>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-              
-              {/* Grid of Smaller Images */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {project.photos.slice(2).map((photo, index) => (
-                  <div key={index + 2} className="group cursor-pointer" onClick={() => openLightbox(index + 2)}>
-                    <div className="aspect-square image-placeholder bg-luxury-gray/10 group-hover:bg-luxury-gray/20 transition-all duration-300 relative overflow-hidden border border-luxury-gold/5">
-                      <div className="absolute inset-0 bg-luxury-black/0 group-hover:bg-luxury-black/10 transition-all duration-300 flex items-center justify-center">
-                        <div className="text-luxury-gold/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+
+              {/* Description Text */}
+              <div className="mt-20 max-w-4xl mx-auto text-center">
+                <div className="space-y-6 text-luxury-text/70 font-light leading-relaxed">
+                  {project.description.split('\n\n').slice(0, 2).map((paragraph, index) => (
+                    <p key={index} className="text-lg md:text-xl">{paragraph}</p>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
-
-        {/* Enhanced Lightbox */}
-        {isLightboxOpen && (
-          <div className="fixed inset-0 bg-luxury-black/98 z-50 flex items-center justify-center backdrop-blur-sm">
-            <button
-              onClick={() => setIsLightboxOpen(false)}
-              className="absolute top-8 right-8 text-luxury-white/80 hover:text-luxury-gold transition-colors z-10 p-2"
-            >
-              <X className="w-6 h-6" />
-            </button>
-            
-            <button
-              onClick={prevPhoto}
-              className="absolute left-8 top-1/2 transform -translate-y-1/2 text-luxury-white/80 hover:text-luxury-gold transition-colors z-10 p-2"
-            >
-              <ChevronLeft className="w-8 h-8" />
-            </button>
-            
-            <button
-              onClick={nextPhoto}
-              className="absolute right-8 top-1/2 transform -translate-y-1/2 text-luxury-white/80 hover:text-luxury-gold transition-colors z-10 p-2"
-            >
-              <ChevronRight className="w-8 h-8" />
-            </button>
-            
-            <div className="max-w-6xl max-h-[85vh] mx-8">
-              <div className="aspect-video image-placeholder bg-luxury-gray/10 border border-luxury-gold/20"></div>
-            </div>
-            
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
-              <p className="text-luxury-white/90 mb-2 font-light">
-                {project.photos[currentPhoto]?.title || `Ansicht ${currentPhoto + 1}`}
-              </p>
-              <p className="text-luxury-text/60 text-sm font-light tracking-wide">
-                {currentPhoto + 1} von {project.photos.length}
-              </p>
-            </div>
-          </div>
-        )}
       </main>
       <Footer />
     </div>
