@@ -172,6 +172,19 @@ Ein zentrales Element dieses Raumes ist das von Antonio Lupi eingebaute und verp
 Die Gemütlichkeit wird weiter betont durch die geschickte Nutzung von indirekten Lichtquellen in dem kleinen Raum. Diese schaffen eine warme und einladende Atmosphäre, die das minimalistische Design aufwertet.
 
 Die exklusiven Armaturen und passenden Accessoires von Fantini fügen sich nahtlos in das Gesamtbild ein. Durch ihre exklusive Beschichtung erhalten sie eine besondere Wirkung, die das Design und die Funktionalität harmonisch vereint. Insgesamt entsteht so ein Raum, der nicht nur ästhetisch ansprechend ist, sondern auch höchsten Komfort und vielseitige Nutzungsmöglichkeiten bietet.`,
+    materialCosts: "Ca. 55.000€",
+    includedServices: [
+      "Fliesen",
+      "Wet-Tapeten", 
+      "Sauna",
+      "Waschtisch + Sitzbank + Wannenblock aus Naturstein",
+      "Waschtischunterschrank",
+      "Dusch WC",
+      "Spiegelschrank",
+      "Armaturen",
+      "Wannenarmatur",
+      "Für die gesamte Planung"
+    ],
     floorPlans: [
       {
         image: '',
@@ -199,6 +212,19 @@ Der dunkle Mosaikstein in der Dusche steht in kontrastreichem Dialog mit den hel
 Ein maßgefertigter Waschtisch mit durchgehender Mineralgussfläche sorgt für klare Linien und maximale Funktionalität. Der große runde Spiegel greift die organische Formensprache auf, während zwei filigrane Pendelleuchten eine weiche Lichtstimmung erzeugen – ideal für entspannte Morgen- und Abendroutinen.
 
 Das Designkonzept setzt auf maximale Raumwirkung bei minimaler Gestaltung – ein durch und durch modernes Bad, das durch seine stille Eleganz begeistert.`,
+    materialCosts: "Ca. 55.000€",
+    includedServices: [
+      "Fliesen",
+      "Wet-Tapeten", 
+      "Sauna",
+      "Waschtisch + Sitzbank + Wannenblock aus Naturstein",
+      "Waschtischunterschrank",
+      "Dusch WC",
+      "Spiegelschrank",
+      "Armaturen",
+      "Wannenarmatur",
+      "Für die gesamte Planung"
+    ],
     floorPlans: [
       {
         image: '',
@@ -226,6 +252,19 @@ In der großzügigen Walk-in-Dusche wird dieselbe Steinfläche zur Bühne für e
 Jedes Detail ist durchdacht: Die Regendusche verschmilzt mit der Decke, die Bedienelemente treten optisch zurück, und selbst die Nischen und Schubladen des Waschtischs sind formal wie funktional reduziert. Das Lichtkonzept – dezent, indirekt, akzentuierend – verleiht dem Raum Tiefe und Ruhe.
 
 Ein Bad für Menschen, die nicht nur höchste Qualität suchen, sondern Atmosphäre. Dieses Raumkonzept steht exemplarisch für den Anspruch der Axel Fröhlich GmbH, Bäder in Erlebnisräume zu verwandeln – kompromisslos in Material, Wirkung und Funktion.`,
+    materialCosts: "Ca. 55.000€",
+    includedServices: [
+      "Fliesen",
+      "Wet-Tapeten", 
+      "Sauna",
+      "Waschtisch + Sitzbank + Wannenblock aus Naturstein",
+      "Waschtischunterschrank",
+      "Dusch WC",
+      "Spiegelschrank",
+      "Armaturen",
+      "Wannenarmatur",
+      "Für die gesamte Planung"
+    ],
     floorPlans: [
       {
         image: '',
@@ -257,6 +296,19 @@ Das Lichtkonzept des Raums ist ebenso durchdacht wie ansprechend. Die indirekte 
 Die Kombination aus Natursteinoptik-Fliesen und leicht geöltem Holz verleiht dem Raum eine natürliche Wärme und eine zeitlose Eleganz. Jeder Zentimeter wurde dabei effektiv genutzt, und durch geschickte Integration von kleinen Nischen und Klappen wurde ein wahres Wunder an Stauraum geschaffen.
 
 Dieses Wellness-Refugium im Altbau vereint meisterhaft Funktionalität, Individualität und ästhetischen in einem Raum der Entspannung.`,
+    materialCosts: "Ca. 55.000€",
+    includedServices: [
+      "Fliesen",
+      "Wet-Tapeten", 
+      "Sauna",
+      "Waschtisch + Sitzbank + Wannenblock aus Naturstein",
+      "Waschtischunterschrank",
+      "Dusch WC",
+      "Spiegelschrank",
+      "Armaturen",
+      "Wannenarmatur",
+      "Für die gesamte Planung"
+    ],
     floorPlans: [
       {
         image: '',
@@ -284,6 +336,19 @@ Die klassische Ästhetik wird gezielt kontrastiert durch eine minimalistisch geh
 Besonderes Detail: eine feine Marmorstatue im Duschbereich, die dem Raum eine fast museale Wirkung verleiht – als wäre dieses Badezimmer selbst ein Kunstwerk. Gekrönt wird die Gestaltung durch dezente Bronze-Armaturen, die das Farbspiel aus Grau, Beige und Off-White harmonisch ergänzen.
 
 Dieses Bad ist mehr als funktionaler Raum – es ist ein Ausdruck von Haltung, von Wertigkeit und von Mut zum Stil.`,
+    materialCosts: "Ca. 55.000€",
+    includedServices: [
+      "Fliesen",
+      "Wet-Tapeten", 
+      "Sauna",
+      "Waschtisch + Sitzbank + Wannenblock aus Naturstein",
+      "Waschtischunterschrank",
+      "Dusch WC",
+      "Spiegelschrank",
+      "Armaturen",
+      "Wannenarmatur",
+      "Für die gesamte Planung"
+    ],
     floorPlans: [
       {
         image: '',
