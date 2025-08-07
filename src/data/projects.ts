@@ -29,6 +29,8 @@ export interface Project {
   floorPlans: FloorPlan[];
   photos: Photo[];
   featured: boolean;
+  materialCosts?: string;
+  includedServices?: string[];
 }
 
 export const projectsData: Project[] = [
@@ -51,6 +53,19 @@ Das WC hingegen ist geschickt im hinteren Bereich des Raumes platziert – gut v
 Von der Sauna aus wird nicht nur der Blick ins Grüne gehalten sondern auch auf den eingebauten Petrolofen gegenüber der Sauna. Diese raffinierte Anordnung unterstreicht die Gemütlichkeit des Raumes auf besondere Weise.
 
 In diesem einzigartigen Masterbad wird Ästhetik und Individualität auf die Spitze getrieben. Willkommen in einer Oase der Ruhe und des Wohlbefindens.`,
+    materialCosts: "Ca. 55.000€",
+    includedServices: [
+      "Fliesen",
+      "Wet-Tapeten", 
+      "Sauna",
+      "Waschtisch + Sitzbank + Wannenblock aus Naturstein",
+      "Waschtischunterschrank",
+      "Dusch WC",
+      "Spiegelschrank",
+      "Armaturen",
+      "Wannenarmatur",
+      "Für die gesamte Planung"
+    ],
     floorPlans: [
       {
         image: '',

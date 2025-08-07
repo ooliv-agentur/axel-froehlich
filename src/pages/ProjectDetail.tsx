@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Check } from 'lucide-react';
 import { projectsData } from '@/data/projects';
 
 const ProjectDetail = () => {
@@ -102,6 +102,58 @@ const ProjectDetail = () => {
             </div>
           </div>
         </section>
+
+        {/* Material Costs & Services Section */}
+        {(project.materialCosts || project.includedServices) && (
+          <section className="py-24 bg-luxury-black/50">
+            <div className="container mx-auto px-8">
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-16">
+                  <h2 className="text-4xl lg:text-5xl font-thin text-luxury-white mb-4">
+                    Materialkosten & Leistungsumfang
+                  </h2>
+                  <p className="text-luxury-gold/60 font-light tracking-wide">Transparenz von Anfang an</p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-12">
+                  {/* Material Costs */}
+                  {project.materialCosts && (
+                    <div className="bg-luxury-black/80 p-8 border border-luxury-gold/20 rounded-lg">
+                      <h3 className="text-2xl font-light text-luxury-gold mb-6 text-center">
+                        Materialkosten
+                      </h3>
+                      <div className="text-center">
+                        <div className="text-4xl font-thin text-luxury-white mb-2">
+                          {project.materialCosts}
+                        </div>
+                        <p className="text-luxury-text/60 text-sm font-light">
+                          Basierend auf dem realisierten Weidmann Masterbad
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Included Services */}
+                  {project.includedServices && (
+                    <div className="bg-luxury-black/80 p-8 border border-luxury-gold/20 rounded-lg">
+                      <h3 className="text-2xl font-light text-luxury-gold mb-6 text-center">
+                        Im Preis enthalten
+                      </h3>
+                      <div className="space-y-3">
+                        {project.includedServices.map((service, index) => (
+                          <div key={index} className="flex items-start gap-3">
+                            <Check className="w-5 h-5 text-luxury-gold mt-0.5 flex-shrink-0" />
+                            <span className="text-luxury-white font-light">{service}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Technical Floor Plans */}
         <section className="py-24 bg-luxury-black/95">
