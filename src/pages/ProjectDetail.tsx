@@ -31,6 +31,7 @@ const ProjectDetail = () => {
 
   // Extract key project details for specifications
   const specifications = [
+    ...(project.materialCosts ? [{ label: "Materialkosten", value: project.materialCosts }] : []),
     { label: "Kategorie", value: project.category },
     { label: "Stil", value: "Luxus Architektur" },
     { label: "Material", value: "Naturstein" },
@@ -72,7 +73,7 @@ const ProjectDetail = () => {
               </Link>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
               {specifications.map((spec, index) => (
                 <div key={index} className="text-center">
                   <h3 className="text-luxury-gold/60 text-xs font-light tracking-[0.2em] uppercase mb-3">
