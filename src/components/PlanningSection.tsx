@@ -104,9 +104,12 @@ export const PlanningSection = () => {
                     <h4 className="text-xl sm:text-2xl font-light mb-2 text-luxury-white">
                       {plan.title}
                     </h4>
-                    {plan.subtitle && <p className="text-luxury-gold/80 text-sm sm:text-base font-light mb-4 tracking-wide">
-                        {plan.subtitle}
-                      </p>}
+<p
+                        className={`text-luxury-gold/80 text-sm sm:text-base font-light mb-4 tracking-wide ${plan.subtitle ? '' : 'invisible'}`}
+                        aria-hidden={!plan.subtitle}
+                      >
+                        {plan.subtitle || '\u00A0'}
+                      </p>
                     <div className="mb-6">
                       <div className="text-3xl sm:text-4xl lg:text-5xl font-light text-luxury-gold mb-2">
                         {plan.price}
