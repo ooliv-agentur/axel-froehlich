@@ -127,9 +127,6 @@ const ProjectDetail = () => {
                         <div className="text-4xl font-thin text-luxury-white mb-2">
                           {project.materialCosts}
                         </div>
-                        <p className="text-luxury-text/60 text-sm font-light">
-                          Basierend auf dem realisierten Weidmann Masterbad
-                        </p>
                       </div>
                     </div>
                   )}
