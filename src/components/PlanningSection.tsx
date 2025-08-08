@@ -1,16 +1,13 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-
 export const PlanningSection = () => {
-  return (
-    <section id="beratung-planung" className="section-spacing bg-luxury-gray relative">
+  return <section id="beratung-planung" className="section-spacing bg-luxury-gray relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="w-full h-full" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #a68343 2px, transparent 2px)`,
-          backgroundSize: '80px 80px'
-        }}></div>
+        backgroundImage: `radial-gradient(circle at 25% 25%, #a68343 2px, transparent 2px)`,
+        backgroundSize: '80px 80px'
+      }}></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-8 relative z-10">
@@ -60,10 +57,7 @@ export const PlanningSection = () => {
                 </p>
               </div>
               
-              <Button 
-                size="lg"
-                className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-lg sm:text-xl px-12 sm:px-16 py-6 sm:py-8 font-light tracking-wide"
-              >
+              <Button size="lg" className="bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-black text-lg sm:text-xl px-12 sm:px-16 py-6 sm:py-8 font-light tracking-wide">
                 3D-Planung anfragen
               </Button>
             </div>
@@ -76,42 +70,30 @@ export const PlanningSection = () => {
               <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-10 sm:mb-12 text-luxury-white tracking-tight">
                 Professionelle <span className="gold-accent font-serif italic">Planung</span>
               </h3>
-              <p className="text-xl sm:text-2xl lg:text-3xl text-luxury-text/70 font-light leading-relaxed max-w-4xl mx-auto">
-                Unsere 3D-Planungsleistungen sind eine Investition in Ihr Projekt. 
-                Bei Beauftragung der Realisierung wird der Planungspreis vollständig angerechnet.
-              </p>
+              <p className="text-xl sm:text-2xl lg:text-3xl text-luxury-text/70 font-light leading-relaxed max-w-4xl mx-auto">Unsere 3D-Planungsleistungen sind eine Investition in Ihr Projekt. </p>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
-              {[
-                {
-                  title: "Gäste WC",
-                  price: "490€",
-                  description: "Kompakte Planung für optimale Raumnutzung"
-                },
-                {
-                  title: "Bad Planung",
-                  subtitle: "bis 8m²",
-                  price: "790€", 
-                  description: "Durchdachte Lösung für kleinere Bäder"
-                },
-                {
-                  title: "Bad Planung",
-                  subtitle: "bis 15m²",
-                  price: "890€",
-                  description: "Komfortable Planung für Familienbäder"
-                },
-                {
-                  title: "Wellness Planung",
-                  subtitle: "bis 25m²",
-                  price: "1.290€",
-                  description: "Luxuriöse Planung für Spa-Erlebnis"
-                }
-              ].map((plan, index) => (
-                <div 
-                  key={index}
-                  className="bg-luxury-gray/5 border border-luxury-gold/20 p-8 sm:p-10 relative overflow-hidden hover:border-luxury-gold/40 transition-all duration-300 group"
-                >
+              {[{
+              title: "Gäste WC",
+              price: "490€",
+              description: "Kompakte Planung für optimale Raumnutzung"
+            }, {
+              title: "Bad Planung",
+              subtitle: "bis 8m²",
+              price: "790€",
+              description: "Durchdachte Lösung für kleinere Bäder"
+            }, {
+              title: "Bad Planung",
+              subtitle: "bis 15m²",
+              price: "890€",
+              description: "Komfortable Planung für Familienbäder"
+            }, {
+              title: "Wellness Planung",
+              subtitle: "bis 25m²",
+              price: "1.290€",
+              description: "Luxuriöse Planung für Spa-Erlebnis"
+            }].map((plan, index) => <div key={index} className="bg-luxury-gray/5 border border-luxury-gold/20 p-8 sm:p-10 relative overflow-hidden hover:border-luxury-gold/40 transition-all duration-300 group">
                   {/* Architectural corner elements */}
                   <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-luxury-gold/40 transition-colors duration-300 group-hover:border-luxury-gold/60"></div>
                   <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-luxury-gold/40 transition-colors duration-300 group-hover:border-luxury-gold/60"></div>
@@ -122,11 +104,9 @@ export const PlanningSection = () => {
                     <h4 className="text-xl sm:text-2xl font-light mb-2 text-luxury-white">
                       {plan.title}
                     </h4>
-                    {plan.subtitle && (
-                      <p className="text-luxury-gold/80 text-sm sm:text-base font-light mb-4 tracking-wide">
+                    {plan.subtitle && <p className="text-luxury-gold/80 text-sm sm:text-base font-light mb-4 tracking-wide">
                         {plan.subtitle}
-                      </p>
-                    )}
+                      </p>}
                     <div className="mb-6">
                       <div className="text-3xl sm:text-4xl lg:text-5xl font-light text-luxury-gold mb-2">
                         {plan.price}
@@ -137,8 +117,7 @@ export const PlanningSection = () => {
                       {plan.description}
                     </p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="text-center mt-16 sm:mt-20">
@@ -162,25 +141,18 @@ export const PlanningSection = () => {
 
           {/* Planning Features Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-16 sm:gap-20 lg:gap-24">
-            {[
-              {
-                title: "Detailgenauigkeit",
-                description: "Millimetergenaue Planung mit allen technischen Spezifikationen"
-              },
-              {
-                title: "Materialvisualisierung", 
-                description: "Originalgetreue Darstellung aller Oberflächen und Texturen"
-              },
-              {
-                title: "Lichtkonzept",
-                description: "Realistische Beleuchtungsszenarien für verschiedene Tageszeiten"
-              }
-            ].map((feature, index) => (
-              <div 
-                key={index}
-                className="text-center animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
+            {[{
+            title: "Detailgenauigkeit",
+            description: "Millimetergenaue Planung mit allen technischen Spezifikationen"
+          }, {
+            title: "Materialvisualisierung",
+            description: "Originalgetreue Darstellung aller Oberflächen und Texturen"
+          }, {
+            title: "Lichtkonzept",
+            description: "Realistische Beleuchtungsszenarien für verschiedene Tageszeiten"
+          }].map((feature, index) => <div key={index} className="text-center animate-fade-in" style={{
+            animationDelay: `${index * 0.2}s`
+          }}>
                 <div className="w-16 sm:w-20 h-16 sm:h-20 border border-luxury-gold/30 rounded-full mx-auto mb-8 sm:mb-10 flex items-center justify-center">
                   <div className="w-2 h-2 bg-luxury-gold rounded-full"></div>
                 </div>
@@ -190,11 +162,9 @@ export const PlanningSection = () => {
                 <p className="text-lg sm:text-xl text-luxury-text/70 leading-relaxed font-light">
                   {feature.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
