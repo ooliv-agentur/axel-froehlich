@@ -127,10 +127,10 @@ const Kontakt = () => {
                   <div className="text-center mb-12">
                     <div className="w-12 h-px bg-luxury-gold mb-4 mx-auto"></div>
                     <h2 className="text-2xl lg:text-3xl font-light text-luxury-white mb-3 tracking-wide">
-                      Planungs-Investment
+                      3D-Planungsservice
                     </h2>
                     <p className="text-luxury-text/70 font-light">
-                      Bei Beauftragung der Realisierung wird der Planungspreis vollständig angerechnet
+                      Eine durchdachte 3D-Planung ist eine Investition in Perfektion
                     </p>
                   </div>
 
